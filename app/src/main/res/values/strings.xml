@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">TT_LUDI</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+
+    <!-- PERFIL -->
+    <string name="txt_nombre">Nombre</string>
+    <string name="txt_apellidos">Apellidos</string>
+    <string name="txt_edad">Edad</string>
+    <string name="txt_peso">Peso</string>
+    <string name="txt_altura">Altura</string>
+    <string name="txt_escuela">Escuela</string>
+
+    <!-- ACTIVIDADES -->
+    <string name="btn_act1">ACTIVIDAD 1</string>
+    <string name="btn_act2">ACTIVIDAD 2</string>
+    <string name="btn_act3">ACTIVIDAD 3</string>
+    <string name="btn_act4">ACTIVIDAD 4</string>
+
+    <!-- ACTIVIDAD 1 -->
+    <string name="btnRespuesta1">RESPUESTA 1</string>
+    <string name="btnRespuesta2">RESPUESTA 2</string>
+    <string name="btnSiguiente">SIGUIENTE</string>
+    <string name="txtPregunta">PREGUNTA</string>
+</resources>

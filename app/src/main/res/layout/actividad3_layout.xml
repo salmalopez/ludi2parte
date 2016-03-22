@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical"
+    tools:context="com.example.sourabh.dragdropexample.MainActivity"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textSize="25sp"
+        android:padding="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="right"
+        android:baselineAligned="false"
+        android:paddingTop="50dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Bracoli"
+            android:layout_margin="10dp"
+            android:textSize="35sp"
+            android:id="@+id/text1"/>
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="84dp"
+            android:text="Cebolla"
+            android:layout_margin="10dp"
+            android:textSize="35sp"
+            android:id="@+id/text2"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:text="Pimiento"
+            android:layout_margin="10dp"
+            android:textSize="35sp"
+            android:id="@+id/text3"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="50dp">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="87dp"
+            android:text="Melon"
+            android:layout_margin="10dp"
+            android:textSize="35sp"
+            android:id="@+id/text4"
+            android:onClick="onTouch"/>
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="84dp"
+            android:text="Piña"
+            android:layout_margin="10dp"
+            android:textSize="35sp"
+            android:id="@+id/text5" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:text="Platano"
+            android:layout_margin="10dp"
+            android:textSize="35sp"
+            android:id="@+id/text6" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="371dp"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="50dp">
+
+        <TextView
+            android:layout_width="500dp"
+            android:layout_height="200dp"
+            android:text="VERDURA"
+            android:layout_margin="10dp"
+            android:textSize="35sp"
+            android:id="@+id/text7"
+            android:background="@android:color/holo_orange_light"
+            android:layout_weight="0.47"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_width="500dp"
+            android:layout_height="200dp"
+            android:text="FRUTA"
+            android:layout_margin="10dp"
+            android:textSize="35sp"
+            android:id="@+id/text8"
+            android:background="@android:color/holo_orange_light"
+            android:layout_gravity="center"
+            android:layout_weight="0.46" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center|left"
+        android:weightSum="1">
+
+        <Button
+            android:layout_width="199dp"
+            android:layout_height="102dp"
+            android:text="Reinicio"
+            android:id="@+id/button"
+            android:onClick="reinicio"
+            android:layout_gravity="center|right"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="0.57"
+            android:layout_marginRight="50dp" />
+
+        <Button
+            android:layout_width="260dp"
+            android:layout_height="114dp"
+            android:text="Cuestionario"
+            android:id="@+id/button2"
+            android:layout_marginLeft="50dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.37"
+            android:layout_marginRight="20dp" />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,36 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ludi.tt_ludi.ActividadesFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <Button
+        android:layout_width="356dp"
+        android:layout_height="569dp"
+        android:id="@+id/btn_act1"
+        android:layout_gravity="left|top"
+        android:text="@string/btn_act1" />
+
+    <Button
+        android:layout_width="434dp"
+        android:layout_height="576dp"
+        android:id="@+id/btn_act2"
+        android:layout_gravity="right|top"
+        android:text="@string/btn_act2" />
+
+    <Button
+        android:layout_width="354dp"
+        android:layout_height="531dp"
+        android:id="@+id/btn_act3"
+        android:layout_gravity="left|bottom"
+        android:text="@string/btn_act3" />
+
+    <Button
+        android:layout_width="420dp"
+        android:layout_height="550dp"
+        android:id="@+id/btn_act4"
+        android:text="@string/btn_act4"
+        android:layout_gravity="right|bottom" />
+</FrameLayout>
