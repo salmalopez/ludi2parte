@@ -26,7 +26,7 @@ public class Libro extends AppCompatActivity {
             architectView.onCreate(configuration);
         }catch(RuntimeException e){
             e.printStackTrace();
-            Toast.makeText(Libro.this, "No se ha podido crear la vista.", Toast.LENGTH_LONG).show();
+            Toast.makeText(Libro.this, "No se ha podido cargar la vista: "+e.getMessage(), Toast.LENGTH_LONG).show();
             finish();
         }
 

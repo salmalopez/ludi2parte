@@ -1,6 +1,7 @@
 package com.ludi.tt_ludi;
 
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -96,6 +97,9 @@ public class MainActivity extends AppCompatActivity
 
 
         } else if (id == R.id.nav_realidadAumentada) {
+
+            Intent siguiente = new Intent(MainActivity.this, Libro.class);
+            MainActivity.this.startActivity(siguiente);
 
         } else if (id == R.id.nav_perfil) {
             fragment = new PerfilFragment();

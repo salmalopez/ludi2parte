@@ -31,13 +31,17 @@ var World = {
 			To start the video immediately after the target is recognized we call play inside the onEnterFieldOfVision trigger. Supplying -1 to play tells the Wikitude SDK to loop the video infinitely. Choose any positive number to re-play it multiple times.
 		*/
 		var pageOne = new AR.Trackable2DObject(this.tracker, "*", {
-			drawables: {
-				cam: [video]
-			},
-			onEnterFieldOfVision: function onEnterFieldOfVisionFn() {
-				video.play(-1);
-			}
-		});
+        			drawables: {
+        				cam: [video]
+        			},
+        			onEnterFieldOfVision: function onEnterFieldOfVisionFn() {
+        				video.play(1);
+        			},
+        			onExitFieldOfVision: function onExitFieldOfVisionFn () {
+                   		video.pause();
+                    }
+
+        		});
 	},
 
 	worldLoaded: function worldLoadedFn() {
