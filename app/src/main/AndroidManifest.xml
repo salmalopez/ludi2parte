@@ -18,18 +18,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="actividad1.Actividad1">
-        </activity>
+        <activity android:name="actividad1.Actividad1" />
+        <activity android:name="actividad1.CuestionarioAct1" />
+        <activity android:name="actividad2.Actividad2" />
+        <activity android:name="actividad2.CuestionarioAct2" />
+        <activity android:name="actividad3.Actividad3" />
+        <activity android:name="com.ludi.tt_ludi.Libro" />
 
-        <activity android:name="actividad1.CuestionarioAct1">
-        </activity>
-
-        <activity android:name="actividad2.Actividad2"></activity>
-        <activity android:name="actividad2.CuestionarioAct2">
-        </activity>
-
-        <activity android:name="actividad3.Actividad3">
-        </activity>
     </application>
 
 </manifest>

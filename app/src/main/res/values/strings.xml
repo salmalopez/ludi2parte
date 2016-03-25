@@ -10,7 +10,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
-
     <!-- PERFIL -->
     <string name="txt_nombre">Nombre</string>
     <string name="txt_apellidos">Apellidos</string>
@@ -30,4 +29,5 @@
     <string name="btnRespuesta2">RESPUESTA 2</string>
     <string name="btnSiguiente">SIGUIENTE</string>
     <string name="txtPregunta">PREGUNTA</string>
+    <string name="title_activity_libro">Libro</string>
 </resources>
