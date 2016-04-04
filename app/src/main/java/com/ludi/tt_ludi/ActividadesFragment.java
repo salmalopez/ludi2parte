@@ -10,10 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import actividad1.Actividad1;
-import actividad2.Actividad2;
-import actividad3.Actividad3;
-
 
 /**
  * A simple {@link Fragment} subclass.

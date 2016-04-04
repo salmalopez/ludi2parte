@@ -105,7 +105,8 @@ public class MainActivity extends AppCompatActivity
             fragment = new PerfilFragment();
             fragmentTransaction = true;
         } else if (id == R.id.nav_cerrarSesison) {
-
+            Intent siguiente = new Intent(MainActivity.this, Inicio.class);
+            MainActivity.this.startActivity(siguiente);
         }
 
         if(fragmentTransaction){
