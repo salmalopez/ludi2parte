@@ -1,11 +1,13 @@
 package com.ludi.tt_ludi;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -20,8 +22,10 @@ import java.util.Map;
 public class Inicio extends AppCompatActivity implements View.OnClickListener{
 
     Button btn_login, btn_register;
+    TextView txtTittle, txtRegister;
 
-    private static final String REGISTER_URL = "http://192.168.1.70:1337/api/loginApp";
+
+    private static final String REGISTER_URL = "http://ludi.mx/api/loginApp";
 
     public static final String KEY_USERNAME = "userName";
 
@@ -32,13 +36,22 @@ public class Inicio extends AppCompatActivity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio);
 
+        Typeface myTypeFace = Typeface.createFromAsset(getAssets(),"KGS.ttf");
+        txtTittle = (TextView) findViewById(R.id.txtTittle);
+        txtTittle.setTypeface(myTypeFace);
+
+
+        Typeface myTypeFace2 = Typeface.createFromAsset(getAssets(),"dot.ttf");
         btn_login = (Button) findViewById(R.id.btn_login);
+        btn_login.setTypeface(myTypeFace2);
         btn_login.setOnClickListener(this);
 
         btn_register = (Button) findViewById(R.id.btn_register);
+        btn_register.setTypeface(myTypeFace2);
         btn_register.setOnClickListener(this);
 
         editTextUserName = (EditText) findViewById(R.id.editTextUserName);
+        editTextUserName.setTypeface(myTypeFace2);
     }
 
 

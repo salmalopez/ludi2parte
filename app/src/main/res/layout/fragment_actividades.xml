@@ -7,30 +7,42 @@
     <!-- TODO: Update blank fragment layout -->
 
     <Button
-        android:layout_width="356dp"
-        android:layout_height="569dp"
+        android:layout_width="620dp"
+        android:layout_height="325dp"
         android:id="@+id/btn_act1"
         android:layout_gravity="left|top"
-        android:text="@string/btn_act1" />
+        android:text="@string/btn_act1"
+        android:background="#31c242"
+        android:textColor="#ffffff"
+        android:textSize="100dp" />
 
     <Button
-        android:layout_width="434dp"
-        android:layout_height="576dp"
+        android:layout_width="620dp"
+        android:layout_height="325dp"
         android:id="@+id/btn_act2"
         android:layout_gravity="right|top"
-        android:text="@string/btn_act2" />
+        android:text="@string/btn_act2"
+        android:background="#eb813a"
+        android:textSize="100dp"
+        android:textColor="#ffffff" />
 
     <Button
-        android:layout_width="354dp"
-        android:layout_height="531dp"
+        android:layout_width="620dp"
+        android:layout_height="325dp"
         android:id="@+id/btn_act3"
         android:layout_gravity="left|bottom"
-        android:text="@string/btn_act3" />
+        android:text="@string/btn_act3"
+        android:background="#f2d638"
+        android:textColor="#ffffff"
+        android:textSize="100dp" />
 
     <Button
-        android:layout_width="420dp"
-        android:layout_height="550dp"
+        android:layout_width="620dp"
+        android:layout_height="325dp"
         android:id="@+id/btn_act4"
         android:text="@string/btn_act4"
-        android:layout_gravity="right|bottom" />
+        android:layout_gravity="right|bottom"
+        android:background="#36b4e6"
+        android:textSize="100dp"
+        android:textColor="#ffffff" />
 </FrameLayout>

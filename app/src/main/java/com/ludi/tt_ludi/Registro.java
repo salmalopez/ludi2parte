@@ -1,10 +1,12 @@
 package com.ludi.tt_ludi;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -18,7 +20,7 @@ import java.util.Map;
 
 public class Registro extends AppCompatActivity implements View.OnClickListener {
 
-    private static final String REGISTER_URL = "http://192.168.1.70:1337/api/user";
+    private static final String REGISTER_URL = "http://ludi.mx/api/user";
 
     public static final String KEY_USERNAME = "userName";
     public static final String KEY_NAME = "name";
@@ -34,6 +36,8 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
     private EditText editTextWeight;
     private EditText editTextHeight;
 
+    private TextView txtRegister;
+
 
     private Button buttonRegister;
 
@@ -41,6 +45,10 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
+
+        Typeface myTypeFace = Typeface.createFromAsset(getAssets(),"KGS.ttf");
+        txtRegister = (TextView) findViewById(R.id.txtRegister);
+        txtRegister .setTypeface(myTypeFace);
 
         editTextUserName = (EditText) findViewById(R.id.editTextUserName);
         editTextName = (EditText) findViewById(R.id.editTextName);

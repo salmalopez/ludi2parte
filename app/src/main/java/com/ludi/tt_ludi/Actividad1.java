@@ -18,7 +18,7 @@ import android.widget.Toast;
 public class Actividad1 extends Activity implements Animation.AnimationListener, View.OnClickListener{
 
     TextView txtPregunta;
-    Button btnRespuesta1,btnRespuesta2, btnSiguiente;
+    Button btnRespuesta1,btnRespuesta2, btnSiguiente, btn_regresar;
     Pregunta[] preguntas = new Pregunta().getPreguntas();
     static int idpregunta = 0;
     static int respuesta = 0;
@@ -27,18 +27,23 @@ public class Actividad1 extends Activity implements Animation.AnimationListener,
 
     // Animation
     Animation animFadein;
+    Animation error;
 
     private static final int[] PREGUNTA_RESOURCES = new int[]{
-            R.drawable.brocoli,
-            R.drawable.uva,
-            R.drawable.berenjena,
-            R.drawable.cebolla,
-            R.drawable.fresa,
-            R.drawable.jitomate,
-            R.drawable.manzana,
-            R.drawable.naranja,
-            R.drawable.platano,
-            R.drawable.zanahoria,
+            R.drawable.vasos3,
+            R.drawable.ocho,
+            R.drawable.vaso,
+            R.drawable.cafe,
+            R.drawable.refresco,
+            R.drawable.jugo,
+            R.drawable.te,
+            R.drawable.vasos3,
+            R.drawable.ocho,
+            R.drawable.vaso,
+            R.drawable.cafe,
+            R.drawable.refresco,
+            R.drawable.jugo,
+            R.drawable.te,
     };
 
     @Override
@@ -51,6 +56,9 @@ public class Actividad1 extends Activity implements Animation.AnimationListener,
         txtPregunta = (TextView) findViewById(R.id.txtPregunta);
         txtPregunta.setText(preguntas[idpregunta].pregunta);
 
+        btn_regresar = (Button) findViewById(R.id.btn_regresar);
+        btn_regresar.setOnClickListener(this);
+
 
         btnRespuesta1 = (Button) findViewById(R.id.btnRespuesta1);
         btnRespuesta1.setText(preguntas[idpregunta].respuesta[0]);
@@ -60,7 +68,7 @@ public class Actividad1 extends Activity implements Animation.AnimationListener,
 
         btnRespuesta2 = (Button) findViewById(R.id.btnRespuesta2);
         btnRespuesta2.setText(preguntas[idpregunta].respuesta[1]);
-        Drawable image2 =(Drawable)getResources().getDrawable(PREGUNTA_RESOURCES[respuesta+1]);
+        Drawable image2 =(Drawable)getResources().getDrawable(PREGUNTA_RESOURCES[++respuesta]);
         btnRespuesta2.setBackground(image2);
 
         btnSiguiente = (Button) findViewById(R.id.btnSiguiente);
@@ -68,6 +76,9 @@ public class Actividad1 extends Activity implements Animation.AnimationListener,
         // load the animation
         animFadein = AnimationUtils.loadAnimation(getApplicationContext(),
                 R.anim.fade_in);
+
+        error = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.error);
         // set animation listener
         animFadein.setAnimationListener(this);
 
@@ -75,9 +86,6 @@ public class Actividad1 extends Activity implements Animation.AnimationListener,
         btnRespuesta1.setOnClickListener(this);
         btnRespuesta2.setOnClickListener(this);
         btnSiguiente.setOnClickListener(this);
-
-
-
     }
 
     @Override
@@ -85,7 +93,8 @@ public class Actividad1 extends Activity implements Animation.AnimationListener,
 
         switch (v.getId()){
             case (R.id.btnRespuesta1):
-                if(idpregunta<8 && preguntas[idpregunta].correcta == 0 ) {
+                btnRespuesta1.clearAnimation();
+                if(idpregunta<5 && preguntas[idpregunta].correcta == 0 ) {
                     idpregunta++;
                     respuesta++;
                     System.out.println(idpregunta + "_ " + Pregunta.contador);
@@ -95,20 +104,29 @@ public class Actividad1 extends Activity implements Animation.AnimationListener,
 
                     Drawable image=(Drawable)getResources().getDrawable(PREGUNTA_RESOURCES[respuesta]);
                     btnRespuesta1.setBackground(image);
-                    Drawable image2=(Drawable)getResources().getDrawable(PREGUNTA_RESOURCES[respuesta+1]);
+                    Drawable image2=(Drawable)getResources().getDrawable(PREGUNTA_RESOURCES[++respuesta]);
                     btnRespuesta2.setBackground(image2);
 
                     txtPregunta.setVisibility(View.VISIBLE);
                     txtPregunta.startAnimation(animFadein);
 
-                    if(idpregunta==8){
-                        btnSiguiente.setVisibility(View.VISIBLE);
+                    Toast toast1 = Toast.makeText(getApplicationContext(),
+                            "Perfecto", Toast.LENGTH_LONG);
+
+                    toast1.show();
+
+                    if(idpregunta==5){
+                        Toast toast2 = Toast.makeText(getApplicationContext(),
+                                "Concluiste la actividad", Toast.LENGTH_LONG);
+                        toast2.show();
                     }
+                }else if(preguntas[idpregunta].correcta != 0) {
+                    btnRespuesta1.startAnimation(error);
                 }
                 break;
 
             case (R.id.btnRespuesta2):
-                if(idpregunta<8 && preguntas[idpregunta].correcta == 1) {
+                if(idpregunta<5 && preguntas[idpregunta].correcta == 1) {
                     idpregunta++;
                     respuesta++;
                     System.out.println(idpregunta + "_ " + Pregunta.contador);
@@ -120,12 +138,21 @@ public class Actividad1 extends Activity implements Animation.AnimationListener,
 
                     Drawable image=(Drawable)getResources().getDrawable(PREGUNTA_RESOURCES[respuesta]);
                     btnRespuesta1.setBackground(image);
-                    Drawable image2=(Drawable)getResources().getDrawable(PREGUNTA_RESOURCES[respuesta+1]);
+                    Drawable image2=(Drawable)getResources().getDrawable(PREGUNTA_RESOURCES[++respuesta]);
                     btnRespuesta2.setBackground(image2);
 
+                    Toast toast1 = Toast.makeText(getApplicationContext(),
+                            "Perfecto", Toast.LENGTH_LONG);
 
-                    if(idpregunta==8){
-                        btnSiguiente.setVisibility(View.VISIBLE);
+                    toast1.show();
+
+
+                    if(idpregunta==5){
+                        Toast toast2 = Toast.makeText(getApplicationContext(),
+                                "Concluiste la actividad", Toast.LENGTH_LONG);
+                        toast2.show();
+                    }else if(preguntas[idpregunta].correcta != 1){
+                        btnRespuesta2.startAnimation(error);
                     }
 
                 }
@@ -144,13 +171,17 @@ public class Actividad1 extends Activity implements Animation.AnimationListener,
 
                     Drawable image=(Drawable)getResources().getDrawable(PREGUNTA_RESOURCES[respuesta]);
                     btnRespuesta1.setBackground(image);
-                    Drawable image2=(Drawable)getResources().getDrawable(PREGUNTA_RESOURCES[respuesta+1]);
+                    Drawable image2=(Drawable)getResources().getDrawable(PREGUNTA_RESOURCES[++respuesta]);
                     btnRespuesta2.setBackground(image2);
                     break;
 
             case (R.id.btnCuestionario):
                 Intent i = new Intent(this, CuestionarioAct1.class);
                 startActivity(i);
+                break;
+
+            case (R.id.btn_regresar):
+                finish();
                 break;
         }
 
@@ -161,10 +192,10 @@ public class Actividad1 extends Activity implements Animation.AnimationListener,
         // Take any action after completing the animation
 
         // check for fade in animation
-        if (animation == animFadein) {
+       /* if (animation == animFadein) {
             Toast.makeText(getApplicationContext(), "Animation Stopped",
                     Toast.LENGTH_SHORT).show();
-        }
+        } */
 
     }
 

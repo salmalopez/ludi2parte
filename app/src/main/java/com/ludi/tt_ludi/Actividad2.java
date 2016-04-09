@@ -49,11 +49,13 @@ public class Actividad2 extends AppCompatActivity implements View.OnClickListene
         tabla.setBackgroundColor(Color.parseColor("#F48FB1"));
 
         Button btnSiguiente = new Button(this);
-        btnSiguiente.setText("SIGUIENTE");
+        btnSiguiente.setText("CUESTIONARIO");
+        btnSiguiente.setBackgroundColor(Color.parseColor("#006064"));
         btnSiguiente.setOnClickListener(this);
 
         Button btnReinicio = new Button(this);
-        btnReinicio.setText("Reinicio");
+        btnReinicio.setText("REINICO");
+        btnReinicio.setBackgroundColor(Color.parseColor("#006064"));
         btnReinicio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -98,17 +100,17 @@ public class Actividad2 extends AppCompatActivity implements View.OnClickListene
         Carta(final int imagen){
             this.imagen = imagen;
             this.boton = new ImageButton(Actividad2.this);
-            this.boton.setLayoutParams(new TableRow.LayoutParams(187, 187));
+            this.boton.setLayoutParams(new TableRow.LayoutParams(320, 155));
 
             this.boton.setScaleType(ImageView.ScaleType.FIT_XY);
-            this.boton.setImageResource(R.drawable.fresa);
+            this.boton.setImageResource(R.drawable.pregunta);
             this.boton.setBackgroundColor(Color.parseColor("#880E4F"));
             this.boton.setOnClickListener(this);
         }
 
         void setCaraVisible(final boolean caraVisible){
             this.caraVisible = caraVisible;
-            boton.setImageResource(caraVisible ? imagen : R.drawable.fresa);
+            boton.setImageResource(caraVisible ? imagen : R.drawable.pregunta);
 
         }
 

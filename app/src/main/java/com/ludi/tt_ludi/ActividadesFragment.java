@@ -2,6 +2,7 @@ package com.ludi.tt_ludi;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -29,7 +30,7 @@ public class ActividadesFragment extends Fragment implements View.OnClickListene
     private String mParam1;
     private String mParam2;
 
-    Button btn_act1, btn_act2, btn_act3;
+    Button btn_act1, btn_act2, btn_act3,btn_act4;
 
     private OnFragmentInteractionListener mListener;
 
@@ -73,14 +74,28 @@ public class ActividadesFragment extends Fragment implements View.OnClickListene
 
         View view = inflater.inflate(R.layout.fragment_actividades, container, false);
 
+        Typeface myTypeFace2 = Typeface.createFromAsset(getContext().getAssets(),"dot.ttf");
+
+
+
         btn_act1 = (Button) view.findViewById(R.id.btn_act1);
+        btn_act1.setTypeface(myTypeFace2);
         btn_act1.setOnClickListener(this);
 
+
         btn_act2 = (Button) view.findViewById(R.id.btn_act2);
+        btn_act2.setTypeface(myTypeFace2);
         btn_act2.setOnClickListener(this);
 
+
         btn_act3 = (Button) view.findViewById(R.id.btn_act3);
+        btn_act3.setTypeface(myTypeFace2);
         btn_act3.setOnClickListener(this);
+
+
+        btn_act4 = (Button) view.findViewById(R.id.btn_act4);
+        btn_act4.setTypeface(myTypeFace2);
+        btn_act4.setOnClickListener(this);
 
         return view;
     }
@@ -114,17 +129,17 @@ public class ActividadesFragment extends Fragment implements View.OnClickListene
         switch (v.getId()) {
 
             case (R.id.btn_act1):
-                Intent intentAct1 = new Intent(getContext(), Actividad1.class);
+                Intent intentAct1 = new Intent(getContext(), InstruccionesAct1.class);
                 startActivity(intentAct1);
                 break;
 
             case (R.id.btn_act2):
-                Intent intentAct2  = new Intent(getContext(), Actividad2.class);
+                Intent intentAct2  = new Intent(getContext(), InstruccionesAct2.class);
                 startActivity(intentAct2);
                 break;
 
             case (R.id.btn_act3):
-                Intent intentAct3 = new Intent(getContext(), Actividad3.class);
+                Intent intentAct3 = new Intent(getContext(), InstruccionesAct3.class);
                 startActivity(intentAct3);
                 break;
         }

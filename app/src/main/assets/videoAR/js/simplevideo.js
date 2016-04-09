@@ -30,7 +30,7 @@ var World = {
 
 			To start the video immediately after the target is recognized we call play inside the onEnterFieldOfVision trigger. Supplying -1 to play tells the Wikitude SDK to loop the video infinitely. Choose any positive number to re-play it multiple times.
 		*/
-		var pageOne = new AR.Trackable2DObject(this.tracker, "*", {
+		var pageOne = new AR.Trackable2DObject(this.tracker, "logo", {
         			drawables: {
         				cam: [video]
         			},
@@ -49,9 +49,9 @@ var World = {
 		var cssDivSurfer = " style='display: table-cell;vertical-align: middle; text-align: left; padding-right: 15px; width: 38px'";
 		var cssDivBiker = " style='display: table-cell;vertical-align: middle; text-align: left; padding-right: 15px;'";
 		document.getElementById('loadingMessage').innerHTML =
-            "<div" + cssDivInstructions + ">Scan Target &#35;1 (surfer) or &#35;2 (biker):</div>" +
-            "<div" + cssDivSurfer + "><img src='assets/surfer.png'></img></div>" +
-            "<div" + cssDivBiker + "><img src='assets/bike.png'></img></div>";
+            "<div" + cssDivInstructions + "></div>" +
+            "<div" + cssDivSurfer + "></div>" +
+            "<div" + cssDivBiker + "></div>";
 
 		// Remove Scan target message after 10 sec.
 		setTimeout(function() {

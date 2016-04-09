@@ -31,4 +31,7 @@
     <string name="btnSiguiente">SIGUIENTE</string>
     <string name="txtPregunta">PREGUNTA</string>
     <string name="title_activity_libro">Libro</string>
+    <string name="title_activity_instrucciones_act1">InstruccionesAct1</string>
+    <string name="title_activity_instrucciones_act2">InstruccionesAct2</string>
+    <string name="title_activity_instrucciones_act3">InstruccionesAct3</string>
 </resources>

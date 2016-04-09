@@ -6,7 +6,8 @@
     android:padding="10dp"
     android:orientation="vertical"
     tools:context="com.example.sourabh.dragdropexample.MainActivity"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:background="#ca52a6">
 
     <TextView
         android:layout_width="wrap_content"
@@ -19,12 +20,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_gravity="right"
-        android:baselineAligned="false"
-        android:paddingTop="50dp"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:paddingBottom="20dp">
+        android:layout_gravity="center"
+        android:baselineAligned="false">
 
         <TextView
             android:layout_width="150dp"
@@ -57,16 +54,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingLeft="20dp"
-        android:paddingTop="20dp"
-        android:paddingRight="20dp"
-        android:paddingBottom="50dp">
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="150dp"
             android:layout_height="87dp"
-            android:text="Melon"
+            android:text="Manzana"
             android:layout_margin="10dp"
             android:textSize="35sp"
             android:id="@+id/text4"
@@ -92,34 +85,39 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="371dp"
-        android:orientation="vertical"
+        android:layout_height="223dp"
+        android:orientation="horizontal"
         android:weightSum="1"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
-        android:paddingBottom="50dp">
+        android:paddingBottom="50dp"
+        android:layout_marginTop="20dp">
 
         <TextView
             android:layout_width="500dp"
             android:layout_height="200dp"
             android:text="VERDURA"
-            android:layout_margin="10dp"
             android:textSize="35sp"
             android:id="@+id/text7"
             android:background="@android:color/holo_orange_light"
             android:layout_weight="0.47"
-            android:layout_gravity="center" />
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp" />
 
         <TextView
             android:layout_width="500dp"
             android:layout_height="200dp"
             android:text="FRUTA"
-            android:layout_margin="10dp"
             android:textSize="35sp"
             android:id="@+id/text8"
             android:background="@android:color/holo_orange_light"
             android:layout_gravity="center"
-            android:layout_weight="0.46" />
+            android:layout_weight="0.46"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp" />
 
     </LinearLayout>
 
@@ -130,10 +128,21 @@
         android:layout_gravity="center|left"
         android:weightSum="1">
 
+
         <Button
-            android:layout_width="199dp"
-            android:layout_height="102dp"
-            android:text="Reinicio"
+            android:layout_width="134dp"
+            android:layout_height="100dp"
+            android:background="@drawable/cuestionario"
+            android:id="@+id/button2"
+            android:layout_marginLeft="50dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.04"
+            android:layout_marginRight="20dp" />
+
+        <Button
+            android:layout_width="134dp"
+            android:layout_height="100dp"
+            android:background="@drawable/reinicio"
             android:id="@+id/button"
             android:onClick="reinicio"
             android:layout_gravity="center|right"
@@ -142,18 +151,8 @@
             android:paddingRight="20dp"
             android:paddingBottom="20dp"
             android:layout_marginLeft="20dp"
-            android:layout_weight="0.57"
+            android:layout_weight="0.02"
             android:layout_marginRight="50dp" />
-
-        <Button
-            android:layout_width="260dp"
-            android:layout_height="114dp"
-            android:text="Cuestionario"
-            android:id="@+id/button2"
-            android:layout_marginLeft="50dp"
-            android:layout_gravity="center"
-            android:layout_weight="0.37"
-            android:layout_marginRight="20dp" />
 
     </LinearLayout>
 

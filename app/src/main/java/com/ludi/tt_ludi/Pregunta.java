@@ -15,7 +15,7 @@ public class Pregunta {
 
         //Pregunta no. 1
         Pregunta p1 = new Pregunta();
-        p1.pregunta = "PREGUNTA 1";
+        p1.pregunta = "¿Cuántos  vasos debes consumir de agua natural al día?";
         p1.correcta = 0;
         p1.respuesta[p1.correcta] = "RPC1";
         p1.respuesta[1] = "RP1";
@@ -23,7 +23,7 @@ public class Pregunta {
 
         //Pregunta no. 2
         Pregunta p2 = new Pregunta();
-        p2.pregunta = "PREGUNTA 2";
+        p2.pregunta = "Se recomienda beber máximo 2 vasos al día...";
         p2.correcta = 1;
         p2.respuesta[0] = "RP2";
         p2.respuesta[p2.correcta] = "RPC2";
@@ -31,7 +31,7 @@ public class Pregunta {
 
         //Pregunta no. 3
         Pregunta p3 = new Pregunta();
-        p3.pregunta = "PREGUNTA 3";
+        p3.pregunta = "Se pueden tomar 4 tazas (250 ml por taza) al día...";
         p3.correcta = 0;
         p3.respuesta[p3.correcta] = "RPC3";
         p3.respuesta[1] = "RP3";
@@ -39,7 +39,7 @@ public class Pregunta {
 
         //Pregunta no. 4
         Pregunta p4 = new Pregunta();
-        p4.pregunta = "PREGUNTA 4";
+        p4.pregunta = "Se aconsejan 0 a 500 ml por día (0 a 2 vasos)...";
         p4.correcta = 1;
         p4.respuesta[0] = "RP4";
         p4.respuesta[p4.correcta] = "RPC4";
@@ -47,7 +47,7 @@ public class Pregunta {
 
         //Pregunta no. 5
         Pregunta p5 = new Pregunta();
-        p5.pregunta = "PREGUNTA 5";
+        p5.pregunta = "Se recomienda de 0 a 1/2 vaso (125 ml) por su aporte de calorías...";
         p5.correcta = 0;
         p5.respuesta[p5.correcta] = "RPC5";
         p5.respuesta[1] = "RP5";
@@ -55,7 +55,7 @@ public class Pregunta {
 
         //Pregunta no. 6
         Pregunta p6 = new Pregunta();
-        p6.pregunta = "PREGUNTA 6";
+        p6.pregunta = "Su consumo se asocia con caries dental y obesidad. Se recomienda no ingerirlas...";
         p6.correcta = 1;
         p6.respuesta[0] = "RP6";
         p6.respuesta[p6.correcta] = "RPC6";

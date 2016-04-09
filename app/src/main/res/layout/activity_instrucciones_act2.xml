@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ludi.tt_ludi.InstruccionesAct1"
+    android:weightSum="1"
+    android:background="#efdf50"
+    android:paddingLeft="50dp"
+    android:paddingRight="50dp"
+    android:paddingBottom="50dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="INSTRUCCIONES"
+        android:id="@+id/txtTittle"
+        android:textSize="100dp"
+        android:textColor="#ff8e38"
+        android:paddingTop="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="memoramammamamamamaaaaaaaa"
+        android:id="@+id/txtIntruciones"
+        android:textSize="25dp"
+        android:textColor="#000000"
+        android:paddingTop="30dp"
+        android:layout_marginBottom="0dp" />
+
+    <Button
+        android:layout_width="615dp"
+        android:layout_height="169dp"
+        android:id="@+id/btn_ra"
+        android:background="@drawable/play"
+        android:layout_above="@+id/btn_comenzar"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:paddingBottom="100dp"
+        android:layout_weight="0.96" />
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/btn_comenzar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/btn_ra"
+        android:background="@drawable/inicio"
+        android:layout_gravity="center|right" />
+
+</LinearLayout>
