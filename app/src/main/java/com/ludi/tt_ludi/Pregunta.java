@@ -15,23 +15,23 @@ public class Pregunta {
 
         //Pregunta no. 1
         Pregunta p1 = new Pregunta();
-        p1.pregunta = "¿Cuántos  vasos debes consumir de agua natural al día?";
+        p1.pregunta = "¿Cuántos niveles tiene la jarra del buen beber?";
         p1.correcta = 0;
-        p1.respuesta[p1.correcta] = "RPC1";
-        p1.respuesta[1] = "RP1";
+        p1.respuesta[0] = "RPC1";
+        p1.respuesta[p1.correcta] = "RP1";
         preguntas[0] = p1;
 
         //Pregunta no. 2
         Pregunta p2 = new Pregunta();
-        p2.pregunta = "Se recomienda beber máximo 2 vasos al día...";
+        p2.pregunta = "¿Cuántos vasos de agua se necesita consumir minimo durante el dia?";
         p2.correcta = 1;
-        p2.respuesta[0] = "RP2";
-        p2.respuesta[p2.correcta] = "RPC2";
+        p2.respuesta[p2.correcta] = "RP2";
+        p2.respuesta[1] = "RPC2";
         preguntas[1] = p2;
 
         //Pregunta no. 3
         Pregunta p3 = new Pregunta();
-        p3.pregunta = "Se pueden tomar 4 tazas (250 ml por taza) al día...";
+        p3.pregunta = "¿Cuántos vasos se recomiendan consumir maximo de este nivel?";
         p3.correcta = 0;
         p3.respuesta[p3.correcta] = "RPC3";
         p3.respuesta[1] = "RP3";
@@ -55,7 +55,7 @@ public class Pregunta {
 
         //Pregunta no. 6
         Pregunta p6 = new Pregunta();
-        p6.pregunta = "Su consumo se asocia con caries dental y obesidad. Se recomienda no ingerirlas...";
+        p6.pregunta = "hgggg";
         p6.correcta = 1;
         p6.respuesta[0] = "RP6";
         p6.respuesta[p6.correcta] = "RPC6";
@@ -63,7 +63,7 @@ public class Pregunta {
 
         //Pregunta no. 7
         Pregunta p7 = new Pregunta();
-        p7.pregunta = "PREGUNTA 7";
+        p7.pregunta = "Su consumo se asocia con caries dental y obesidad. Se recomienda no ingerirlas...";
         p7.correcta = 1;
         p7.respuesta[0] = "RP7";
         p7.respuesta[p7.correcta] = "RPC7";

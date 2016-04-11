@@ -69,7 +69,8 @@
             android:name=".InstruccionesAct3"
             android:label="@string/title_activity_instrucciones_act3"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Noticias"></activity>
+        <activity android:name=".Noticias" />
+        <activity android:name=".Actividad4"></activity>
     </application>
 
 </manifest>

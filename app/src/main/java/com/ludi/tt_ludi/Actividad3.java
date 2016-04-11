@@ -1,10 +1,12 @@
 package com.ludi.tt_ludi;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.DragEvent;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 /**
@@ -12,7 +14,10 @@ import android.widget.TextView;
  */
 public class Actividad3 extends AppCompatActivity implements View.OnTouchListener,View.OnDragListener {
 
-    private TextView text1,text2,text3,text4,text5,text6,text7,text8;
+    private TextView textG1,textG1_1,textG1_2,textG2,textG2_1,textG2_2,textG3,textG3_1,textG3_2,textG3_3, textGrupo1,textGrupo2,textGrupo3;
+
+    LinearLayout layoutPlato;
+
 
     //When touched text gets dropped into either text4 or text5 or text6 then this method will be called
     @Override
@@ -31,31 +36,94 @@ public class Actividad3 extends AppCompatActivity implements View.OnTouchListene
             String text = dropTarget.getText().toString();
             //if there is already an item here, set it back visible in its original place
 
-            if(text.equals("FRUTA")){
-                if(dropped.equals(text.equals(text4.getText().toString())) || dropped.equals(text.equals(text5.getText().toString()))
-                        || dropped.equals(text.equals(text6.getText().toString()))){
+            if(text.equals("GRUPO2")){
+                if(dropped.equals(text.equals(textG2.getText().toString()))
+                        || dropped.equals(text.equals(textG2_1.getText().toString()))
+                        || dropped.equals(text.equals(textG2_2.getText().toString()))){
                     dropTarget.setText(dropped.getText());
                 }else{
-                    if(dropped.getText().toString().equals(text1.getText())){
-                        text1.setVisibility(View.VISIBLE);
-                    }else if (dropped.getText().toString().equals(text2.getText())){
-                        text2.setVisibility(View.VISIBLE);
-                    }else if (dropped.getText().toString().equals(text3.getText())){
-                        text3.setVisibility(View.VISIBLE);
+                    if(dropped.getText().toString().equals(textG1.getText())){
+                        textG1.setVisibility(View.VISIBLE);
+                        System.out.println("no va aqui");
+                    }else if (dropped.getText().toString().equals(textG1_1.getText())){
+                        textG1_1.setVisibility(View.VISIBLE);
+                        System.out.println("no va aqui");
+                    }else if (dropped.getText().toString().equals(textG1_2.getText())){
+                        textG1_2.setVisibility(View.VISIBLE);
+                        System.out.println("no va aqui");
+                    }else if (dropped.getText().toString().equals(textG3.getText())){
+                        textG3.setVisibility(View.VISIBLE);
+                        System.out.println("no va aqui");
+                    }else if (dropped.getText().toString().equals(textG3_1.getText())){
+                        textG3_1.setVisibility(View.VISIBLE);
+                        System.out.println("no va aqui");
+                    }else if (dropped.getText().toString().equals(textG3_2.getText())){
+                        textG3_2.setVisibility(View.VISIBLE);
+                        System.out.println("no va aqui");
+                    }else if (dropped.getText().toString().equals(textG3_3.getText())){
+                        textG3_3.setVisibility(View.VISIBLE);
                         System.out.println("no va aqui");
                     }
                 }
-            }else{
-                if(dropped.equals(text.equals(text1.getText().toString())) || dropped.equals(text.equals(text2.getText().toString()))
-                        || dropped.equals(text.equals(text3.getText().toString()))){
+            }else if(text.equals("GRUPO1")){
+                if(dropped.equals(text.equals(textG1.getText().toString()))){
+                    dropTarget.setText(dropped.getText());
+
+                    Drawable image = (Drawable)getResources().getDrawable((R.drawable.platano));
+                    layoutPlato.setBackground(image);
+                    
+                }else if(dropped.equals(text.equals(textG1_1.getText().toString()))){
+                    dropTarget.setText(dropped.getText());
+                }else if(dropped.equals(text.equals(textG1_2.getText().toString()))){
                     dropTarget.setText(dropped.getText());
                 }else{
-                    if(dropped.getText().toString().equals(text4.getText())){
-                        text4.setVisibility(View.VISIBLE);
-                    }else if (dropped.getText().toString().equals(text5.getText())){
-                        text5.setVisibility(View.VISIBLE);
-                    }else if (dropped.getText().toString().equals(text6.getText())){
-                        text6.setVisibility(View.VISIBLE);
+                    if(dropped.getText().toString().equals(textG2.getText())){
+                        textG2.setVisibility(View.VISIBLE);
+                        System.out.println("no va aqui");
+                    }else if (dropped.getText().toString().equals(textG2_1.getText())){
+                        textG2_1.setVisibility(View.VISIBLE);
+                        System.out.println("no va aqui");
+                    }else if (dropped.getText().toString().equals(textG2_2.getText())){
+                        textG2_2.setVisibility(View.VISIBLE);
+                        System.out.println("no va aqui");
+                    }else if (dropped.getText().toString().equals(textG3.getText())){
+                        textG3.setVisibility(View.VISIBLE);
+                        System.out.println("no va aqui");
+                    }else if (dropped.getText().toString().equals(textG3_1.getText())){
+                        textG3_1.setVisibility(View.VISIBLE);
+                        System.out.println("no va aqui");
+                    }else if (dropped.getText().toString().equals(textG3_2.getText())){
+                        textG3_2.setVisibility(View.VISIBLE);
+                        System.out.println("no va aqui");
+                    }else if (dropped.getText().toString().equals(textG3_3.getText())){
+                        textG3_3.setVisibility(View.VISIBLE);
+                        System.out.println("no va aqui");
+                    }
+                }
+
+            }else{
+                if(dropped.equals(text.equals(textG3.getText().toString()))
+                        || dropped.equals(text.equals(textG3_1.getText().toString()))
+                        || dropped.equals(text.equals(textG3_2.getText().toString()))
+                        || dropped.equals(text.equals(textG3_3.getText().toString()))){
+                }else{
+                    if(dropped.getText().toString().equals(textG1.getText())){
+                        textG1.setVisibility(View.VISIBLE);
+                        System.out.println("no va aqui");
+                    }else if (dropped.getText().toString().equals(textG1_1.getText())){
+                        textG1_1.setVisibility(View.VISIBLE);
+                        System.out.println("no va aqui");
+                    }else if (dropped.getText().toString().equals(textG1_2.getText())){
+                        textG1_2.setVisibility(View.VISIBLE);
+                        System.out.println("no va aqui");
+                    }else if (dropped.getText().toString().equals(textG2.getText())){
+                        textG2.setVisibility(View.VISIBLE);
+                        System.out.println("no va aqui");
+                    }else if (dropped.getText().toString().equals(textG2_1.getText())){
+                        textG2_1.setVisibility(View.VISIBLE);
+                        System.out.println("no va aqui");
+                    }else if (dropped.getText().toString().equals(textG2_2.getText())){
+                        textG2_2.setVisibility(View.VISIBLE);
                         System.out.println("no va aqui");
                     }
                 }
@@ -88,12 +156,16 @@ public class Actividad3 extends AppCompatActivity implements View.OnTouchListene
     }
 
     public void reinicio(View v){
-        text1.setVisibility(View.VISIBLE);
-        text2.setVisibility(View.VISIBLE);
-        text3.setVisibility(View.VISIBLE);
-        text4.setVisibility(View.VISIBLE);
-        text5.setVisibility(View.VISIBLE);
-        text6.setVisibility(View.VISIBLE);
+        textG1.setVisibility(View.VISIBLE);
+        textG1_1.setVisibility(View.VISIBLE);
+        textG1_2.setVisibility(View.VISIBLE);
+        textG2.setVisibility(View.VISIBLE);
+        textG2_1.setVisibility(View.VISIBLE);
+        textG2_2.setVisibility(View.VISIBLE);
+        textG3.setVisibility(View.VISIBLE);
+        textG3_1.setVisibility(View.VISIBLE);
+        textG3_2.setVisibility(View.VISIBLE);
+        textG3_3.setVisibility(View.VISIBLE);
     }
 
 
@@ -114,24 +186,38 @@ public class Actividad3 extends AppCompatActivity implements View.OnTouchListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.actividad3_layout);
 
-        text1 = (TextView)findViewById(R.id.text1);
-        text2 = (TextView)findViewById(R.id.text2);
-        text3 = (TextView)findViewById(R.id.text3);
-        text4 = (TextView)findViewById(R.id.text4);
-        text5 = (TextView)findViewById(R.id.text5);
-        text6 = (TextView)findViewById(R.id.text6);
-        text7 = (TextView)findViewById(R.id.text7);
-        text8 = (TextView)findViewById(R.id.text8);
+        layoutPlato = (LinearLayout)findViewById(R.id.layoutPlato);
+
+        textG1 = (TextView)findViewById(R.id.textG1);
+        textG1_1 = (TextView)findViewById(R.id.textG1_1);
+        textG1_2 = (TextView)findViewById(R.id.textG1_2);
+        textG2 = (TextView)findViewById(R.id.textG2);
+        textG2_1 = (TextView)findViewById(R.id.textG2_1);
+        textG2_2 = (TextView)findViewById(R.id.textG2_2);
+        textG3 = (TextView)findViewById(R.id.textG3);
+        textG3_1 = (TextView)findViewById(R.id.textG3_1);
+        textG3_2 = (TextView)findViewById(R.id.textG3_2);
+        textG3_3 = (TextView)findViewById(R.id.textG3_3);
+
+        textGrupo1 = (TextView)findViewById(R.id.textGrupo1);
+        textGrupo2 = (TextView)findViewById(R.id.textGrupo2);
+        textGrupo3 = (TextView)findViewById(R.id.textGrupo3);
 
         //Setting touch and drag listeners
-        text1.setOnTouchListener(this);
-        text2.setOnTouchListener(this);
-        text3.setOnTouchListener(this);
-        text4.setOnTouchListener(this);
-        text5.setOnTouchListener(this);
-        text6.setOnTouchListener(this);
-        text7.setOnDragListener(this);
-        text8.setOnDragListener(this);
+        textG1.setOnTouchListener(this);
+        textG1_1.setOnTouchListener(this);
+        textG1_2.setOnTouchListener(this);
+        textG2.setOnTouchListener(this);
+        textG2_1.setOnTouchListener(this);
+        textG2_2.setOnTouchListener(this);
+        textG3.setOnTouchListener(this);
+        textG3_1.setOnTouchListener(this);
+        textG3_2.setOnTouchListener(this);
+        textG3_3.setOnTouchListener(this);
+
+        textGrupo1.setOnDragListener(this);
+        textGrupo2.setOnDragListener(this);
+        textGrupo3.setOnDragListener(this);
     }
 }
 

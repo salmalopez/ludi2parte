@@ -1,20 +1,21 @@
-package actividad1;
+package com.ludi.tt_ludi;
 
 /**
- * Created by Salma on 15/03/16.
+ * Created by Salma on 10/04/16.
  */
-public class Pregunta {
+
+public class PreguntasCuestionario1 {
     int correcta;
     String  pregunta;
-    String[] respuesta = new String[2];
+    String[] respuesta = new String[3];
     public static int contador = 0;
 
-    public Pregunta[] getPreguntas(){
+    public PreguntasCuestionario1[] getPreguntas(){
 
-        Pregunta preguntas[] = new Pregunta[10];
+        PreguntasCuestionario1 preguntas[] = new PreguntasCuestionario1[10];
 
         //Pregunta no. 1
-        Pregunta p1 = new Pregunta();
+        PreguntasCuestionario1 p1 = new PreguntasCuestionario1();
         p1.pregunta = "¿Por qué los niños deben consumir frutas y verduras?";
         p1.correcta = 1;
         p1.respuesta[0] = "Porque nuestra mama nos lo indica.";
@@ -23,7 +24,7 @@ public class Pregunta {
         preguntas[0] = p1;
 
         //Pregunta no. 2
-        Pregunta p2 = new Pregunta();
+        PreguntasCuestionario1 p2 = new PreguntasCuestionario1();
         p2.pregunta = "Tienen un alto contenido de agua:";
         p2.correcta = 2;
         p2.respuesta[0] = "Frutas.";
@@ -32,7 +33,7 @@ public class Pregunta {
         preguntas[1] = p2;
 
         //Pregunta no. 3
-        Pregunta p3 = new Pregunta();
+        PreguntasCuestionario1 p3 = new PreguntasCuestionario1();
         p3.pregunta = "Las frutas amarillas destacan en alto contenido de:";
         p3.correcta = 0;
         p3.respuesta[0] = "Vitamina A";
@@ -41,7 +42,7 @@ public class Pregunta {
         preguntas[2] = p3;
 
         //Pregunta no. 4
-        Pregunta p4 = new Pregunta();
+        PreguntasCuestionario1 p4 = new PreguntasCuestionario1();
         p4.pregunta = "Las frutas y verduras son alimentos que carecen de grasas.";
         p4.correcta = 0;
         p4.respuesta[0] = "Verdadero.";
@@ -49,7 +50,7 @@ public class Pregunta {
         preguntas[3] = p4;
 
         //Pregunta no. 5
-        Pregunta p5 = new Pregunta();
+        PreguntasCuestionario1 p5 = new PreguntasCuestionario1();
         p5.pregunta = "¿Cuáles de las siguientes opciones contienen únicamente frutas?";
         p5.correcta = 0;
         p5.respuesta[0] = "Naranja, plátano, melón, aguacate, manzana.";
@@ -58,7 +59,7 @@ public class Pregunta {
         preguntas[4] = p5;
 
         //Pregunta no. 6
-        Pregunta p6 = new Pregunta();
+        PreguntasCuestionario1 p6 = new PreguntasCuestionario1();
         p6.pregunta = "¿Para qué nos ayuda la Vitamina C?";
         p6.correcta = 2;
         p6.respuesta[0] = "Aumenta la posibilidad de enfermarnos.";
@@ -67,7 +68,7 @@ public class Pregunta {
         preguntas[5] = p6;
 
         //Pregunta no. 7
-        Pregunta p7 = new Pregunta();
+        PreguntasCuestionario1 p7 = new PreguntasCuestionario1();
         p7.pregunta = "Las frutas y verduras no contienen vitaminas y minerales.";
         p7.correcta = 1;
         p7.respuesta[0] = "Verdadero.";
@@ -75,7 +76,7 @@ public class Pregunta {
         preguntas[6] = p7;
 
         //Pregunta no. 8
-        Pregunta p8 = new Pregunta();
+        PreguntasCuestionario1 p8 = new PreguntasCuestionario1();
         p8.pregunta = "¿Cuáles de los siguientes alimentos son ricos en Vitamina C?";
         p8.correcta = 1;
         p8.respuesta[0] = "Plátano, manzana, acelgas.";
@@ -85,7 +86,7 @@ public class Pregunta {
 
 
         //Pregunta no. 9
-        Pregunta p9 = new Pregunta();
+        PreguntasCuestionario1 p9 = new PreguntasCuestionario1();
         p9.pregunta = "¿Cuántas piezas de frutas y verduras se recomiendan consumir al día?";
         p9.correcta = 1;
         p9.respuesta[0] = "2 piezas.";
@@ -94,7 +95,7 @@ public class Pregunta {
         preguntas[8] = p9;
 
         //Pregunta no. 10
-        Pregunta p10 = new Pregunta();
+        PreguntasCuestionario1 p10 = new PreguntasCuestionario1();
         p10.pregunta = "Las frutas y verduras proporcionan fibra.";
         p10.correcta = 0;
         p10.respuesta[0] = "Verdadero.";
@@ -103,7 +104,6 @@ public class Pregunta {
 
 
         return preguntas;
-
     }
 
     public String[] getRespuesta(){
@@ -113,11 +113,5 @@ public class Pregunta {
     public int getIdRespuestaCorrecta(){
         return correcta;
     }
-
-
-
-
-
-
 
 }

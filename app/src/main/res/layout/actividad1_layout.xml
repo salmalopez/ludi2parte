@@ -5,7 +5,7 @@
     android:layout_height="fill_parent"
     android:orientation="vertical"
     android:weightSum="1"
-    android:background="#a96ed5"
+    android:background="#fdfcfe"
     android:gravity="center_horizontal"
     android:paddingBottom="0dp">
 
@@ -16,46 +16,66 @@
         android:text="@string/txtPregunta"
         android:id="@+id/txtPregunta"
         android:gravity="center"
-        android:layout_marginTop="100dp"
-        android:layout_weight="0.13"
-        android:textColor="#ffffff"
+        android:textColor="#030000"
         android:textSize="30dp"
-        android:paddingBottom="20dp" />
+        android:layout_marginTop="60dp"
+        android:paddingBottom="40dp"
+        android:layout_gravity="top"
+        android:layout_marginBottom="30dp" />
 
     <LinearLayout
-        android:layout_width="1200dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="1"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="150dp">
+        android:paddingBottom="40dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:layout_gravity="center">
+
 
         <Button
-            android:layout_width="50dp"
+            android:layout_width="200dp"
             android:layout_height="200dp"
             android:text="@string/btnRespuesta1"
             android:id="@+id/btnRespuesta1"
             android:layout_row="0"
             android:layout_column="3"
             android:layout_weight="0.37"
-            android:layout_marginLeft="300dp"
-            android:layout_marginRight="50dp" />
+            android:layout_gravity="center"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp" />
+
+        <ImageView
+            android:layout_width="500dp"
+            android:layout_height="400dp"
+            android:id="@+id/imagenJarra"
+            android:layout_weight="0.37"
+            android:layout_gravity="center"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp" />
 
         <Button
-            android:layout_width="50dp"
+            android:layout_width="200dp"
             android:layout_height="200dp"
             android:text="@string/btnRespuesta2"
             android:id="@+id/btnRespuesta2"
             android:layout_row="0"
             android:layout_column="2"
-            android:layout_weight="0.39" />
+            android:layout_weight="0.39"
+            android:layout_gravity="center"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_weight="0.31">
 
         <Button
             android:layout_width="80dp"

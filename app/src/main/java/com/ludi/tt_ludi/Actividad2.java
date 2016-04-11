@@ -59,10 +59,11 @@ public class Actividad2 extends AppCompatActivity implements View.OnClickListene
         btnReinicio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                for(int y=0; y < cartas.length; y++){
-                    cartas[y].setCaraVisible(false);
-                }
+                finish();
+                Intent intentAct2  = new Intent(Actividad2.this, Actividad2.class);
+                startActivity(intentAct2);
             }
+
         });
 
         final int tam =  4;
@@ -74,6 +75,7 @@ public class Actividad2 extends AppCompatActivity implements View.OnClickListene
                 fila.addView(cartas[(y * tam) + x].boton);
                 fila.setBackgroundColor(Color.parseColor("#FFFFFF"));
             }
+
             tabla.addView(fila);
         }
         tabla.addView(btnReinicio);
@@ -104,7 +106,7 @@ public class Actividad2 extends AppCompatActivity implements View.OnClickListene
 
             this.boton.setScaleType(ImageView.ScaleType.FIT_XY);
             this.boton.setImageResource(R.drawable.pregunta);
-            this.boton.setBackgroundColor(Color.parseColor("#880E4F"));
+            this.boton.setBackgroundColor(Color.parseColor("#FFFFFF"));
             this.boton.setOnClickListener(this);
         }
 

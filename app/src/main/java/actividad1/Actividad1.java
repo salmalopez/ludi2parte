@@ -56,14 +56,12 @@ public class Actividad1 extends Activity implements Animation.AnimationListener,
 
         btnRespuesta1 = (Button) findViewById(R.id.btnRespuesta1);
         btnRespuesta1.setText(preguntas[idpregunta].respuesta[0]);
-        Drawable image=(Drawable)getResources().getDrawable(PREGUNTA_RESOURCES[respuesta]);
-        btnRespuesta1.setBackground(image);
+
 
 
         btnRespuesta2 = (Button) findViewById(R.id.btnRespuesta2);
         btnRespuesta2.setText(preguntas[idpregunta].respuesta[1]);
-        Drawable image2=(Drawable)getResources().getDrawable(PREGUNTA_RESOURCES[respuesta+1]);
-        btnRespuesta2.setBackground(image2);
+
 
         btnSiguiente = (Button) findViewById(R.id.btnSiguiente);
 
