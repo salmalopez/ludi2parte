@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 /**
@@ -33,7 +34,6 @@ public class CuestionarioAct1  extends AppCompatActivity implements View.OnClick
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // TODO Auto-generated method stub
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cuestionario1_layout);
@@ -135,25 +135,25 @@ public class CuestionarioAct1  extends AppCompatActivity implements View.OnClick
     @Override
     public void onClick(View v) {
 
-        if(rb1_1.isChecked())
+        if(((RadioButton)((RadioGroup)findViewById(R.id.grpP1)).getChildAt(preguntas[0].correcta)).isChecked())
             correctas++;
-        if(rb2_2.isChecked())
+        if(((RadioButton)((RadioGroup)findViewById(R.id.grpP2)).getChildAt(preguntas[1].correcta)).isChecked())
             correctas++;
-        if(rb3_2.isChecked())
+        if(((RadioButton)((RadioGroup)findViewById(R.id.grpP3)).getChildAt(preguntas[2].correcta)).isChecked())
             correctas++;
-        if(rb4_0.isChecked())
+        if(((RadioButton)((RadioGroup)findViewById(R.id.grpP4)).getChildAt(preguntas[3].correcta)).isChecked())
             correctas++;
-        if(rb5_0.isChecked())
+        if(((RadioButton)((RadioGroup)findViewById(R.id.grpP5)).getChildAt(preguntas[4].correcta)).isChecked())
             correctas++;
-        if(rb6_2.isChecked())
+        if(((RadioButton)((RadioGroup)findViewById(R.id.grpP6)).getChildAt(preguntas[5].correcta)).isChecked())
             correctas++;
-        if(rb7_1.isChecked())
+        if(((RadioButton)((RadioGroup)findViewById(R.id.grpP7)).getChildAt(preguntas[6].correcta)).isChecked())
             correctas++;
-        if(rb8_1.isChecked())
+        if(((RadioButton)((RadioGroup)findViewById(R.id.grpP8)).getChildAt(preguntas[7].correcta)).isChecked())
             correctas++;
-        if(rb9_1.isChecked())
+        if(((RadioButton)((RadioGroup)findViewById(R.id.grpP9)).getChildAt(preguntas[8].correcta)).isChecked())
             correctas++;
-        if(rb10_0.isChecked())
+        if(((RadioButton)((RadioGroup)findViewById(R.id.grpP10)).getChildAt(preguntas[9].correcta)).isChecked())
             correctas++;
 
         System.out.println("Las respuestas correctas fueron "+correctas);

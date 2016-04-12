@@ -50,9 +50,7 @@
             android:name=".Actividad1"
             android:configChanges="orientation"
             android:screenOrientation="landscape" />
-        <activity android:name=".CuestionarioAct1" />
         <activity android:name=".Actividad2" />
-        <activity android:name=".CuestionarioAct2" />
         <activity android:name=".Actividad3" />
         <activity android:name=".Libro" />
         <activity
@@ -70,7 +68,14 @@
             android:label="@string/title_activity_instrucciones_act3"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Noticias" />
-        <activity android:name=".Actividad4"></activity>
+        <activity android:name=".Actividad4" />
+
+        <activity android:name=".CuestionarioAct1" />
+        <activity android:name=".CuestionarioAct2" />
+        <activity android:name=".CuestionarioAct3" />
+        <activity android:name=".CuestionarioAct4" />
+        <activity android:name=".CuestionarioAct5" />
+
     </application>
 
 </manifest>
