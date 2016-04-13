@@ -23,12 +23,13 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="En la siguiente actividad se van a mostrar una serie de preguntas,deberas indicar cual de las imagenes es la respuesta correcta"
+        android:text="Elige la imagen con la respuesta correcta para llenar los niveles de la jarra del buen beber"
         android:id="@+id/txtIntruciones"
         android:textSize="25dp"
         android:textColor="#000000"
         android:paddingTop="30dp"
-        android:layout_marginBottom="0dp" />
+        android:layout_marginBottom="0dp"
+        android:layout_gravity="center" />
 
     <Button
         android:layout_width="615dp"
@@ -41,14 +42,26 @@
         android:paddingBottom="100dp"
         android:layout_weight="0.96" />
 
-    <Button
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:id="@+id/btn_comenzar"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/btn_ra"
-        android:background="@drawable/inicio"
-        android:layout_gravity="center|right" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/btn_regresar"
+            android:background="@drawable/regreso"
+            android:layout_marginRight="1000dp" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/btn_comenzar"
+            android:background="@drawable/inicio" />
+    </LinearLayout>
+
+
 
 
 </LinearLayout>

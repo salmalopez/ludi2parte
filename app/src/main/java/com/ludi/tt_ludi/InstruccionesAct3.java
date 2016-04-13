@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class InstruccionesAct3  extends AppCompatActivity implements View.OnClickListener{
 
-    Button btn_ra,btn_comenzar;
+    Button btn_ra,btn_comenzar,btn_regresar;
     TextView txtTittle;
 
     @Override
@@ -31,6 +31,10 @@ public class InstruccionesAct3  extends AppCompatActivity implements View.OnClic
         btn_comenzar = (Button) findViewById (R.id.btn_comenzar);
         btn_comenzar.setTypeface(myTypeFace2);
         btn_comenzar.setOnClickListener(this);
+
+        btn_regresar = (Button) findViewById (R.id.btn_regresar);
+        btn_regresar.setTypeface(myTypeFace2);
+        btn_regresar.setOnClickListener(this);
     }
 
     @Override
@@ -45,6 +49,10 @@ public class InstruccionesAct3  extends AppCompatActivity implements View.OnClic
             case (R.id.btn_comenzar):
                 Intent intentAct2 = new Intent(InstruccionesAct3.this, Actividad3.class);
                 startActivity(intentAct2);
+                break;
+
+            case (R.id.btn_regresar):
+                finish();
                 break;
         }
     }

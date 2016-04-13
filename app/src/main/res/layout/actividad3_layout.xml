@@ -14,178 +14,176 @@
 <LinearLayout
     android:layout_width="1250dp"
     android:layout_height="526dp"
-    android:orientation="horizontal"
-    android:weightSum="1">
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:background="#FFFFFF"
+    android:baselineAligned="true">
 
     <LinearLayout
-        android:layout_width="246dp"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
         android:baselineAligned="false"
+        android:gravity="center"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:background="@drawable/brocolidrag"
+            android:text="BR"
+            android:layout_margin="10dp"
+            android:id="@+id/textG1"
+            android:layout_gravity="center|top"
+            android:textIsSelectable="false"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:background="@drawable/tortilla"
+            android:text="TO"
+            android:layout_margin="10dp"
+            android:textSize="15dp"
+            android:id="@+id/textG2_1"
+            android:textColor="#ffffff"
+            android:layout_weight="0.03" />
+
+        <TextView
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:background="@drawable/huevodrag"
+            android:text="H"
+            android:layout_margin="10dp"
+            android:textSize="15dp"
+            android:id="@+id/textG3"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:background="@drawable/naranjadrag"
+            android:text="NA"
+            android:layout_margin="10dp"
+            android:textSize="15dp"
+            android:id="@+id/textG1_2"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:background="@drawable/rabano"
+            android:text="RA"
+            android:layout_margin="10dp"
+            android:textSize="15dp"
+            android:id="@+id/textG2_2"
+            android:textColor="#ffffff" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
         android:gravity="center">
+
+        <TextView
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:background="@drawable/pan"
+            android:text="PA"
+            android:layout_margin="10dp"
+            android:textSize="15dp"
+            android:id="@+id/textG2"
+            android:onClick="onTouch"
+            android:layout_weight="0.03"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:background="@drawable/jitomatedrag"
+            android:text="JI"
+            android:layout_margin="10dp"
+            android:textSize="15dp"
+            android:id="@+id/textG1_1"
+            android:textColor="#ffffff"
+            android:layout_weight="0.03" />
 
         <TextView
             android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:background="@drawable/fruta1"
-            android:text="P"
+            android:layout_height="57dp"
+            android:background="@drawable/quesodrag"
+            android:text="QU"
             android:layout_margin="10dp"
-            android:textSize="35sp"
-            android:id="@+id/textG1"
-            android:layout_gravity="center|top" />
+            android:textSize="15dp"
+            android:id="@+id/textG3_2"
+            android:layout_weight="0.03"
+            android:textColor="#ffffff" />
 
         <TextView
-            android:layout_width="150dp"
-            android:layout_height="84dp"
-            android:text="fruta 2"
-            android:layout_margin="10dp"
-            android:textSize="35sp"
-            android:id="@+id/textG1_1"
-            />
-
-        <TextView
-            android:layout_width="150dp"
+            android:layout_width="88dp"
             android:layout_height="88dp"
-            android:text="fruta 3"
+            android:background="@drawable/frijol"
+            android:text="FR"
             android:layout_margin="10dp"
-            android:textSize="35sp"
-            android:id="@+id/textG1_2"
-            />
+            android:textSize="15dp"
+            android:id="@+id/textG3_3"
+            android:textColor="#ffffff" />
 
         <TextView
-            android:layout_width="150dp"
+            android:layout_width="88dp"
             android:layout_height="88dp"
-            android:text="carne 2"
+            android:background="@drawable/carnedrag"
+            android:text="CARNE"
             android:layout_margin="10dp"
-            android:textSize="35sp"
-            android:id="@+id/textG3" />
-
-        <TextView
-            android:layout_width="150dp"
-            android:layout_height="88dp"
-            android:text="carne 3"
-            android:layout_margin="10dp"
-            android:textSize="35sp"
-            android:id="@+id/textG3_1" />
+            android:textSize="15dp"
+            android:id="@+id/textG3_1"
+            android:textColor="#ffffff"
+            android:layout_weight="0.03" />
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="602dp"
-        android:layout_height="match_parent"
-        android:background="@drawable/plato"
-        android:weightSum="1"
-        android:id="@+id/layoutPlato">
+
+
 
         <LinearLayout
-            android:layout_width="361dp"
-            android:layout_height="347dp"
-
-            android:orientation="vertical"
-            android:weightSum="1"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:paddingBottom="50dp"
-            android:layout_marginTop="150dp"
-            android:gravity="center"
-            android:layout_marginBottom="30dp">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
 
             <TextView
-                android:layout_width="213dp"
-                android:layout_height="120dp"
+                android:layout_width="400dp"
+                android:layout_height="350dp"
+                android:background="@drawable/bolsa1"
                 android:text="GRUPO1"
                 android:textSize="35sp"
                 android:id="@+id/textGrupo1"
-                android:layout_alignParentTop="true"
-                android:layout_alignEnd="@+id/textGrupo3"
-                android:layout_alignStart="@+id/textGrupo2"
-                android:layout_above="@+id/textGrupo2"
-                android:layout_marginTop="40dp"
-                android:layout_marginLeft="90dp" />
+                android:textColor="#ffffff" />
+
 
             <TextView
-                android:layout_width="168dp"
-                android:layout_height="120dp"
-                android:text="GRUPO3"
-                android:textSize="35sp"
-                android:id="@+id/textGrupo3"
-                android:layout_centerVertical="true"
-                android:layout_alignParentEnd="true"
-                android:paddingTop="100dp"
-                android:layout_gravity="right"
-                android:layout_marginTop="20dp"
-                android:autoText="true" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="196dp"
-            android:layout_height="match_parent">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="360dp"
+                android:layout_width="400dp"
+                android:layout_height="350dp"
+                android:background="@drawable/bolsa2"
                 android:text="GRUPO2"
                 android:textSize="35sp"
                 android:id="@+id/textGrupo2"
-                android:layout_alignTop="@+id/textGrupo3"
-                android:layout_alignParentStart="true"
-                android:layout_gravity="center|bottom" />
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:layout_width="400dp"
+                android:layout_height="350dp"
+                android:background="@drawable/bolsa3"
+                android:text="GRUPO3"
+                android:textSize="35sp"
+                android:id="@+id/textGrupo3"
+                android:textColor="#ffffff" />
+
 
         </LinearLayout>
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="262dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:weightSum="1"
-        android:gravity="center">
-
-        <TextView
-            android:layout_width="150dp"
-            android:layout_height="87dp"
-            android:text="cereal 1"
-            android:layout_margin="10dp"
-            android:textSize="35sp"
-            android:id="@+id/textG2"
-            android:onClick="onTouch"/>
-
-        <TextView
-            android:layout_width="150dp"
-            android:layout_height="84dp"
-            android:text="cereal 2"
-            android:layout_margin="10dp"
-            android:textSize="35sp"
-            android:id="@+id/textG2_1" />
-
-        <TextView
-            android:layout_width="150dp"
-            android:layout_height="88dp"
-            android:text="cereal 3"
-            android:layout_margin="10dp"
-            android:textSize="35sp"
-            android:id="@+id/textG2_2" />
-
-        <TextView
-            android:layout_width="150dp"
-            android:layout_height="88dp"
-            android:text="carne 1"
-            android:layout_margin="10dp"
-            android:textSize="35sp"
-            android:id="@+id/textG3_2" />
-
-        <TextView
-            android:layout_width="150dp"
-            android:layout_height="88dp"
-            android:text="carne 4"
-            android:layout_margin="10dp"
-            android:textSize="35sp"
-            android:id="@+id/textG3_3" />
-
-    </LinearLayout>
 
 
 

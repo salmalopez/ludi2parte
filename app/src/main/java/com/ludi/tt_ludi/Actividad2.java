@@ -2,6 +2,7 @@ package com.ludi.tt_ludi;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -46,25 +47,47 @@ public class Actividad2 extends AppCompatActivity implements View.OnClickListene
         setContentView(R.layout.actividad2_layout);
         final TableLayout tabla = new TableLayout(this);
 
-        tabla.setBackgroundColor(Color.parseColor("#F48FB1"));
+        tabla.setBackgroundColor(Color.parseColor("#C2185B"));
+
+        Button btnEspacio = new Button(this);
+        Drawable image = (Drawable)getResources().getDrawable(R.drawable.espaciomem);
+        btnEspacio.setBackground(image);
 
         Button btnSiguiente = new Button(this);
-        btnSiguiente.setText("CUESTIONARIO");
-        btnSiguiente.setBackgroundColor(Color.parseColor("#006064"));
+        Drawable image4 = (Drawable)getResources().getDrawable(R.drawable.cuestionariomem);
+        btnSiguiente.setBackground(image4);
         btnSiguiente.setOnClickListener(this);
 
         Button btnReinicio = new Button(this);
-        btnReinicio.setText("REINICO");
-        btnReinicio.setBackgroundColor(Color.parseColor("#006064"));
+        Drawable image2 = (Drawable)getResources().getDrawable(R.drawable.reiniciomem);
+        btnReinicio.setBackground(image2);
         btnReinicio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
-                Intent intentAct2  = new Intent(Actividad2.this, Actividad2.class);
+                Intent intentAct2 = new Intent(Actividad2.this, Actividad2.class);
                 startActivity(intentAct2);
             }
 
         });
+
+        Button btnRegreso = new Button(this);
+        Drawable image3 = (Drawable)getResources().getDrawable(R.drawable.regresomem);
+        btnRegreso.setBackground(image3);
+        btnRegreso.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+
+        });
+
+        final TableRow fila2 = new TableRow(this);
+        fila2.addView(btnRegreso);
+        fila2.addView(btnEspacio);
+        fila2.addView(btnSiguiente);
+        fila2.addView(btnReinicio);
+
 
         final int tam =  4;
         cartas = crearCeldas(tam*tam);
@@ -73,13 +96,12 @@ public class Actividad2 extends AppCompatActivity implements View.OnClickListene
             final TableRow fila = new TableRow(this);
             for(int x=0; x<tam; x++){
                 fila.addView(cartas[(y * tam) + x].boton);
-                fila.setBackgroundColor(Color.parseColor("#FFFFFF"));
+                fila.setBackgroundColor(Color.parseColor("#C2185B"));
             }
 
             tabla.addView(fila);
         }
-        tabla.addView(btnReinicio);
-        tabla.addView(btnSiguiente);
+        tabla.addView(fila2);
         setContentView(tabla);
 
 
@@ -102,11 +124,11 @@ public class Actividad2 extends AppCompatActivity implements View.OnClickListene
         Carta(final int imagen){
             this.imagen = imagen;
             this.boton = new ImageButton(Actividad2.this);
-            this.boton.setLayoutParams(new TableRow.LayoutParams(320, 155));
+            this.boton.setLayoutParams(new TableRow.LayoutParams(180, 140));
 
             this.boton.setScaleType(ImageView.ScaleType.FIT_XY);
             this.boton.setImageResource(R.drawable.pregunta);
-            this.boton.setBackgroundColor(Color.parseColor("#FFFFFF"));
+            this.boton.setBackgroundColor(Color.parseColor("#C2185B"));
             this.boton.setOnClickListener(this);
         }
 

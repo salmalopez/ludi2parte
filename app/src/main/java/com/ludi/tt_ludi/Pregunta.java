@@ -71,7 +71,7 @@ public class Pregunta {
 
         //Pregunta no. 8
         Pregunta p8 = new Pregunta();
-        p8.pregunta = "PREGUNTA 8";
+        p8.pregunta = "CONCLUISTE LA ACTIVIDAD";
         p8.correcta = 0;
         p8.respuesta[p8.correcta] = "RPC8";
         p8.respuesta[1] = "RP8";

@@ -6,18 +6,24 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.DragEvent;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 /**
  * Created by Salma on 17/03/16.
  */
-public class Actividad3 extends AppCompatActivity implements View.OnTouchListener,View.OnDragListener {
+public class Actividad3 extends AppCompatActivity implements View.OnTouchListener,View.OnDragListener, View.OnClickListener {
 
     private TextView textG1,textG1_1,textG1_2,textG2,textG2_1,textG2_2,textG3,textG3_1,textG3_2,textG3_3, textGrupo1,textGrupo2,textGrupo3;
 
     LinearLayout layoutPlato;
 
+    Button btn_regresar;
+
+    Animation error,bounce;
 
     //When touched text gets dropped into either text4 or text5 or text6 then this method will be called
     @Override
@@ -44,24 +50,32 @@ public class Actividad3 extends AppCompatActivity implements View.OnTouchListene
                 }else{
                     if(dropped.getText().toString().equals(textG1.getText())){
                         textG1.setVisibility(View.VISIBLE);
+                        textG1.startAnimation(error);
                         System.out.println("no va aqui");
+
                     }else if (dropped.getText().toString().equals(textG1_1.getText())){
                         textG1_1.setVisibility(View.VISIBLE);
+                        textG1_1.startAnimation(error);
                         System.out.println("no va aqui");
                     }else if (dropped.getText().toString().equals(textG1_2.getText())){
                         textG1_2.setVisibility(View.VISIBLE);
+                        textG1_2.startAnimation(error);
                         System.out.println("no va aqui");
                     }else if (dropped.getText().toString().equals(textG3.getText())){
                         textG3.setVisibility(View.VISIBLE);
+                        textG3.startAnimation(error);
                         System.out.println("no va aqui");
                     }else if (dropped.getText().toString().equals(textG3_1.getText())){
                         textG3_1.setVisibility(View.VISIBLE);
+                        textG3_1.startAnimation(error);
                         System.out.println("no va aqui");
                     }else if (dropped.getText().toString().equals(textG3_2.getText())){
                         textG3_2.setVisibility(View.VISIBLE);
+                        textG3_2.startAnimation(error);
                         System.out.println("no va aqui");
                     }else if (dropped.getText().toString().equals(textG3_3.getText())){
                         textG3_3.setVisibility(View.VISIBLE);
+                        textG3_3.startAnimation(error);
                         System.out.println("no va aqui");
                     }
                 }
@@ -79,24 +93,31 @@ public class Actividad3 extends AppCompatActivity implements View.OnTouchListene
                 }else{
                     if(dropped.getText().toString().equals(textG2.getText())){
                         textG2.setVisibility(View.VISIBLE);
+                        textG2.startAnimation(error);
                         System.out.println("no va aqui");
                     }else if (dropped.getText().toString().equals(textG2_1.getText())){
                         textG2_1.setVisibility(View.VISIBLE);
+                        textG2_1.startAnimation(error);
                         System.out.println("no va aqui");
                     }else if (dropped.getText().toString().equals(textG2_2.getText())){
                         textG2_2.setVisibility(View.VISIBLE);
+                        textG2_2.startAnimation(error);
                         System.out.println("no va aqui");
                     }else if (dropped.getText().toString().equals(textG3.getText())){
                         textG3.setVisibility(View.VISIBLE);
+                        textG3.startAnimation(error);
                         System.out.println("no va aqui");
                     }else if (dropped.getText().toString().equals(textG3_1.getText())){
                         textG3_1.setVisibility(View.VISIBLE);
+                        textG3_1.startAnimation(error);
                         System.out.println("no va aqui");
                     }else if (dropped.getText().toString().equals(textG3_2.getText())){
                         textG3_2.setVisibility(View.VISIBLE);
+                        textG3_2.startAnimation(error);
                         System.out.println("no va aqui");
                     }else if (dropped.getText().toString().equals(textG3_3.getText())){
                         textG3_3.setVisibility(View.VISIBLE);
+                        textG3_3.startAnimation(error);
                         System.out.println("no va aqui");
                     }
                 }
@@ -109,21 +130,27 @@ public class Actividad3 extends AppCompatActivity implements View.OnTouchListene
                 }else{
                     if(dropped.getText().toString().equals(textG1.getText())){
                         textG1.setVisibility(View.VISIBLE);
+                        textG1.startAnimation(error);
                         System.out.println("no va aqui");
                     }else if (dropped.getText().toString().equals(textG1_1.getText())){
                         textG1_1.setVisibility(View.VISIBLE);
+                        textG1_1.startAnimation(error);
                         System.out.println("no va aqui");
                     }else if (dropped.getText().toString().equals(textG1_2.getText())){
                         textG1_2.setVisibility(View.VISIBLE);
+                        textG1_2.startAnimation(error);
                         System.out.println("no va aqui");
                     }else if (dropped.getText().toString().equals(textG2.getText())){
                         textG2.setVisibility(View.VISIBLE);
+                        textG2.startAnimation(error);
                         System.out.println("no va aqui");
                     }else if (dropped.getText().toString().equals(textG2_1.getText())){
                         textG2_1.setVisibility(View.VISIBLE);
+                        textG2_1.startAnimation(error);
                         System.out.println("no va aqui");
                     }else if (dropped.getText().toString().equals(textG2_2.getText())){
                         textG2_2.setVisibility(View.VISIBLE);
+                        textG2_2.startAnimation(error);
                         System.out.println("no va aqui");
                     }
                 }
@@ -166,6 +193,17 @@ public class Actividad3 extends AppCompatActivity implements View.OnTouchListene
         textG3_1.setVisibility(View.VISIBLE);
         textG3_2.setVisibility(View.VISIBLE);
         textG3_3.setVisibility(View.VISIBLE);
+
+        textG1.startAnimation(bounce);
+        textG1_1.startAnimation(bounce);
+        textG1_2.startAnimation(bounce);
+        textG2.startAnimation(bounce);
+        textG2_1.startAnimation(bounce);
+        textG2_2.startAnimation(bounce);
+        textG3.startAnimation(bounce);
+        textG3_1.startAnimation(bounce);
+        textG3_2.startAnimation(bounce);
+        textG3_3.startAnimation(bounce);
     }
 
 
@@ -186,7 +224,14 @@ public class Actividad3 extends AppCompatActivity implements View.OnTouchListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.actividad3_layout);
 
-        layoutPlato = (LinearLayout)findViewById(R.id.layoutPlato);
+        error = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.error);
+
+        bounce = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.bounce);
+
+        btn_regresar = (Button)findViewById(R.id.btn_regresar);
+        btn_regresar.setOnClickListener(this);
 
         textG1 = (TextView)findViewById(R.id.textG1);
         textG1_1 = (TextView)findViewById(R.id.textG1_1);
@@ -218,6 +263,12 @@ public class Actividad3 extends AppCompatActivity implements View.OnTouchListene
         textGrupo1.setOnDragListener(this);
         textGrupo2.setOnDragListener(this);
         textGrupo3.setOnDragListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        finish();
+
     }
 }
 

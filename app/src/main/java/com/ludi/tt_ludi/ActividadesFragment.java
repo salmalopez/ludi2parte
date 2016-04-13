@@ -30,7 +30,7 @@ public class ActividadesFragment extends Fragment implements View.OnClickListene
     private String mParam1;
     private String mParam2;
 
-    Button btn_act1, btn_act2, btn_act3,btn_act4;
+    Button btn_act1, btn_act2, btn_act3,btn_act4,btn_act5;
 
     private OnFragmentInteractionListener mListener;
 
@@ -97,6 +97,10 @@ public class ActividadesFragment extends Fragment implements View.OnClickListene
         btn_act4.setTypeface(myTypeFace2);
         btn_act4.setOnClickListener(this);
 
+        btn_act5 = (Button) view.findViewById(R.id.btn_act5);
+        btn_act5.setTypeface(myTypeFace2);
+        btn_act5.setOnClickListener(this);
+
         return view;
     }
 
@@ -129,18 +133,26 @@ public class ActividadesFragment extends Fragment implements View.OnClickListene
         switch (v.getId()) {
 
             case (R.id.btn_act1):
-                Intent intentAct1 = new Intent(getContext(), InstruccionesAct1.class);
-                startActivity(intentAct1);
+
                 break;
 
             case (R.id.btn_act2):
+
+                break;
+
+            case (R.id.btn_act3):
                 Intent intentAct2  = new Intent(getContext(), InstruccionesAct2.class);
                 startActivity(intentAct2);
                 break;
 
-            case (R.id.btn_act3):
+            case (R.id.btn_act4):
                 Intent intentAct3 = new Intent(getContext(), InstruccionesAct3.class);
                 startActivity(intentAct3);
+                break;
+
+            case (R.id.btn_act5):
+                Intent intentAct1 = new Intent(getContext(), InstruccionesAct1.class);
+                startActivity(intentAct1);
                 break;
         }
     }

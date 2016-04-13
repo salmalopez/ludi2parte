@@ -7,42 +7,54 @@
     <!-- TODO: Update blank fragment layout -->
 
     <Button
-        android:layout_width="620dp"
+        android:layout_width="400dp"
         android:layout_height="325dp"
         android:id="@+id/btn_act1"
         android:layout_gravity="left|top"
-        android:text="@string/btn_act1"
+        android:text="FRUTAS Y VERDURAS"
         android:background="#31c242"
         android:textColor="#ffffff"
-        android:textSize="100dp" />
+        android:textSize="60dp" />
 
     <Button
-        android:layout_width="620dp"
+        android:layout_width="400dp"
         android:layout_height="325dp"
         android:id="@+id/btn_act2"
-        android:layout_gravity="right|top"
-        android:text="@string/btn_act2"
-        android:background="#eb813a"
-        android:textSize="100dp"
+        android:layout_gravity="center_horizontal|top"
+        android:text="CEREALES Y TUBERCULOS"
+        android:background="#f2d638"
+        android:textSize="60dp"
         android:textColor="#ffffff" />
 
     <Button
-        android:layout_width="620dp"
+        android:layout_width="400dp"
         android:layout_height="325dp"
         android:id="@+id/btn_act3"
-        android:layout_gravity="left|bottom"
-        android:text="@string/btn_act3"
-        android:background="#f2d638"
+        android:layout_gravity="right|top"
+        android:text="ALIMENTOS DE ORIGEN ANIMAL Y LEGUMINOSAS"
         android:textColor="#ffffff"
-        android:textSize="100dp" />
+        android:textSize="50dp"
+        android:background="#c74343" />
 
     <Button
-        android:layout_width="620dp"
+        android:layout_width="600dp"
         android:layout_height="325dp"
         android:id="@+id/btn_act4"
-        android:text="@string/btn_act4"
+        android:text="EL PLATO DEL BIEN COMER"
+        android:layout_gravity="left|bottom"
+        android:background="#fa6631"
+        android:textSize="80dp"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:layout_width="600dp"
+        android:layout_height="325dp"
+        android:id="@+id/btn_act5"
+        android:text="LA JARRA DEL BUEN BEBER"
         android:layout_gravity="right|bottom"
         android:background="#36b4e6"
-        android:textSize="100dp"
+        android:textSize="80dp"
         android:textColor="#ffffff" />
+
+
 </FrameLayout>
