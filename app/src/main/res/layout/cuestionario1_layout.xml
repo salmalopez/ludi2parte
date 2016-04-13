@@ -8,7 +8,9 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:id="@+id/btnCuestionario"
     android:orientation="vertical"
-    tools:context="Actividad1.Cuestionario">
+    tools:context="com.ludi.tt_ludi.CuestionarioAct1">
+
+
 
 
     <TextView
@@ -21,7 +23,8 @@
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:id="@+id/grpP1">
 
         <RadioButton
             android:layout_width="wrap_content"
@@ -57,7 +60,8 @@
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:id="@+id/grpP2">
 
         <RadioButton
             android:layout_width="wrap_content"
@@ -94,7 +98,8 @@
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:id="@+id/grpP3">
 
         <RadioButton
             android:layout_width="wrap_content"
@@ -130,7 +135,8 @@
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:id="@+id/grpP4">
 
         <RadioButton
             android:layout_width="wrap_content"
@@ -159,7 +165,8 @@
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:id="@+id/grpP5">
 
         <RadioButton
             android:layout_width="wrap_content"
@@ -196,7 +203,8 @@
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:id="@+id/grpP6">
 
         <RadioButton
             android:layout_width="wrap_content"
@@ -232,7 +240,8 @@
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:id="@+id/grpP7">
 
         <RadioButton
             android:layout_width="wrap_content"
@@ -261,7 +270,8 @@
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:id="@+id/grpP8">
 
         <RadioButton
             android:layout_width="wrap_content"
@@ -297,7 +307,8 @@
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:id="@+id/grpP9">
 
         <RadioButton
             android:layout_width="wrap_content"
@@ -334,7 +345,8 @@
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:id="@+id/grpP10">
 
         <RadioButton
             android:layout_width="wrap_content"
@@ -363,6 +375,8 @@
         android:layout_gravity="left"
         android:layout_row="0"
         android:layout_column="3" />
+
+
 
 
 </LinearLayout>

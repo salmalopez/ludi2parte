@@ -8,12 +8,10 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-import com.ludi.tt_ludi.R;
-
 /**
  * Created by Josh on 12/04/16.
  */
-public class CuestionarioAct2 extends AppCompatActivity implements View.OnClickListener{
+public class CuestionarioAct4  extends AppCompatActivity implements View.OnClickListener{
 
     TextView txtP1, txtP2, txtP3, txtP4, txtP5, txtP6, txtP7, txtP8, txtP9, txtP10;
     Button btnFin;
@@ -29,7 +27,7 @@ public class CuestionarioAct2 extends AppCompatActivity implements View.OnClickL
             rb9_0, rb9_1, rb9_2,
             rb10_0, rb10_1;
 
-    PreguntasCuestionario2[] preguntas = new PreguntasCuestionario2().getPreguntas();
+    PreguntasCuestionario4[] preguntas = new PreguntasCuestionario4().getPreguntas();
     static int idpregunta = 0;
     static int respuesta = 0;
     int correctas = 0;
@@ -38,7 +36,7 @@ public class CuestionarioAct2 extends AppCompatActivity implements View.OnClickL
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.cuestionario2_layout);
+        setContentView(R.layout.cuestionario4_layout);
 
         //Se llenan todas las preguntas:
         txtP1 = (TextView) findViewById(R.id.txtPregunta1);
@@ -161,4 +159,5 @@ public class CuestionarioAct2 extends AppCompatActivity implements View.OnClickL
         System.out.println("Las respuestas correctas fueron "+correctas);
 
     }
+
 }

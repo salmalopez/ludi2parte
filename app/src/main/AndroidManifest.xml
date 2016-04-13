@@ -71,6 +71,10 @@
             android:configChanges="orientation"
             android:screenOrientation="landscape"/>
 
+        <activity android:name=".Actividad2" />
+        <activity android:name=".Actividad3" />
+        <activity android:name=".Libro" />
+
         <activity
             android:name=".Registro"
             android:configChanges="orientation"
@@ -92,6 +96,7 @@
 
         <activity android:name=".InstruccionesAct3"
             android:label="@string/title_activity_instrucciones_act3"
+
             android:theme="@style/AppTheme.NoActionBar"
             android:configChanges="orientation"
             android:screenOrientation="landscape"/>
@@ -99,6 +104,17 @@
         <activity android:name=".Noticias"
             android:configChanges="orientation"
             android:screenOrientation="landscape"/>
+
+            
+        <activity android:name=".Noticias" />
+        <activity android:name=".Actividad4" />
+
+        <activity android:name=".CuestionarioAct1" />
+        <activity android:name=".CuestionarioAct2" />
+        <activity android:name=".CuestionarioAct3" />
+        <activity android:name=".CuestionarioAct4" />
+        <activity android:name=".CuestionarioAct5" />
+
 
     </application>
 

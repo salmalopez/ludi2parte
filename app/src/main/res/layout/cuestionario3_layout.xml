@@ -8,7 +8,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:id="@+id/btnCuestionario"
     android:orientation="vertical"
-    tools:context="com.ludi.tt_ludi.CuestionarioAct2">
+    tools:context="com.ludi.tt_ludi.CuestionarioAct3">
 
 
 
