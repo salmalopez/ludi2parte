@@ -19,9 +19,34 @@ var World = {
 			The URL and the size are required when creating a new AR.VideoDrawable. Optionally the offsetX and offsetY parameters are set to position the video on the target. The values for the offsets are in SDUs. If you want to know more about SDUs look up the code reference.
 		*/
 		var video = new AR.VideoDrawable("assets/ludi.mp4", 0.40, {
-			offsetX: 0,
-            offsetY: 0
-		});
+							offsetX: 0,
+							offsetY: 0
+        				});
+
+        var videofyv = new AR.VideoDrawable("assets/fyv.mp4", 0.40, {
+							offsetX: 0,
+							offsetY: 0
+        				});
+
+        var videocereales = new AR.VideoDrawable("assets/cereales.mp4", 0.40, {
+                			offsetX: 0,
+                            offsetY: 0
+                		});
+
+        var videocarne = new AR.VideoDrawable("assets/carnes.mp4", 0.40, {
+                			offsetX: 0,
+                            offsetY: 0
+                		});
+
+        var videoplato = new AR.VideoDrawable("assets/plato.mp4", 0.40, {
+                			offsetX: 0,
+                            offsetY: 0
+                		});
+
+        var videojarra = new AR.VideoDrawable("assets/ludi.mp4", 0.40, {
+                 			offsetX: 0,
+                            offsetY: 0
+                 		});
 
 		/*
 			Adding the video to the image target is straight forward and similar like adding any other drawable to an image target.
@@ -31,17 +56,85 @@ var World = {
 			To start the video immediately after the target is recognized we call play inside the onEnterFieldOfVision trigger. Supplying -1 to play tells the Wikitude SDK to loop the video infinitely. Choose any positive number to re-play it multiple times.
 		*/
 		var pageOne = new AR.Trackable2DObject(this.tracker, "logo", {
-        			drawables: {
-        				cam: [video]
-        			},
-        			onEnterFieldOfVision: function onEnterFieldOfVisionFn() {
-        				video.play(1);
-        			},
-        			onExitFieldOfVision: function onExitFieldOfVisionFn () {
-                   		video.pause();
-                    }
+                			drawables: {
+                				cam: [video]
+                			},
+                			onEnterFieldOfVision: function onEnterFieldOfVisionFn() {
+                				video.play(1);
+                			},
+                			onExitFieldOfVision: function onExitFieldOfVisionFn () {
+                           		video.pause();
+                            }
 
-        		});
+                		});
+
+		var pageTwo = new AR.Trackable2DObject(this.tracker, "verduras", {
+                			drawables: {
+                				cam: [videofyv]
+                			},
+                			onEnterFieldOfVision: function onEnterFieldOfVisionFn() {
+                				videofyv.play(1);
+                			},
+                			onExitFieldOfVision: function onExitFieldOfVisionFn () {
+                           		videofyv.pause();
+                            }
+
+                		});
+
+		var pageThree = new AR.Trackable2DObject(this.tracker, "cereales", {
+                			drawables: {
+                				cam: [videocereales]
+                			},
+                			onEnterFieldOfVision: function onEnterFieldOfVisionFn() {
+                				videocereales.play(1);
+                			},
+                			onExitFieldOfVision: function onExitFieldOfVisionFn () {
+                           		videocereales.pause();
+                            }
+
+                		});
+
+		var pageFour = new AR.Trackable2DObject(this.tracker, "carne", {
+                			drawables: {
+                				cam: [videocarne]
+                			},
+                			onEnterFieldOfVision: function onEnterFieldOfVisionFn() {
+                				videocarne.play(1);
+                			},
+                			onExitFieldOfVision: function onExitFieldOfVisionFn () {
+                           		videocarne.pause();
+                            }
+
+                		});
+
+
+		var pageFive = new AR.Trackable2DObject(this.tracker, "plato", {
+                			drawables: {
+                				cam: [videoplato]
+                			},
+                			onEnterFieldOfVision: function onEnterFieldOfVisionFn() {
+                				videoplato.play(1);
+                			},
+                			onExitFieldOfVision: function onExitFieldOfVisionFn () {
+                           		videoplato.pause();
+                            }
+
+                		});
+
+
+		var pageFive = new AR.Trackable2DObject(this.tracker, "bebidas", {
+                			drawables: {
+                				cam: [videojarra]
+                			},
+                			onEnterFieldOfVision: function onEnterFieldOfVisionFn() {
+                				videojarra.play(1);
+                			},
+                			onExitFieldOfVision: function onExitFieldOfVisionFn () {
+                           		videojarra.pause();
+                            }
+
+                		});
+
 	},
 
 	worldLoaded: function worldLoadedFn() {
