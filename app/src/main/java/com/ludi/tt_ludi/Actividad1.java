@@ -39,7 +39,7 @@ public class Actividad1 extends Activity implements Animation.AnimationListener,
             R.drawable.agua,
             R.drawable.cafe,
             R.drawable.refresco,
-            R.drawable.cafe,
+            R.drawable.leche,
             R.drawable.agua,
             R.drawable.jugo,
             R.drawable.vasos3,
@@ -82,13 +82,13 @@ public class Actividad1 extends Activity implements Animation.AnimationListener,
         btnCuestionario.setOnClickListener(this);
 
         btnRespuesta1 = (Button) findViewById(R.id.btnRespuesta1);
-        btnRespuesta1.setText(preguntas[idpregunta].respuesta[0]);
+        //btnRespuesta1.setText(preguntas[idpregunta].respuesta[0]);
         Drawable image = (Drawable)getResources().getDrawable(PREGUNTA_RESOURCES[respuesta]);
         btnRespuesta1.setBackground(image);
 
 
         btnRespuesta2 = (Button) findViewById(R.id.btnRespuesta2);
-        btnRespuesta2.setText(preguntas[idpregunta].respuesta[1]);
+        //btnRespuesta2.setText(preguntas[idpregunta].respuesta[1]);
         Drawable image2 =(Drawable)getResources().getDrawable(PREGUNTA_RESOURCES[++respuesta]);
         btnRespuesta2.setBackground(image2);
 
@@ -128,9 +128,8 @@ public class Actividad1 extends Activity implements Animation.AnimationListener,
 
                     System.out.println(idpregunta + "_ " + Pregunta.contador);
                     txtPregunta.setText(preguntas[idpregunta].pregunta);
-                    btnRespuesta1.setText(preguntas[idpregunta].respuesta[0]);
-                    btnRespuesta2.setText(preguntas[idpregunta].respuesta[1]);
-
+                    //btnRespuesta1.setText(preguntas[idpregunta].respuesta[0]);
+                    //btnRespuesta2.setText(preguntas[idpregunta].respuesta[1]);
                     Drawable image=(Drawable)getResources().getDrawable(PREGUNTA_RESOURCES[respuesta]);
                     btnRespuesta1.setBackground(image);
                     Drawable image2=(Drawable)getResources().getDrawable(PREGUNTA_RESOURCES[++respuesta]);
@@ -159,8 +158,8 @@ public class Actividad1 extends Activity implements Animation.AnimationListener,
                     imagenJarra.setImageResource(NIVELES_JARRA[nivel]);
                     System.out.println(idpregunta + "_ " + Pregunta.contador);
                     txtPregunta.setText(preguntas[idpregunta].pregunta);
-                    btnRespuesta1.setText(preguntas[idpregunta].respuesta[0]);
-                    btnRespuesta2.setText(preguntas[idpregunta].respuesta[1]);
+                    //btnRespuesta1.setText(preguntas[idpregunta].respuesta[0]);
+                    //btnRespuesta2.setText(preguntas[idpregunta].respuesta[1]);
                     txtPregunta.setVisibility(View.VISIBLE);
                     txtPregunta.startAnimation(animFadein);
                     btnRespuesta1.startAnimation(bounce);
@@ -190,8 +189,8 @@ public class Actividad1 extends Activity implements Animation.AnimationListener,
 
                 System.out.println(idpregunta + "_ " + Pregunta.contador);
                     txtPregunta.setText(preguntas[idpregunta].pregunta);
-                    btnRespuesta1.setText(preguntas[idpregunta].respuesta[0]);
-                    btnRespuesta2.setText(preguntas[idpregunta].respuesta[1]);
+                    //btnRespuesta1.setText(preguntas[idpregunta].respuesta[0]);
+                    //btnRespuesta2.setText(preguntas[idpregunta].respuesta[1]);
                     txtPregunta.setVisibility(View.VISIBLE);
                     txtPregunta.startAnimation(animFadein);
                     btnRespuesta1.startAnimation(bounce);

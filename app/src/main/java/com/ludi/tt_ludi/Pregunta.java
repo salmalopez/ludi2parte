@@ -23,7 +23,7 @@ public class Pregunta {
 
         //Pregunta no. 2
         Pregunta p2 = new Pregunta();
-        p2.pregunta = "¿Cuántos vasos de agua se necesita consumir minimo durante el dia?";
+        p2.pregunta = "¿Cuántos vasos de agua natural necesitas beber al día?";
         p2.correcta = 1;
         p2.respuesta[p2.correcta] = "RP2";
         p2.respuesta[1] = "RPC2";
@@ -31,7 +31,7 @@ public class Pregunta {
 
         //Pregunta no. 3
         Pregunta p3 = new Pregunta();
-        p3.pregunta = "¿Cuántos vasos se recomiendan consumir maximo de este nivel?";
+        p3.pregunta = "¿Cuántos vasos de leche semidescremada y bebidas de soya sin azúcar debes beber máximo al día ?";
         p3.correcta = 0;
         p3.respuesta[p3.correcta] = "RPC3";
         p3.respuesta[1] = "RP3";
@@ -39,7 +39,7 @@ public class Pregunta {
 
         //Pregunta no. 4
         Pregunta p4 = new Pregunta();
-        p4.pregunta = "Se aconsejan 0 a 500 ml por día (0 a 2 vasos)...";
+        p4.pregunta = "Se pueden tomar 4 tazas (250 ml por taza) al día de...";
         p4.correcta = 1;
         p4.respuesta[0] = "RP4";
         p4.respuesta[p4.correcta] = "RPC4";
@@ -47,7 +47,7 @@ public class Pregunta {
 
         //Pregunta no. 5
         Pregunta p5 = new Pregunta();
-        p5.pregunta = "Se recomienda de 0 a 1/2 vaso (125 ml) por su aporte de calorías...";
+        p5.pregunta = "Se aconsejan de 0 a 2 vasos por día de... ";
         p5.correcta = 0;
         p5.respuesta[p5.correcta] = "RPC5";
         p5.respuesta[1] = "RP5";
@@ -55,7 +55,7 @@ public class Pregunta {
 
         //Pregunta no. 6
         Pregunta p6 = new Pregunta();
-        p6.pregunta = "hgggg";
+        p6.pregunta = "Son bebidas con alto valor calórico y beneficios en salud limitados, por ello se recomienda consumir de 0 a 1/2 vasos al día...";
         p6.correcta = 1;
         p6.respuesta[0] = "RP6";
         p6.respuesta[p6.correcta] = "RPC6";
@@ -63,7 +63,7 @@ public class Pregunta {
 
         //Pregunta no. 7
         Pregunta p7 = new Pregunta();
-        p7.pregunta = "Su consumo se asocia con caries dental y obesidad. Se recomienda no ingerirlas...";
+        p7.pregunta = "Su consumo se asocia con caries dental y obesidad, se recomienda no ingerirlas... ";
         p7.correcta = 1;
         p7.respuesta[0] = "RP7";
         p7.respuesta[p7.correcta] = "RPC7";

@@ -75,6 +75,7 @@
             android:configChanges="orientation"
             android:screenOrientation="landscape"/>
 
+
         <activity
             android:name=".Registro"
             android:configChanges="orientation"
@@ -104,7 +105,6 @@
         <activity android:name=".Noticias"
             android:configChanges="orientation"
             android:screenOrientation="landscape"/>
-
 
         <activity android:name=".CuestionarioAct4" />
         <activity android:name=".CuestionarioAct5" />

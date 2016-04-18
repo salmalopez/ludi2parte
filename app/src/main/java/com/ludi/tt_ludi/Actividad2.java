@@ -22,14 +22,14 @@ import java.util.Collections;
 public class Actividad2 extends AppCompatActivity implements View.OnClickListener{
 
     private static final int[] CARTA_RESOURCES = new int[]{
-            R.drawable.carne,
-            R.drawable.cerdito,
-            R.drawable.gallina,
-            R.drawable.huevo,
-            R.drawable.queso,
-            R.drawable.vaquita,
-            R.drawable.pez,
-            R.drawable.leche
+            R.drawable.quesomem,
+            R.drawable.lentejasmem,
+            R.drawable.garbanzozmem,
+            R.drawable.huevomem,
+            R.drawable.lechemem,
+            R.drawable.pollomem,
+            R.drawable.carnemem,
+            R.drawable.pescadomem,
 
     };
 
@@ -50,16 +50,16 @@ public class Actividad2 extends AppCompatActivity implements View.OnClickListene
         tabla.setBackgroundColor(Color.parseColor("#C2185B"));
 
         Button btnEspacio = new Button(this);
-        Drawable image = (Drawable)getResources().getDrawable(R.drawable.espaciomem);
-        btnEspacio.setBackground(image);
+        //Drawable image = (Drawable)getResources().getDrawable(R.drawable.espaciomem);
+        //btnEspacio.setBackground(image);
 
         Button btnSiguiente = new Button(this);
-        Drawable image4 = (Drawable)getResources().getDrawable(R.drawable.cuestionariomem);
+        Drawable image4 = (Drawable)getResources().getDrawable(R.drawable.cuestionario);
         btnSiguiente.setBackground(image4);
         btnSiguiente.setOnClickListener(this);
 
         Button btnReinicio = new Button(this);
-        Drawable image2 = (Drawable)getResources().getDrawable(R.drawable.reiniciomem);
+        Drawable image2 = (Drawable)getResources().getDrawable(R.drawable.reinicio);
         btnReinicio.setBackground(image2);
         btnReinicio.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,7 +72,7 @@ public class Actividad2 extends AppCompatActivity implements View.OnClickListene
         });
 
         Button btnRegreso = new Button(this);
-        Drawable image3 = (Drawable)getResources().getDrawable(R.drawable.regresomem);
+        Drawable image3 = (Drawable)getResources().getDrawable(R.drawable.regreso);
         btnRegreso.setBackground(image3);
         btnRegreso.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -127,14 +127,14 @@ public class Actividad2 extends AppCompatActivity implements View.OnClickListene
             this.boton.setLayoutParams(new TableRow.LayoutParams(180, 140));
 
             this.boton.setScaleType(ImageView.ScaleType.FIT_XY);
-            this.boton.setImageResource(R.drawable.pregunta);
+            this.boton.setImageResource(R.drawable.cerebromem);
             this.boton.setBackgroundColor(Color.parseColor("#C2185B"));
             this.boton.setOnClickListener(this);
         }
 
         void setCaraVisible(final boolean caraVisible){
             this.caraVisible = caraVisible;
-            boton.setImageResource(caraVisible ? imagen : R.drawable.pregunta);
+            boton.setImageResource(caraVisible ? imagen : R.drawable.cerebromem);
 
         }
 

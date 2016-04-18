@@ -2,59 +2,70 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondoactiv"
     tools:context="com.ludi.tt_ludi.ActividadesFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
     <Button
-        android:layout_width="400dp"
+        android:layout_width="345dp"
         android:layout_height="325dp"
         android:id="@+id/btn_act1"
         android:layout_gravity="left|top"
         android:text="FRUTAS Y VERDURAS"
-        android:background="#31c242"
+        android:background="@drawable/btngrupo1"
         android:textColor="#ffffff"
-        android:textSize="60dp" />
+        android:textSize="80dp"
+        android:layout_margin="30dp"
+        android:textAlignment="center" />
 
     <Button
-        android:layout_width="400dp"
+        android:layout_width="345dp"
         android:layout_height="325dp"
         android:id="@+id/btn_act2"
         android:layout_gravity="center_horizontal|top"
         android:text="CEREALES Y TUBERCULOS"
-        android:background="#f2d638"
-        android:textSize="60dp"
-        android:textColor="#ffffff" />
+        android:background="@drawable/btngrupo2"
+        android:textSize="70dp"
+        android:textColor="#ffffff"
+        android:layout_margin="30dp"
+        android:textAlignment="center" />
 
     <Button
-        android:layout_width="400dp"
+        android:layout_width="345dp"
         android:layout_height="325dp"
         android:id="@+id/btn_act3"
+        android:background="@drawable/btngrupo3"
         android:layout_gravity="right|top"
         android:text="ALIMENTOS DE ORIGEN ANIMAL Y LEGUMINOSAS"
         android:textColor="#ffffff"
         android:textSize="50dp"
-        android:background="#c74343" />
+        android:layout_margin="30dp"
+        android:textAlignment="center" />
 
     <Button
-        android:layout_width="600dp"
-        android:layout_height="325dp"
+        android:layout_width="540dp"
+        android:layout_height="245dp"
         android:id="@+id/btn_act4"
         android:text="EL PLATO DEL BIEN COMER"
         android:layout_gravity="left|bottom"
-        android:background="#fa6631"
-        android:textSize="80dp"
-        android:textColor="#ffffff" />
+        android:background="@drawable/btngrupo4"
+        android:textSize="70dp"
+        android:textColor="#ffffff"
+        android:layout_margin="30dp"
+        android:textAlignment="center" />
 
     <Button
-        android:layout_width="600dp"
-        android:layout_height="325dp"
+        android:layout_width="540dp"
+        android:layout_height="245dp"
         android:id="@+id/btn_act5"
         android:text="LA JARRA DEL BUEN BEBER"
         android:layout_gravity="right|bottom"
-        android:background="#36b4e6"
-        android:textSize="80dp"
-        android:textColor="#ffffff" />
+        android:background="@drawable/btngrupo5"
+        android:textSize="70dp"
+        android:textColor="#ffffff"
+        android:layout_margin="30dp"
+        android:textAlignment="center" />
 
 
 </FrameLayout>
