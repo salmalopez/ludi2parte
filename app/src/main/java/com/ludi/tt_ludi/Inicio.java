@@ -41,7 +41,7 @@ public class Inicio extends AppCompatActivity implements View.OnClickListener{
         txtTittle.setTypeface(myTypeFace);
 
 
-        Typeface myTypeFace2 = Typeface.createFromAsset(getAssets(),"dot.ttf");
+        Typeface myTypeFace2 = Typeface.createFromAsset(getAssets(),"DK.ttf");
         btn_login = (Button) findViewById(R.id.btn_login);
         btn_login.setTypeface(myTypeFace2);
         btn_login.setOnClickListener(this);

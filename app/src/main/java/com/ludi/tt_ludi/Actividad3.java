@@ -1,6 +1,5 @@
 package com.ludi.tt_ludi;
 
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.DragEvent;
@@ -9,7 +8,6 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 /**
@@ -17,9 +15,8 @@ import android.widget.TextView;
  */
 public class Actividad3 extends AppCompatActivity implements View.OnTouchListener,View.OnDragListener, View.OnClickListener {
 
-    private TextView textG1,textG1_1,textG1_2,textG2,textG2_1,textG2_2,textG3,textG3_1,textG3_2,textG3_3, textGrupo1,textGrupo2,textGrupo3;
+    private TextView textG1,textG1_1,textG1_2,textG1_3,textG1_4,textG2,textG2_1,textG2_2,textG3,textG3_1,textG3_2,textG3_3, textGrupo1,textGrupo2,textGrupo3;
 
-    LinearLayout layoutPlato;
 
     Button btn_regresar;
 
@@ -42,7 +39,7 @@ public class Actividad3 extends AppCompatActivity implements View.OnTouchListene
             String text = dropTarget.getText().toString();
             //if there is already an item here, set it back visible in its original place
 
-            if(text.equals("GRUPO2")){
+            if(text.equals("G2")){
                 if(dropped.equals(text.equals(textG2.getText().toString()))
                         || dropped.equals(text.equals(textG2_1.getText().toString()))
                         || dropped.equals(text.equals(textG2_2.getText().toString()))){
@@ -51,74 +48,60 @@ public class Actividad3 extends AppCompatActivity implements View.OnTouchListene
                     if(dropped.getText().toString().equals(textG1.getText())){
                         textG1.setVisibility(View.VISIBLE);
                         textG1.startAnimation(error);
-                        System.out.println("no va aqui");
-
                     }else if (dropped.getText().toString().equals(textG1_1.getText())){
                         textG1_1.setVisibility(View.VISIBLE);
                         textG1_1.startAnimation(error);
-                        System.out.println("no va aqui");
                     }else if (dropped.getText().toString().equals(textG1_2.getText())){
                         textG1_2.setVisibility(View.VISIBLE);
                         textG1_2.startAnimation(error);
-                        System.out.println("no va aqui");
+                    }else if (dropped.getText().toString().equals(textG1_3.getText())){
+                        textG1_3.setVisibility(View.VISIBLE);
+                        textG1_3.startAnimation(error);
+                    }else if (dropped.getText().toString().equals(textG1_4.getText())){
+                        textG1_4.setVisibility(View.VISIBLE);
+                        textG1_4.startAnimation(error);
                     }else if (dropped.getText().toString().equals(textG3.getText())){
                         textG3.setVisibility(View.VISIBLE);
                         textG3.startAnimation(error);
-                        System.out.println("no va aqui");
                     }else if (dropped.getText().toString().equals(textG3_1.getText())){
                         textG3_1.setVisibility(View.VISIBLE);
                         textG3_1.startAnimation(error);
-                        System.out.println("no va aqui");
                     }else if (dropped.getText().toString().equals(textG3_2.getText())){
                         textG3_2.setVisibility(View.VISIBLE);
                         textG3_2.startAnimation(error);
-                        System.out.println("no va aqui");
                     }else if (dropped.getText().toString().equals(textG3_3.getText())){
                         textG3_3.setVisibility(View.VISIBLE);
                         textG3_3.startAnimation(error);
-                        System.out.println("no va aqui");
                     }
                 }
-            }else if(text.equals("GRUPO1")){
-                if(dropped.equals(text.equals(textG1.getText().toString()))){
-                    dropTarget.setText(dropped.getText());
-
-                    Drawable image = (Drawable)getResources().getDrawable((R.drawable.platano));
-                    layoutPlato.setBackground(image);
-                    
-                }else if(dropped.equals(text.equals(textG1_1.getText().toString()))){
-                    dropTarget.setText(dropped.getText());
-                }else if(dropped.equals(text.equals(textG1_2.getText().toString()))){
-                    dropTarget.setText(dropped.getText());
+            }else if(text.equals("GUNO")){
+                if(dropped.equals(text.equals(textG1.getText().toString()))
+                        || dropped.equals(text.equals(textG1_1.getText().toString()))
+                        || dropped.equals(text.equals(textG1_2.getText().toString()))
+                        || dropped.equals(text.equals(textG1_3.getText().toString()))
+                        || dropped.equals(text.equals(textG1_4.getText().toString()))){
                 }else{
                     if(dropped.getText().toString().equals(textG2.getText())){
                         textG2.setVisibility(View.VISIBLE);
                         textG2.startAnimation(error);
-                        System.out.println("no va aqui");
                     }else if (dropped.getText().toString().equals(textG2_1.getText())){
                         textG2_1.setVisibility(View.VISIBLE);
                         textG2_1.startAnimation(error);
-                        System.out.println("no va aqui");
                     }else if (dropped.getText().toString().equals(textG2_2.getText())){
                         textG2_2.setVisibility(View.VISIBLE);
                         textG2_2.startAnimation(error);
-                        System.out.println("no va aqui");
                     }else if (dropped.getText().toString().equals(textG3.getText())){
                         textG3.setVisibility(View.VISIBLE);
                         textG3.startAnimation(error);
-                        System.out.println("no va aqui");
                     }else if (dropped.getText().toString().equals(textG3_1.getText())){
                         textG3_1.setVisibility(View.VISIBLE);
                         textG3_1.startAnimation(error);
-                        System.out.println("no va aqui");
                     }else if (dropped.getText().toString().equals(textG3_2.getText())){
                         textG3_2.setVisibility(View.VISIBLE);
                         textG3_2.startAnimation(error);
-                        System.out.println("no va aqui");
                     }else if (dropped.getText().toString().equals(textG3_3.getText())){
                         textG3_3.setVisibility(View.VISIBLE);
                         textG3_3.startAnimation(error);
-                        System.out.println("no va aqui");
                     }
                 }
 
@@ -131,53 +114,31 @@ public class Actividad3 extends AppCompatActivity implements View.OnTouchListene
                     if(dropped.getText().toString().equals(textG1.getText())){
                         textG1.setVisibility(View.VISIBLE);
                         textG1.startAnimation(error);
-                        System.out.println("no va aqui");
                     }else if (dropped.getText().toString().equals(textG1_1.getText())){
                         textG1_1.setVisibility(View.VISIBLE);
                         textG1_1.startAnimation(error);
-                        System.out.println("no va aqui");
                     }else if (dropped.getText().toString().equals(textG1_2.getText())){
                         textG1_2.setVisibility(View.VISIBLE);
                         textG1_2.startAnimation(error);
-                        System.out.println("no va aqui");
+                    }else if (dropped.getText().toString().equals(textG1_3.getText())){
+                        textG1_3.setVisibility(View.VISIBLE);
+                        textG1_3.startAnimation(error);
+                    }else if (dropped.getText().toString().equals(textG1_4.getText())){
+                        textG1_4.setVisibility(View.VISIBLE);
+                        textG1_4.startAnimation(error);
                     }else if (dropped.getText().toString().equals(textG2.getText())){
                         textG2.setVisibility(View.VISIBLE);
                         textG2.startAnimation(error);
-                        System.out.println("no va aqui");
                     }else if (dropped.getText().toString().equals(textG2_1.getText())){
                         textG2_1.setVisibility(View.VISIBLE);
                         textG2_1.startAnimation(error);
-                        System.out.println("no va aqui");
                     }else if (dropped.getText().toString().equals(textG2_2.getText())){
                         textG2_2.setVisibility(View.VISIBLE);
                         textG2_2.startAnimation(error);
-                        System.out.println("no va aqui");
                     }
                 }
 
             }
-
-
-/*
-             if(text.equals(text1.getText().toString()))
-            {
-                System.out.println(text);
-                text1.setVisibility(View.VISIBLE);
-            }
-            else if(text.equals(text2.getText().toString()))
-                text2.setVisibility(View.VISIBLE);
-            else if(text.equals(text3.getText().toString()))
-                text3.setVisibility(View.VISIBLE);
-            else if(text.equals(text7.getText().toString()))
-                text7.setVisibility(View.VISIBLE);
-            else if(text.equals(text8.getText().toString()))
-                text8.setVisibility(View.VISIBLE);
-            else if(text.equals(text9.getText().toString()))
-                text9.setVisibility(View.VISIBLE);
-
-            //update the text and color in the target view to reflect the data being dropped
-            dropTarget.setText(dropped.getText());
-            dropTarget.setBackgroundColor(Color.BLUE); */
         }
         return true;
     }
@@ -186,6 +147,8 @@ public class Actividad3 extends AppCompatActivity implements View.OnTouchListene
         textG1.setVisibility(View.VISIBLE);
         textG1_1.setVisibility(View.VISIBLE);
         textG1_2.setVisibility(View.VISIBLE);
+        textG1_3.setVisibility(View.VISIBLE);
+        textG1_4.setVisibility(View.VISIBLE);
         textG2.setVisibility(View.VISIBLE);
         textG2_1.setVisibility(View.VISIBLE);
         textG2_2.setVisibility(View.VISIBLE);
@@ -197,6 +160,8 @@ public class Actividad3 extends AppCompatActivity implements View.OnTouchListene
         textG1.startAnimation(bounce);
         textG1_1.startAnimation(bounce);
         textG1_2.startAnimation(bounce);
+        textG1_3.startAnimation(bounce);
+        textG1_4.startAnimation(bounce);
         textG2.startAnimation(bounce);
         textG2_1.startAnimation(bounce);
         textG2_2.startAnimation(bounce);
@@ -236,6 +201,8 @@ public class Actividad3 extends AppCompatActivity implements View.OnTouchListene
         textG1 = (TextView)findViewById(R.id.textG1);
         textG1_1 = (TextView)findViewById(R.id.textG1_1);
         textG1_2 = (TextView)findViewById(R.id.textG1_2);
+        textG1_3 = (TextView)findViewById(R.id.textG1_3);
+        textG1_4 = (TextView)findViewById(R.id.textG1_4);
         textG2 = (TextView)findViewById(R.id.textG2);
         textG2_1 = (TextView)findViewById(R.id.textG2_1);
         textG2_2 = (TextView)findViewById(R.id.textG2_2);
@@ -252,6 +219,8 @@ public class Actividad3 extends AppCompatActivity implements View.OnTouchListene
         textG1.setOnTouchListener(this);
         textG1_1.setOnTouchListener(this);
         textG1_2.setOnTouchListener(this);
+        textG1_3.setOnTouchListener(this);
+        textG1_4.setOnTouchListener(this);
         textG2.setOnTouchListener(this);
         textG2_1.setOnTouchListener(this);
         textG2_2.setOnTouchListener(this);

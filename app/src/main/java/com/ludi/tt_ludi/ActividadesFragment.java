@@ -74,9 +74,7 @@ public class ActividadesFragment extends Fragment implements View.OnClickListene
 
         View view = inflater.inflate(R.layout.fragment_actividades, container, false);
 
-        Typeface myTypeFace2 = Typeface.createFromAsset(getContext().getAssets(),"dot.ttf");
-
-
+        Typeface myTypeFace2 = Typeface.createFromAsset(getContext().getAssets(),"DK.ttf");
 
         btn_act1 = (Button) view.findViewById(R.id.btn_act1);
         btn_act1.setTypeface(myTypeFace2);

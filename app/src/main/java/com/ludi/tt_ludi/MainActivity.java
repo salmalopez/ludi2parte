@@ -2,6 +2,7 @@ package com.ludi.tt_ludi;
 
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -16,15 +17,36 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, ActividadesFragment.OnFragmentInteractionListener,
+        implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener, ActividadesFragment.OnFragmentInteractionListener,
                     PerfilFragment.OnFragmentInteractionListener{
+
+    Button btnActividades, btnNoticias,btnAvance;
+
+    Fragment fragment = null;
+    boolean fragmentTransaction = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        btnActividades = (Button) findViewById(R.id.btnActividades);
+        btnNoticias = (Button) findViewById(R.id.btnNoticias);
+        btnAvance = (Button) findViewById(R.id.btnAvance);
+
+
+        Typeface myTypeFace2 = Typeface.createFromAsset(getAssets(),"DK.ttf");
+        btnActividades.setTypeface(myTypeFace2);
+        btnActividades.setOnClickListener(this);
+        btnNoticias.setTypeface(myTypeFace2);
+        btnNoticias.setOnClickListener(this);
+        btnAvance.setTypeface(myTypeFace2);
+        btnAvance.setOnClickListener(this);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -84,9 +106,6 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-        Fragment fragment = null;
-        boolean fragmentTransaction = false;
-
 
         if (id == R.id.nav_actividades) {
             // Handle the camera action
@@ -125,5 +144,23 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onFragmentInteraction(Uri uri) {
 
+    }
+
+    @Override
+    public void onClick(View v) {
+
+        switch (v.getId()) {
+            case (R.id.btnActividades):
+                fragment = new ActividadesFragment();
+                fragmentTransaction = true;
+                break;
+
+            case (R.id.btnNoticias):
+
+                break;
+            case (R.id.btnAvance):
+
+                break;
+        }
     }
 }

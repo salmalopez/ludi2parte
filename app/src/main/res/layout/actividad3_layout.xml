@@ -28,9 +28,9 @@
         android:weightSum="1">
 
         <TextView
-            android:layout_width="88dp"
-            android:layout_height="88dp"
-            android:background="@drawable/brocolidrag"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/brocolo"
             android:text="BR"
             android:layout_margin="10dp"
             android:id="@+id/textG1"
@@ -39,10 +39,10 @@
             android:textColor="#ffffff" />
 
         <TextView
-            android:layout_width="88dp"
-            android:layout_height="88dp"
-            android:background="@drawable/tortilla"
-            android:text="TO"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/elote"
+            android:text="EL"
             android:layout_margin="10dp"
             android:textSize="15dp"
             android:id="@+id/textG2_1"
@@ -50,33 +50,53 @@
             android:layout_weight="0.03" />
 
         <TextView
-            android:layout_width="88dp"
-            android:layout_height="88dp"
-            android:background="@drawable/huevodrag"
-            android:text="H"
+            android:layout_width="63dp"
+            android:layout_height="80dp"
+            android:background="@drawable/pollo"
+            android:text="PO"
             android:layout_margin="10dp"
             android:textSize="15dp"
             android:id="@+id/textG3"
             android:textColor="#ffffff" />
 
         <TextView
-            android:layout_width="88dp"
-            android:layout_height="88dp"
-            android:background="@drawable/naranjadrag"
-            android:text="NA"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/berenjenaplato"
+            android:text="BE"
             android:layout_margin="10dp"
             android:textSize="15dp"
             android:id="@+id/textG1_2"
             android:textColor="#ffffff" />
 
         <TextView
-            android:layout_width="88dp"
-            android:layout_height="88dp"
-            android:background="@drawable/rabano"
-            android:text="RA"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/manzana"
+            android:text="MA"
+            android:layout_margin="10dp"
+            android:textSize="15dp"
+            android:id="@+id/textG1_3"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/trigo"
+            android:text="TR"
             android:layout_margin="10dp"
             android:textSize="15dp"
             android:id="@+id/textG2_2"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/jitomate"
+            android:text="JI"
+            android:layout_margin="10dp"
+            android:textSize="15dp"
+            android:id="@+id/textG1_4"
             android:textColor="#ffffff" />
 
     </LinearLayout>
@@ -89,8 +109,8 @@
         android:gravity="center">
 
         <TextView
-            android:layout_width="88dp"
-            android:layout_height="88dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:background="@drawable/pan"
             android:text="PA"
             android:layout_margin="10dp"
@@ -101,21 +121,20 @@
             android:textColor="#ffffff" />
 
         <TextView
-            android:layout_width="88dp"
-            android:layout_height="88dp"
-            android:background="@drawable/jitomatedrag"
-            android:text="JI"
+            android:layout_width="65dp"
+            android:layout_height="80dp"
+            android:background="@drawable/zanahoriaplato"
+            android:text="ZA"
             android:layout_margin="10dp"
             android:textSize="15dp"
             android:id="@+id/textG1_1"
-            android:textColor="#ffffff"
-            android:layout_weight="0.03" />
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="80dp"
-            android:layout_height="57dp"
-            android:background="@drawable/quesodrag"
-            android:text="QU"
+            android:layout_height="80dp"
+            android:background="@drawable/huevoplato"
+            android:text="HU"
             android:layout_margin="10dp"
             android:textSize="15dp"
             android:id="@+id/textG3_2"
@@ -123,20 +142,20 @@
             android:textColor="#ffffff" />
 
         <TextView
-            android:layout_width="88dp"
-            android:layout_height="88dp"
-            android:background="@drawable/frijol"
-            android:text="FR"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/garbanzo"
+            android:text="GA"
             android:layout_margin="10dp"
             android:textSize="15dp"
             android:id="@+id/textG3_3"
             android:textColor="#ffffff" />
 
         <TextView
-            android:layout_width="88dp"
-            android:layout_height="88dp"
-            android:background="@drawable/carnedrag"
-            android:text="CARNE"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/carneplato"
+            android:text="CA"
             android:layout_margin="10dp"
             android:textSize="15dp"
             android:id="@+id/textG3_1"
@@ -158,7 +177,7 @@
                 android:layout_width="400dp"
                 android:layout_height="350dp"
                 android:background="@drawable/bolsa1"
-                android:text="GRUPO1"
+                android:text="GUNO"
                 android:textSize="35sp"
                 android:id="@+id/textGrupo1"
                 android:textColor="#ffffff" />
@@ -168,7 +187,7 @@
                 android:layout_width="400dp"
                 android:layout_height="350dp"
                 android:background="@drawable/bolsa2"
-                android:text="GRUPO2"
+                android:text="G2"
                 android:textSize="35sp"
                 android:id="@+id/textGrupo2"
                 android:textColor="#ffffff" />
@@ -177,7 +196,7 @@
                 android:layout_width="400dp"
                 android:layout_height="350dp"
                 android:background="@drawable/bolsa3"
-                android:text="GRUPO3"
+                android:text="GTRES"
                 android:textSize="35sp"
                 android:id="@+id/textGrupo3"
                 android:textColor="#ffffff" />
