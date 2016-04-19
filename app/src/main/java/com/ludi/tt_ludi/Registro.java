@@ -50,12 +50,12 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
         txtRegister = (TextView) findViewById(R.id.txtRegister);
         txtRegister .setTypeface(myTypeFace);
 
-        editTextUserName = (EditText) findViewById(R.id.editTextUserName);
-        editTextName = (EditText) findViewById(R.id.editTextName);
+        editTextUserName = (EditText) findViewById(R.id.editTextUsuario);
+        editTextName = (EditText) findViewById(R.id.editTextNombre);
         editTextLastName = (EditText) findViewById(R.id.editTextLastName);
         editTextDate= (EditText) findViewById(R.id.editTextDate);
         editTextWeight= (EditText) findViewById(R.id.editTextWeight);
-        editTextHeight= (EditText) findViewById(R.id.editTextHeight);
+        editTextHeight= (EditText) findViewById(R.id.editTextEstarura);
 
 
         buttonRegister = (Button) findViewById(R.id.buttonRegister);

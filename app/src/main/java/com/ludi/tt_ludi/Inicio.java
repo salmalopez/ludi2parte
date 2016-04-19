@@ -1,6 +1,7 @@
 package com.ludi.tt_ludi;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -50,7 +51,7 @@ public class Inicio extends AppCompatActivity implements View.OnClickListener{
         btn_register.setTypeface(myTypeFace2);
         btn_register.setOnClickListener(this);
 
-        editTextUserName = (EditText) findViewById(R.id.editTextUserName);
+        editTextUserName = (EditText) findViewById(R.id.editTextUsuario);
         editTextUserName.setTypeface(myTypeFace2);
     }
 
@@ -70,21 +71,26 @@ public class Inicio extends AppCompatActivity implements View.OnClickListener{
                         new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response){
-                                //Toast.makeText(Registro.this, response, Toast.LENGTH_LONG).show();
-                                System.out.println("dddddddddd"+response);
-                                if(response.equals("OK")){
+
+                                if(Integer.valueOf(response)>0){
+
+                                    SharedPreferences pref = getApplicationContext().getSharedPreferences("ludi", 0);
+                                    SharedPreferences.Editor editor = pref.edit();
+                                    editor.putString("id", response);
+                                    editor.commit();
+
                                     Intent siguiente = new Intent(Inicio.this, MainActivity.class);
                                     Inicio.this.startActivity(siguiente);
+
                                 }else{
-                                    System.out.println("no pasas");
+                                    System.out.println("No fue posible iniciar sesión. La respuesta del servidor fue: "+response);
                                 }
                             }
                         },
                         new Response.ErrorListener() {
                             @Override
                             public void onErrorResponse(VolleyError error) {
-                                //Toast.makeText(Registro.this,error.toString(),Toast.LENGTH_LONG).show();
-                                System.out.println("aaaaaaaaaa:: "+error);
+                                System.out.println("No es posible iniciar sesión debido a un error inesperado: "+error);
                             }
                         }){
                     @Override
