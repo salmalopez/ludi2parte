@@ -1,5 +1,6 @@
 package com.ludi.tt_ludi;
 
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -24,7 +25,7 @@ import java.util.Map;
 
 public class Actualizar extends AppCompatActivity implements View.OnClickListener{
 
-    private static final String USER_URL = "http://52.23.175.78/api/usuario";
+    private static final String USER_URL = "http://ludi.mx/api/usuario";
 
     public static final String KEY_IDUSER = "idusuario";
     public static final String KEY_USUARIO = "usuario";
@@ -39,15 +40,20 @@ public class Actualizar extends AppCompatActivity implements View.OnClickListene
     private EditText editTextEstatura;
     private EditText editTextEdad;
 
-    private TextView txtRegister;
 
+    private TextView txtRegister;
+    private String id;
 
     private Button buttonUpdate;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_actualizar);
+
+        this.id = (getApplicationContext().getSharedPreferences("ludi", 0)).getString("id",null);
 
         Typeface myTypeFace = Typeface.createFromAsset(getAssets(),"KGS.ttf");
         txtRegister = (TextView) findViewById(R.id.txtRegister);
@@ -67,10 +73,11 @@ public class Actualizar extends AppCompatActivity implements View.OnClickListene
         editTextEdad.setTypeface(myTypeFace2);
 
 
+
         buttonUpdate = (Button) findViewById(R.id.buttonUpdate);
         buttonUpdate.setOnClickListener(this);
 
-        retrieveUser("1");
+        retrieveUser(this.id);
     }
 
     private void updateUser(String id){
@@ -80,6 +87,7 @@ public class Actualizar extends AppCompatActivity implements View.OnClickListene
         final String peso = editTextPeso.getText().toString().trim();
         final String estatura = editTextEstatura.getText().toString().trim();
         final String edad = editTextEdad.getText().toString().trim();
+
 
         StringRequest stringRequest = new StringRequest(Request.Method.PUT, USER_URL,
                 new Response.Listener<String>() {
@@ -175,7 +183,7 @@ public class Actualizar extends AppCompatActivity implements View.OnClickListene
     @Override
     public void onClick(View v) {
         if(v == buttonUpdate){
-            updateUser("1");
+            updateUser(this.id);
         }
     }
 

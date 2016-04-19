@@ -48,18 +48,22 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
         txtRegister = (TextView) findViewById(R.id.txtRegister);
         txtRegister.setTypeface(myTypeFace);
 
+
         Typeface myTypeFace2 = Typeface.createFromAsset(getAssets(),"DK.ttf");
         editTextUserName = (EditText) findViewById(R.id.editTextUserName);
         editTextUserName.setTypeface(myTypeFace2);
         editTextName = (EditText) findViewById(R.id.editTextName);
         editTextName.setTypeface(myTypeFace2);
+
+        editTextUserName = (EditText) findViewById(R.id.editTextUsuario);
+        editTextName = (EditText) findViewById(R.id.editTextNombre);
         editTextDate= (EditText) findViewById(R.id.editTextDate);
         editTextDate.setTypeface(myTypeFace2);
         editTextWeight= (EditText) findViewById(R.id.editTextWeight);
+
         editTextWeight.setTypeface(myTypeFace2);
         editTextHeight= (EditText) findViewById(R.id.editTextHeight);
         editTextHeight.setTypeface(myTypeFace2);
-
 
         buttonRegister = (Button) findViewById(R.id.buttonRegister);
         buttonRegister.setOnClickListener(this);

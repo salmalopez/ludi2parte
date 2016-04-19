@@ -8,12 +8,25 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.ludi.tt_ludi.R;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by Josh on 12/04/16.
  */
 public class CuestionarioAct2 extends AppCompatActivity implements View.OnClickListener{
+
+    private static final String WS_ESTATUS = "http://ludi.mx/api/estatus";
+    private static final String KEY_USUARIO = "isusuario";
+    private static final String KEY_ACTIVIDAD = "idactividad";
 
     TextView txtP1, txtP2, txtP3, txtP4, txtP5, txtP6, txtP7, txtP8, txtP9, txtP10;
     Button btnFin;
@@ -33,12 +46,15 @@ public class CuestionarioAct2 extends AppCompatActivity implements View.OnClickL
     static int idpregunta = 0;
     static int respuesta = 0;
     int correctas = 0;
+    private String id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cuestionario2_layout);
+
+        this.id = (getApplicationContext().getSharedPreferences("ludi", 0)).getString("id",null);
 
         //Se llenan todas las preguntas:
         txtP1 = (TextView) findViewById(R.id.txtPregunta1);
@@ -159,6 +175,37 @@ public class CuestionarioAct2 extends AppCompatActivity implements View.OnClickL
             correctas++;
 
         System.out.println("Las respuestas correctas fueron "+correctas);
+        updateEstatus(this.id,"2");
 
+    }
+
+    private void updateEstatus(final String idusuario, final String idActividad){
+
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, WS_ESTATUS,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        System.out.println("No se pudo actualizar la actividad.");
+                    }
+                }){
+            @Override
+            protected Map<String,String> getParams(){
+                Map<String,String> params = new HashMap<String, String>();
+                params.put(KEY_USUARIO,idusuario);
+                params.put(KEY_ACTIVIDAD,idActividad);
+                return params;
+            }
+
+        };
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
     }
 }

@@ -16,7 +16,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="REGISTRATE"
         android:id="@+id/txtRegister"
-        android:textSize="200dp"
+        android:textSize="150dp"
         android:textColor="#ff8e38" />
 
     <LinearLayout
@@ -62,7 +62,7 @@
         android:orientation="horizontal">
 
         <EditText
-        android:layout_width="666dp"
+        android:layout_width="541dp"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
         android:id="@+id/editTextDate"
