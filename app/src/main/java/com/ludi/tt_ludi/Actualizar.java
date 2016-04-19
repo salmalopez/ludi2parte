@@ -32,14 +32,12 @@ public class Actualizar extends AppCompatActivity implements View.OnClickListene
     public static final String KEY_PESO = "peso";
     public static final String KEY_ESTATURA = "estatura";
     public static final String KEY_EDAD = "edad";
-    public static final String KEY_ESCUELA = "idescuela";
 
     private EditText editTextUsuario;
     private EditText editTextNombre;
     private EditText editTextPeso;
     private EditText editTextEstatura;
     private EditText editTextEdad;
-    private EditText editTextEscuela;
 
     private TextView txtRegister;
 
@@ -53,14 +51,20 @@ public class Actualizar extends AppCompatActivity implements View.OnClickListene
 
         Typeface myTypeFace = Typeface.createFromAsset(getAssets(),"KGS.ttf");
         txtRegister = (TextView) findViewById(R.id.txtRegister);
-        txtRegister .setTypeface(myTypeFace);
+        txtRegister.setTypeface(myTypeFace);
+
+        Typeface myTypeFace2 = Typeface.createFromAsset(getAssets(),"DK.ttf");
 
         editTextUsuario = (EditText) findViewById(R.id.editTextUsuario);
+        editTextUsuario.setTypeface(myTypeFace2);
         editTextNombre = (EditText) findViewById(R.id.editTextNombre);
+        editTextNombre.setTypeface(myTypeFace2);
         editTextPeso = (EditText) findViewById(R.id.editTextPeso);
-        editTextEstatura = (EditText) findViewById(R.id.editTextEstarura);
+        editTextPeso.setTypeface(myTypeFace2);
+        editTextEstatura = (EditText) findViewById(R.id.editTextEstatura);
+        editTextEstatura.setTypeface(myTypeFace2);
         editTextEdad = (EditText) findViewById(R.id.editTextEdad);
-        editTextEscuela = (EditText) findViewById(R.id.editTextEscuela);
+        editTextEdad.setTypeface(myTypeFace2);
 
 
         buttonUpdate = (Button) findViewById(R.id.buttonUpdate);
@@ -76,7 +80,6 @@ public class Actualizar extends AppCompatActivity implements View.OnClickListene
         final String peso = editTextPeso.getText().toString().trim();
         final String estatura = editTextEstatura.getText().toString().trim();
         final String edad = editTextEdad.getText().toString().trim();
-        final String escuela = editTextEscuela.getText().toString().trim();
 
         StringRequest stringRequest = new StringRequest(Request.Method.PUT, USER_URL,
                 new Response.Listener<String>() {
@@ -108,7 +111,6 @@ public class Actualizar extends AppCompatActivity implements View.OnClickListene
                 params.put(KEY_PESO,peso);
                 params.put(KEY_ESTATURA, estatura);
                 params.put(KEY_EDAD, edad);
-                params.put(KEY_ESCUELA, escuela);
 
                 return params;
             }
@@ -127,7 +129,7 @@ public class Actualizar extends AppCompatActivity implements View.OnClickListene
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        String usuario = "", nombre= "", peso = "", estatura = "",  edad = "", escuela = "";
+                        String usuario = "", nombre= "", peso = "", estatura = "",  edad = "";
 
                         try {
 
@@ -138,7 +140,6 @@ public class Actualizar extends AppCompatActivity implements View.OnClickListene
                             peso = reader.getString(KEY_PESO);
                             estatura = reader.getString(KEY_ESTATURA);
                             edad = reader.getString(KEY_EDAD);
-                            escuela = reader.getString(KEY_ESCUELA);
 
                             System.out.println("Obtenido usuario "+reader.getString("idusuario"));
 
@@ -149,7 +150,6 @@ public class Actualizar extends AppCompatActivity implements View.OnClickListene
                         editTextPeso.setText(peso);
                         editTextEstatura.setText(estatura);
                         editTextEdad.setText(edad);
-                        editTextEscuela.setText(escuela);
 
                     }
                 },

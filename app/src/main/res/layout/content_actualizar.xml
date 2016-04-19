@@ -17,10 +17,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="REGISTRO"
+        android:text="CAMBIA TUS DATOS"
         android:id="@+id/txtRegister"
-        android:textSize="50dp"
+        android:textSize="80dp"
         android:textColor="#ff8e38" />
+
+    <LinearLayout
+        android:layout_width="666dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="118dp"
+            android:layout_height="96dp"
+            android:background="@drawable/nino" />
+
+        <EditText
+            android:layout_width="670dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextUsuario"
+            android:text="Usuario"
+            android:layout_gravity="center"
+            android:textColor="#006064"
+            android:textSize="30dp" />
+
+    </LinearLayout>
+
 
 
     <LinearLayout
@@ -31,32 +52,15 @@
 
 
         <EditText
-            android:layout_width="1153dp"
+            android:layout_width="666dp"
             android:layout_height="wrap_content"
-            android:text="Nombre"
+            android:text="Nombre "
             android:id="@+id/editTextNombre"
-            android:textColor="#006064" />
+            android:textColor="#006064"
+            android:textSize="30dp" />
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="1182dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="118dp"
-            android:layout_height="96dp"
-            android:background="@drawable/usuario" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/editTextUsuario"
-            android:text="Usuario"
-            android:layout_gravity="center"
-            android:textColor="#006064" />
-
-    </LinearLayout>
 
 
    <LinearLayout
@@ -66,28 +70,31 @@
         android:paddingLeft="120dp">
 
         <EditText
-            android:layout_width="1147dp"
+            android:layout_width="666dp"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
             android:id="@+id/editTextPeso"
             android:text="Peso"
-            android:textColor="#006064" />
+            android:textColor="#006064"
+            android:textSize="30dp" />
 
        <EditText
-           android:layout_width="match_parent"
+           android:layout_width="666dp"
            android:layout_height="wrap_content"
            android:inputType="numberDecimal"
            android:id="@+id/editTextEstatura"
            android:text="Estatura"
-           android:textColor="#006064" />
+           android:textColor="#006064"
+           android:textSize="30dp" />
 
        <EditText
-           android:layout_width="match_parent"
+           android:layout_width="666dp"
            android:layout_height="wrap_content"
            android:inputType="numberDecimal"
            android:id="@+id/editTextEdad"
            android:text="Edad"
-           android:textColor="#006064" />
+           android:textColor="#006064"
+           android:textSize="30dp" />
 
     </LinearLayout>
 
@@ -95,18 +102,6 @@
         android:layout_width="1182dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <TextView
-            android:layout_width="118dp"
-            android:layout_height="96dp"
-            android:background="@drawable/escuela" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/editTextEscuela"
-            android:text="Escuela"
-            android:layout_gravity="center"
-            android:textColor="#006064" />
 
     </LinearLayout>
 

@@ -5,9 +5,7 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -20,8 +18,8 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity
-        implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener, ActividadesFragment.OnFragmentInteractionListener,
-                    PerfilFragment.OnFragmentInteractionListener{
+        implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener, ActividadesFragment.OnFragmentInteractionListener
+                    {
 
     Button btnActividades, btnNoticias,btnAvance;
 
@@ -50,14 +48,13 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+       /* FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                finish();
             }
-        });
+        });*/
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -121,8 +118,9 @@ public class MainActivity extends AppCompatActivity
             MainActivity.this.startActivity(siguiente);
 
         } else if (id == R.id.nav_perfil) {
-            fragment = new PerfilFragment();
-            fragmentTransaction = true;
+            Intent siguiente2 = new Intent(MainActivity.this, Actualizar.class);
+            MainActivity.this.startActivity(siguiente2);
+
         } else if (id == R.id.nav_cerrarSesison) {
             Intent siguiente = new Intent(MainActivity.this, Inicio.class);
             MainActivity.this.startActivity(siguiente);
@@ -151,8 +149,7 @@ public class MainActivity extends AppCompatActivity
 
         switch (v.getId()) {
             case (R.id.btnActividades):
-                fragment = new ActividadesFragment();
-                fragmentTransaction = true;
+
                 break;
 
             case (R.id.btnNoticias):

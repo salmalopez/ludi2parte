@@ -17,64 +17,64 @@ public class Pregunta {
         Pregunta p1 = new Pregunta();
         p1.pregunta = "¿Cuántos niveles tiene la jarra del buen beber?";
         p1.correcta = 0;
-        p1.respuesta[0] = "RPC1";
-        p1.respuesta[p1.correcta] = "RP1";
+        p1.respuesta[0] = "    ";
+        p1.respuesta[p1.correcta] = "     ";
         preguntas[0] = p1;
 
         //Pregunta no. 2
         Pregunta p2 = new Pregunta();
         p2.pregunta = "¿Cuántos vasos de agua natural necesitas beber al día?";
         p2.correcta = 1;
-        p2.respuesta[p2.correcta] = "RP2";
-        p2.respuesta[1] = "RPC2";
+        p2.respuesta[p2.correcta] = "";
+        p2.respuesta[1] = "";
         preguntas[1] = p2;
 
         //Pregunta no. 3
         Pregunta p3 = new Pregunta();
         p3.pregunta = "¿Cuántos vasos de leche semidescremada y bebidas de soya sin azúcar debes beber máximo al día ?";
         p3.correcta = 0;
-        p3.respuesta[p3.correcta] = "RPC3";
-        p3.respuesta[1] = "RP3";
+        p3.respuesta[p3.correcta] = "";
+        p3.respuesta[1] = "";
         preguntas[2] = p3;
 
         //Pregunta no. 4
         Pregunta p4 = new Pregunta();
         p4.pregunta = "Se pueden tomar 4 tazas (250 ml por taza) al día de...";
         p4.correcta = 1;
-        p4.respuesta[0] = "RP4";
-        p4.respuesta[p4.correcta] = "RPC4";
+        p4.respuesta[0] = "";
+        p4.respuesta[p4.correcta] = "";
         preguntas[3] = p4;
 
         //Pregunta no. 5
         Pregunta p5 = new Pregunta();
         p5.pregunta = "Se aconsejan de 0 a 2 vasos por día de... ";
         p5.correcta = 0;
-        p5.respuesta[p5.correcta] = "RPC5";
-        p5.respuesta[1] = "RP5";
+        p5.respuesta[p5.correcta] = "";
+        p5.respuesta[1] = "";
         preguntas[4] = p5;
 
         //Pregunta no. 6
         Pregunta p6 = new Pregunta();
         p6.pregunta = "Son bebidas con alto valor calórico y beneficios en salud limitados, por ello se recomienda consumir de 0 a 1/2 vasos al día...";
         p6.correcta = 1;
-        p6.respuesta[0] = "RP6";
-        p6.respuesta[p6.correcta] = "RPC6";
+        p6.respuesta[0] = "";
+        p6.respuesta[p6.correcta] = "";
         preguntas[5] = p6;
 
         //Pregunta no. 7
         Pregunta p7 = new Pregunta();
         p7.pregunta = "Su consumo se asocia con caries dental y obesidad, se recomienda no ingerirlas... ";
         p7.correcta = 1;
-        p7.respuesta[0] = "RP7";
-        p7.respuesta[p7.correcta] = "RPC7";
+        p7.respuesta[0] = "";
+        p7.respuesta[p7.correcta] = "";
         preguntas[6] = p7;
 
         //Pregunta no. 8
         Pregunta p8 = new Pregunta();
         p8.pregunta = "CONCLUISTE LA ACTIVIDAD";
         p8.correcta = 0;
-        p8.respuesta[p8.correcta] = "RPC8";
-        p8.respuesta[1] = "RP8";
+        p8.respuesta[p8.correcta] = "";
+        p8.respuesta[1] = "";
         preguntas[7] = p8;
 
 

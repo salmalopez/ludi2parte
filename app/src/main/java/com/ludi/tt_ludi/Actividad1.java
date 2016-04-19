@@ -2,6 +2,7 @@ package com.ludi.tt_ludi;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
@@ -71,9 +72,10 @@ public class Actividad1 extends Activity implements Animation.AnimationListener,
         imagenJarra = (ImageView) findViewById(R.id.imagenJarra);
         imagenJarra.setImageResource(NIVELES_JARRA[nivel]);
 
-
+        Typeface myTypeFace2 = Typeface.createFromAsset(getAssets(),"DK.ttf");
         txtPregunta = (TextView) findViewById(R.id.txtPregunta);
         txtPregunta.setText(preguntas[idpregunta].pregunta);
+        txtPregunta.setTypeface(myTypeFace2);
 
         btn_regresar = (Button) findViewById(R.id.btn_regresar);
         btn_regresar.setOnClickListener(this);
@@ -82,13 +84,13 @@ public class Actividad1 extends Activity implements Animation.AnimationListener,
         btnCuestionario.setOnClickListener(this);
 
         btnRespuesta1 = (Button) findViewById(R.id.btnRespuesta1);
-        //btnRespuesta1.setText(preguntas[idpregunta].respuesta[0]);
+        btnRespuesta1.setText(preguntas[idpregunta].respuesta[0]);
         Drawable image = (Drawable)getResources().getDrawable(PREGUNTA_RESOURCES[respuesta]);
         btnRespuesta1.setBackground(image);
 
 
         btnRespuesta2 = (Button) findViewById(R.id.btnRespuesta2);
-        //btnRespuesta2.setText(preguntas[idpregunta].respuesta[1]);
+        btnRespuesta2.setText(preguntas[idpregunta].respuesta[1]);
         Drawable image2 =(Drawable)getResources().getDrawable(PREGUNTA_RESOURCES[++respuesta]);
         btnRespuesta2.setBackground(image2);
 
@@ -125,11 +127,12 @@ public class Actividad1 extends Activity implements Animation.AnimationListener,
                     nivel++;
 
                     imagenJarra.setImageResource(NIVELES_JARRA[nivel]);
-
+                    Typeface myTypeFace2 = Typeface.createFromAsset(getAssets(),"DK.ttf");
                     System.out.println(idpregunta + "_ " + Pregunta.contador);
                     txtPregunta.setText(preguntas[idpregunta].pregunta);
-                    //btnRespuesta1.setText(preguntas[idpregunta].respuesta[0]);
-                    //btnRespuesta2.setText(preguntas[idpregunta].respuesta[1]);
+                    txtPregunta.setTypeface(myTypeFace2);
+                    btnRespuesta1.setText(preguntas[idpregunta].respuesta[0]);
+                    btnRespuesta2.setText(preguntas[idpregunta].respuesta[1]);
                     Drawable image=(Drawable)getResources().getDrawable(PREGUNTA_RESOURCES[respuesta]);
                     btnRespuesta1.setBackground(image);
                     Drawable image2=(Drawable)getResources().getDrawable(PREGUNTA_RESOURCES[++respuesta]);
@@ -157,9 +160,11 @@ public class Actividad1 extends Activity implements Animation.AnimationListener,
                     nivel++;
                     imagenJarra.setImageResource(NIVELES_JARRA[nivel]);
                     System.out.println(idpregunta + "_ " + Pregunta.contador);
+                    Typeface myTypeFace2 = Typeface.createFromAsset(getAssets(),"DK.ttf");
                     txtPregunta.setText(preguntas[idpregunta].pregunta);
-                    //btnRespuesta1.setText(preguntas[idpregunta].respuesta[0]);
-                    //btnRespuesta2.setText(preguntas[idpregunta].respuesta[1]);
+                    btnRespuesta1.setText(preguntas[idpregunta].respuesta[0]);
+                    btnRespuesta2.setText(preguntas[idpregunta].respuesta[1]);
+                    txtPregunta.setTypeface(myTypeFace2);
                     txtPregunta.setVisibility(View.VISIBLE);
                     txtPregunta.startAnimation(animFadein);
                     btnRespuesta1.startAnimation(bounce);
@@ -180,26 +185,12 @@ public class Actividad1 extends Activity implements Animation.AnimationListener,
 
 
             case (R.id.btnSiguiente):
-                    idpregunta=0;
-                    respuesta=0;
-                    nivel=0;
-
-                imagenJarra = (ImageView) findViewById(R.id.imagenJarra);
-                imagenJarra.setImageResource(NIVELES_JARRA[nivel]);
-
-                System.out.println(idpregunta + "_ " + Pregunta.contador);
-                    txtPregunta.setText(preguntas[idpregunta].pregunta);
-                    //btnRespuesta1.setText(preguntas[idpregunta].respuesta[0]);
-                    //btnRespuesta2.setText(preguntas[idpregunta].respuesta[1]);
-                    txtPregunta.setVisibility(View.VISIBLE);
-                    txtPregunta.startAnimation(animFadein);
-                    btnRespuesta1.startAnimation(bounce);
-                    btnRespuesta2.startAnimation(bounce);
-
-                    Drawable image=(Drawable)getResources().getDrawable(PREGUNTA_RESOURCES[respuesta]);
-                    btnRespuesta1.setBackground(image);
-                    Drawable image2=(Drawable)getResources().getDrawable(PREGUNTA_RESOURCES[++respuesta]);
-                    btnRespuesta2.setBackground(image2);
+                finish();
+                idpregunta=0;
+                respuesta=0;
+                nivel=0;
+                Intent i2 = new Intent(this, Actividad1.class);
+                startActivity(i2);
                     break;
 
             case (R.id.btnCuestionario):

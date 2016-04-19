@@ -24,14 +24,12 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
 
     public static final String KEY_USERNAME = "userName";
     public static final String KEY_NAME = "name";
-    public static final String KEY_LASTNAME = "lastName";
     public static final String KEY_DATE = "date";
     public static final String KEY_WEIGHT = "weight";
     public static final String KEY_HEIGHT = "height";
 
     private EditText editTextUserName;
     private EditText editTextName;
-    private EditText editTextLastName;
     private EditText editTextDate;
     private EditText editTextWeight;
     private EditText editTextHeight;
@@ -48,14 +46,19 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
 
         Typeface myTypeFace = Typeface.createFromAsset(getAssets(),"KGS.ttf");
         txtRegister = (TextView) findViewById(R.id.txtRegister);
-        txtRegister .setTypeface(myTypeFace);
+        txtRegister.setTypeface(myTypeFace);
 
+        Typeface myTypeFace2 = Typeface.createFromAsset(getAssets(),"DK.ttf");
         editTextUserName = (EditText) findViewById(R.id.editTextUserName);
+        editTextUserName.setTypeface(myTypeFace2);
         editTextName = (EditText) findViewById(R.id.editTextName);
-        editTextLastName = (EditText) findViewById(R.id.editTextLastName);
+        editTextName.setTypeface(myTypeFace2);
         editTextDate= (EditText) findViewById(R.id.editTextDate);
+        editTextDate.setTypeface(myTypeFace2);
         editTextWeight= (EditText) findViewById(R.id.editTextWeight);
+        editTextWeight.setTypeface(myTypeFace2);
         editTextHeight= (EditText) findViewById(R.id.editTextHeight);
+        editTextHeight.setTypeface(myTypeFace2);
 
 
         buttonRegister = (Button) findViewById(R.id.buttonRegister);
@@ -65,7 +68,6 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
     private void registerUser(){
         final String userName = editTextUserName.getText().toString().trim();
         final String name = editTextName.getText().toString().trim();
-        final String lastName = editTextLastName.getText().toString().trim();
         final String date = editTextDate.getText().toString().trim();
         final String weight = editTextWeight.getText().toString().trim();
         final String height = editTextHeight.getText().toString().trim();
@@ -96,7 +98,6 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
                 Map<String,String> params = new HashMap<String, String>();
                 params.put(KEY_USERNAME,userName);
                 params.put(KEY_NAME,name);
-                params.put(KEY_LASTNAME,lastName);
                 params.put(KEY_DATE, date);
                 params.put(KEY_WEIGHT,weight);
                 params.put(KEY_HEIGHT, height);

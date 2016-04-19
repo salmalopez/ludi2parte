@@ -158,5 +158,6 @@ public class CuestionarioAct1  extends AppCompatActivity implements View.OnClick
 
         System.out.println("Las respuestas correctas fueron "+correctas);
 
+
     }
 }

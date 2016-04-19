@@ -1,9 +1,9 @@
 package com.ludi.tt_ludi;
 
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
 import com.wikitude.architect.ArchitectView;
@@ -13,7 +13,6 @@ import java.io.IOException;
 
 public class Libro extends AppCompatActivity implements View.OnClickListener{
 
-    Button btn_regresar;
     private ArchitectView architectView;
     public static final String WIKITUDE_SDK_KEY = "zZuZ9k1/g3e+4jxajBLq5K0pJoiQx9370zwRdFF+xAnWLEuc2lT52Ug2ea/DMxaBeL1HgWzxzPTU5xLboDJUlSC5IAZ7CKHJQcsYansSyMe2DEaUbYGq5bGshFhed0q92+VonP9D6ZOZS9qr9rhRoApeCJcXC+CnnOwrnbxpibJTYWx0ZWRfX78gNtShlHPyz0t4uYNPpgiPejgn+/JG7jh5IH1zabSBLVU54B48W1xAurBoG42jdcjfsZ58YdRfo25/p/3jLuSyzWnD/uoiPW/63ApBzWlsBjw/onZBdHHfedJvKqXt/ExojHi847/UFdrjLdiYADdoGvxAQ/VReGYciv4xZdgdsba2TuzKeOEr11emt92bGO2cbyl9UqoDFI7iGKZsXBLvZuBePXozVTZRbXsm2CYj4SK67OIPaAT5SXm9CYd+tz348EH1L+lNufGY0GTEu4HVYzf5zUPKzK79G61nH/KAmjOWNhOWj8DmQ176jH6iHhEIuq2nJ6qkHvptlkJWeElrxUmYAe4ZbebutUW4M2ZjNTTI+3jy3Aus+Tkpnsz//Emo5bP4izcVHqLnEkzBFW3BSgwnYZrLLu4KioA0OkybNP/lUmoFVWoSDXWmwZ2+Ij8w9gLrI3V4UGiy8AFIXQiDkDknnI0SXRHMKLtJaCW31ZaMF2KU7vI=";
 
@@ -34,8 +33,13 @@ public class Libro extends AppCompatActivity implements View.OnClickListener{
             finish();
         }
 
-        btn_regresar = (Button) findViewById (R.id.btn_regresar);
-        btn_regresar.setOnClickListener(this);
+        FloatingActionButton btn_regresar = (FloatingActionButton) findViewById(R.id.btn_regresar);
+        btn_regresar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               finish();
+            }
+        });
 
     }
 

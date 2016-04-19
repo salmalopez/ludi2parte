@@ -16,12 +16,12 @@
 
     <include layout="@layout/content_libro" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
+    <android.support.design.widget.FloatingActionButton
         android:id="@+id/btn_regresar"
-        android:visibility="visible"
-        android:background="@drawable/regreso"
-        android:text="REGRESAR" />
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/regreso"/>
 
 </android.support.design.widget.CoordinatorLayout>

@@ -1,5 +1,6 @@
 package com.ludi.tt_ludi;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.DragEvent;
@@ -18,7 +19,7 @@ public class Actividad3 extends AppCompatActivity implements View.OnTouchListene
     private TextView textG1,textG1_1,textG1_2,textG1_3,textG1_4,textG2,textG2_1,textG2_2,textG3,textG3_1,textG3_2,textG3_3, textGrupo1,textGrupo2,textGrupo3;
 
 
-    Button btn_regresar;
+    Button btn_regresar,btnCuestionario,btn_reinicio;
 
     Animation error,bounce;
 
@@ -143,33 +144,6 @@ public class Actividad3 extends AppCompatActivity implements View.OnTouchListene
         return true;
     }
 
-    public void reinicio(View v){
-        textG1.setVisibility(View.VISIBLE);
-        textG1_1.setVisibility(View.VISIBLE);
-        textG1_2.setVisibility(View.VISIBLE);
-        textG1_3.setVisibility(View.VISIBLE);
-        textG1_4.setVisibility(View.VISIBLE);
-        textG2.setVisibility(View.VISIBLE);
-        textG2_1.setVisibility(View.VISIBLE);
-        textG2_2.setVisibility(View.VISIBLE);
-        textG3.setVisibility(View.VISIBLE);
-        textG3_1.setVisibility(View.VISIBLE);
-        textG3_2.setVisibility(View.VISIBLE);
-        textG3_3.setVisibility(View.VISIBLE);
-
-        textG1.startAnimation(bounce);
-        textG1_1.startAnimation(bounce);
-        textG1_2.startAnimation(bounce);
-        textG1_3.startAnimation(bounce);
-        textG1_4.startAnimation(bounce);
-        textG2.startAnimation(bounce);
-        textG2_1.startAnimation(bounce);
-        textG2_2.startAnimation(bounce);
-        textG3.startAnimation(bounce);
-        textG3_1.startAnimation(bounce);
-        textG3_2.startAnimation(bounce);
-        textG3_3.startAnimation(bounce);
-    }
 
 
     //When text1 or text2 or text3 gets clicked or touched then this method will be called
@@ -197,6 +171,12 @@ public class Actividad3 extends AppCompatActivity implements View.OnTouchListene
 
         btn_regresar = (Button)findViewById(R.id.btn_regresar);
         btn_regresar.setOnClickListener(this);
+
+        btn_reinicio  = (Button)findViewById(R.id.btn_reinicio);
+        btn_reinicio.setOnClickListener(this);
+
+        btnCuestionario = (Button) findViewById(R.id.btnCuestionario);
+        btnCuestionario.setOnClickListener(this);
 
         textG1 = (TextView)findViewById(R.id.textG1);
         textG1_1 = (TextView)findViewById(R.id.textG1_1);
@@ -236,7 +216,24 @@ public class Actividad3 extends AppCompatActivity implements View.OnTouchListene
 
     @Override
     public void onClick(View v) {
-        finish();
+
+        switch (v.getId()){
+            case (R.id.btnCuestionario):
+                Intent i = new Intent(this, CuestionarioAct1.class);
+                startActivity(i);
+                break;
+
+            case (R.id.btn_regresar):
+                finish();
+                break;
+
+            case (R.id.btn_reinicio):
+                finish();
+                Intent i2 = new Intent(this, Actividad3.class);
+                startActivity(i2);
+                break;
+        }
+
 
     }
 }

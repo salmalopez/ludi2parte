@@ -25,7 +25,7 @@ public class Inicio extends AppCompatActivity implements View.OnClickListener{
     TextView txtTittle, txtRegister;
 
 
-    private static final String REGISTER_URL = "http://ludi.mx/api/loginApp";
+    private static final String REGISTER_URL = "http://54.191.222.236/api/loginApp";
 
     public static final String KEY_USERNAME = "userName";
 
