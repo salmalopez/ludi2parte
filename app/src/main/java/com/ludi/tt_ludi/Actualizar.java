@@ -1,6 +1,5 @@
 package com.ludi.tt_ludi;
 
-import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -41,7 +40,7 @@ public class Actualizar extends AppCompatActivity implements View.OnClickListene
     private EditText editTextEdad;
 
 
-    private TextView txtRegister;
+    private TextView txtRegister,txtRegister2;
     private String id;
 
     private Button buttonUpdate;
@@ -58,6 +57,9 @@ public class Actualizar extends AppCompatActivity implements View.OnClickListene
         Typeface myTypeFace = Typeface.createFromAsset(getAssets(),"KGS.ttf");
         txtRegister = (TextView) findViewById(R.id.txtRegister);
         txtRegister.setTypeface(myTypeFace);
+
+        txtRegister2 = (TextView) findViewById(R.id.txtRegister2);
+        txtRegister2.setTypeface(myTypeFace);
 
         Typeface myTypeFace2 = Typeface.createFromAsset(getAssets(),"DK.ttf");
 

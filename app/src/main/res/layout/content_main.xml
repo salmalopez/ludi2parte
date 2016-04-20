@@ -14,31 +14,48 @@
     tools:context="com.ludi.tt_ludi.MainActivity"
     tools:showIn="@layout/app_bar_main">
     <Button
-        android:layout_width="400dp"
+        android:layout_width="300dp"
         android:layout_height="200dp"
         android:text="ACTIVIDADES"
         android:id="@+id/btnActividades"
+        android:background="@drawable/btnmain"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:textSize="60dp" />
+        android:textSize="60dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginLeft="50dp"
+        android:textColor="#fdfdfd" />
 
     <Button
-        android:layout_width="400dp"
+        android:layout_width="300dp"
         android:layout_height="200dp"
         android:text="NOTICIAS"
         android:id="@+id/btnNoticias"
+        android:background="@drawable/btnmain"
         android:layout_alignBottom="@+id/btnActividades"
         android:layout_toEndOf="@+id/btnActividades"
-        android:textSize="60dp" />
+        android:textSize="60dp"
+        android:layout_marginRight="100dp"
+        android:textColor="#ffffff" />
 
     <Button
-        android:layout_width="400dp"
+        android:layout_width="300dp"
         android:layout_height="200dp"
         android:text="AVANCE"
         android:id="@+id/btnAvance"
+        android:background="@drawable/btnmain"
         android:layout_alignTop="@+id/btnNoticias"
         android:layout_toEndOf="@+id/btnNoticias"
-        android:textSize="60dp" />
+        android:textSize="60dp"
+        android:textColor="#ffffff" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView5"
+        android:background="@drawable/menu"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
 
 
 </RelativeLayout>

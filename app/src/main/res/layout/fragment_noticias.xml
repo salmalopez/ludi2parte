@@ -1,0 +1,27 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ludi.tt_ludi.NoticiasFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="500dp"
+        android:text="New Text"
+        android:id="@+id/textViewid"
+        android:layout_gravity="center_horizontal|top"
+        android:background="#f01d1d" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/btn"
+        android:layout_below="@+id/textViewid"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/textViewid" />
+</RelativeLayout>

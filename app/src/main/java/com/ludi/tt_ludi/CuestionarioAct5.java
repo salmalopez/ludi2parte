@@ -21,7 +21,7 @@ import java.util.Map;
 public class CuestionarioAct5 extends AppCompatActivity implements View.OnClickListener{
 
     private static final String WS_ESTATUS = "http://ludi.mx/api/estatus";
-    private static final String KEY_USUARIO = "isusuario";
+    private static final String KEY_USUARIO = "idusuario";
     private static final String KEY_ACTIVIDAD = "idactividad";
 
     TextView txtP1, txtP2, txtP3, txtP4, txtP5, txtP6, txtP7, txtP8, txtP9, txtP10;

@@ -18,13 +18,17 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity
-        implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener, ActividadesFragment.OnFragmentInteractionListener
+        implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener,
+        ActividadesFragment.OnFragmentInteractionListener,
+        NoticiasFragment.OnFragmentInteractionListener
                     {
+
 
     Button btnActividades, btnNoticias,btnAvance;
 
-    Fragment fragment = null;
-    boolean fragmentTransaction = false;
+
+                        boolean fragmentTransaction = false;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +41,8 @@ public class MainActivity extends AppCompatActivity
         btnAvance = (Button) findViewById(R.id.btnAvance);
 
 
+
+
         Typeface myTypeFace2 = Typeface.createFromAsset(getAssets(),"DK.ttf");
         btnActividades.setTypeface(myTypeFace2);
         btnActividades.setOnClickListener(this);
@@ -44,6 +50,7 @@ public class MainActivity extends AppCompatActivity
         btnNoticias.setOnClickListener(this);
         btnAvance.setTypeface(myTypeFace2);
         btnAvance.setOnClickListener(this);
+
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -103,19 +110,27 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+        Fragment fragment = null;
+
 
         if (id == R.id.nav_actividades) {
             // Handle the camera action
             fragment = new ActividadesFragment();
             fragmentTransaction = true;
 
+        }  else if (id == R.id.nav_inicio) {
+            Intent main = new Intent(MainActivity.this, MainActivity.class);
+            MainActivity.this.startActivity(main);
+
         } else if (id == R.id.nav_noticias) {
+            fragment = new NoticiasFragment();
+            fragmentTransaction = true;
 
 
         } else if (id == R.id.nav_realidadAumentada) {
 
-            Intent siguiente = new Intent(MainActivity.this, Libro.class);
-            MainActivity.this.startActivity(siguiente);
+            Intent ra = new Intent(MainActivity.this, Libro.class);
+            MainActivity.this.startActivity(ra);
 
         } else if (id == R.id.nav_perfil) {
             Intent siguiente2 = new Intent(MainActivity.this, Actualizar.class);
@@ -124,6 +139,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_cerrarSesison) {
             Intent siguiente = new Intent(MainActivity.this, Inicio.class);
             MainActivity.this.startActivity(siguiente);
+
         }
 
         if(fragmentTransaction){
@@ -149,11 +165,19 @@ public class MainActivity extends AppCompatActivity
 
         switch (v.getId()) {
             case (R.id.btnActividades):
-
+                ActividadesFragment fragment2 = new ActividadesFragment();
+                getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.content_nav_drawer, fragment2)
+                            .commit();
+                getSupportActionBar().setTitle("Actividades");
                 break;
 
             case (R.id.btnNoticias):
-
+                NoticiasFragment fragment3 = new NoticiasFragment();
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.content_nav_drawer, fragment3)
+                        .commit();
+                getSupportActionBar().setTitle("Noticias");
                 break;
             case (R.id.btnAvance):
 

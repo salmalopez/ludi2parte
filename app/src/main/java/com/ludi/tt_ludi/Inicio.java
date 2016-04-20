@@ -51,7 +51,7 @@ public class Inicio extends AppCompatActivity implements View.OnClickListener{
         btn_register.setTypeface(myTypeFace2);
         btn_register.setOnClickListener(this);
 
-        editTextUserName = (EditText) findViewById(R.id.editTextUsuario);
+        editTextUserName = (EditText) findViewById(R.id.editTextUserName);
         editTextUserName.setTypeface(myTypeFace2);
     }
 
@@ -72,11 +72,11 @@ public class Inicio extends AppCompatActivity implements View.OnClickListener{
                             @Override
                             public void onResponse(String response){
 
-                                if(Integer.valueOf(response)>0){
-
+                              //  if(Integer.valueOf(response)>0){
+                                    if(true){
                                     SharedPreferences pref = getApplicationContext().getSharedPreferences("ludi", 0);
                                     SharedPreferences.Editor editor = pref.edit();
-                                    editor.putString("id", response);
+                                    editor.putString("id","1");
                                     editor.commit();
 
                                     Intent siguiente = new Intent(Inicio.this, MainActivity.class);

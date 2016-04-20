@@ -102,10 +102,6 @@
             android:configChanges="orientation"
             android:screenOrientation="landscape"/>
 
-        <activity android:name=".Noticias"
-            android:configChanges="orientation"
-            android:screenOrientation="landscape"/>
-
         <activity android:name=".Actualizar"
             android:configChanges="orientation"
             android:screenOrientation="landscape"/>

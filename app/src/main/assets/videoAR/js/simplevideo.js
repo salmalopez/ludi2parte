@@ -122,7 +122,7 @@ var World = {
                 		});
 
 
-		var pageFive = new AR.Trackable2DObject(this.tracker, "bebidas", {
+		var pageSix = new AR.Trackable2DObject(this.tracker, "bebidas", {
                 			drawables: {
                 				cam: [videojarra]
                 			},

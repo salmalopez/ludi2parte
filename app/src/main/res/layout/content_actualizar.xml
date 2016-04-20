@@ -17,10 +17,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="CAMBIA TUS DATOS"
+        android:text="CAMBIA"
         android:id="@+id/txtRegister"
-        android:textSize="80dp"
+        android:textSize="90dp"
         android:textColor="#ff8e38" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="TUS DATOS"
+        android:id="@+id/txtRegister2"
+        android:textSize="90dp"
+        android:textColor="#ff8e38"
+        android:layout_marginLeft="400dp" />
 
     <LinearLayout
         android:layout_width="666dp"
@@ -32,7 +41,7 @@
             android:background="@drawable/nino" />
 
         <EditText
-            android:layout_width="670dp"
+            android:layout_width="666dp"
             android:layout_height="wrap_content"
             android:id="@+id/editTextUsuario"
             android:text="Usuario"
