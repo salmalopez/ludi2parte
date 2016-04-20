@@ -2,6 +2,7 @@ package com.ludi.tt_ludi;
 
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
@@ -25,9 +26,7 @@ public class MainActivity extends AppCompatActivity
 
 
     Button btnActividades, btnNoticias,btnAvance;
-
-
-                        boolean fragmentTransaction = false;
+    boolean fragmentTransaction = false;
 
 
     @Override
@@ -137,6 +136,11 @@ public class MainActivity extends AppCompatActivity
             MainActivity.this.startActivity(siguiente2);
 
         } else if (id == R.id.nav_cerrarSesison) {
+
+            SharedPreferences.Editor editor = (getApplicationContext().getSharedPreferences("ludi", 0)).edit();
+            editor.remove("id");
+            editor.commit();
+
             Intent siguiente = new Intent(MainActivity.this, Inicio.class);
             MainActivity.this.startActivity(siguiente);
 
@@ -180,7 +184,11 @@ public class MainActivity extends AppCompatActivity
                 getSupportActionBar().setTitle("Noticias");
                 break;
             case (R.id.btnAvance):
-
+                AvanceFragment fragment4 = new AvanceFragment();
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.content_nav_drawer, fragment4)
+                        .commit();
+                getSupportActionBar().setTitle("Avance");
                 break;
         }
     }
