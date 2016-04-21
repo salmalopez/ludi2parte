@@ -44,7 +44,7 @@
         <EditText
             android:layout_width="390dp"
             android:layout_height="70dp"
-            android:id="@+id/editTextUserName"
+            android:id="@+id/editTextUsuario"
             android:padding="10dp"
             android:background="#E0F7FA"
             android:paddingLeft="30dp"
