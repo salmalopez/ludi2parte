@@ -6,20 +6,20 @@
         <item
             android:id="@+id/nav_inicio"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Inicio" />
+            android:title="INICIO" />
 
         <item
             android:id="@+id/nav_actividades"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Actividades" />
+            android:icon="@drawable/ic_menu_actividades"
+            android:title="ACTIVIDADES" />
         <item
             android:id="@+id/nav_noticias"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Noticias" />
+            android:title="NOTICIAS" />
         <item
             android:id="@+id/nav_realidadAumentada"
             android:icon="@drawable/ic_menu_camera"
-            android:title="Realidad Aumentada" />
+            android:title="REALIDAD AUMENTADA" />
 
     </group>
 
@@ -27,12 +27,12 @@
         <menu>
             <item
                 android:id="@+id/nav_perfil"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Perfil" />
+                android:icon="@drawable/ic_menu_perfil"
+                android:title="PERFIL" />
             <item
                 android:id="@+id/nav_cerrarSesison"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Cerrar Sesion" />
+                android:title="CERRAR SESION" />
         </menu>
     </item>
 

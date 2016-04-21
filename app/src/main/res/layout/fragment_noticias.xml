@@ -2,26 +2,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context="com.ludi.tt_ludi.NoticiasFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
 
     <TextView
-        android:layout_width="500dp"
-        android:layout_height="500dp"
+        android:layout_width="600dp"
+        android:layout_height="400dp"
         android:text="New Text"
         android:id="@+id/textViewid"
         android:layout_gravity="center_horizontal|top"
-        android:background="#f01d1d" />
+        android:background="#ffffff"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:textSize="30dp" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="¿Qué hay de nuevo?"
         android:id="@+id/btn"
-        android:layout_below="@+id/textViewid"
-        android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_alignEnd="@+id/textViewid" />
+        android:layout_alignStart="@+id/textViewid"
+        android:layout_below="@+id/textViewid"
+        android:layout_alignEnd="@+id/textViewid"
+        android:layout_marginBottom="100dp" />
 </RelativeLayout>

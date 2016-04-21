@@ -20,12 +20,12 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity
         implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener,
         ActividadesFragment.OnFragmentInteractionListener,
-        NoticiasFragment.OnFragmentInteractionListener
+        NoticiasFragment.OnFragmentInteractionListener,
+        InicioFragment.OnFragmentInteractionListener
                     {
 
 
     Button btnActividades, btnNoticias,btnAvance;
-
 
                         boolean fragmentTransaction = false;
 
@@ -119,8 +119,8 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction = true;
 
         }  else if (id == R.id.nav_inicio) {
-            Intent main = new Intent(MainActivity.this, MainActivity.class);
-            MainActivity.this.startActivity(main);
+            fragment = new InicioFragment();
+            fragmentTransaction = true;
 
         } else if (id == R.id.nav_noticias) {
             fragment = new NoticiasFragment();
@@ -129,15 +129,15 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_realidadAumentada) {
 
-            Intent ra = new Intent(MainActivity.this, Libro.class);
+            Intent ra = new Intent(this, Libro.class);
             MainActivity.this.startActivity(ra);
 
         } else if (id == R.id.nav_perfil) {
-            Intent siguiente2 = new Intent(MainActivity.this, Actualizar.class);
-            MainActivity.this.startActivity(siguiente2);
+            Intent actualizar = new Intent(this, Actualizar.class);
+            MainActivity.this.startActivity(actualizar);
 
         } else if (id == R.id.nav_cerrarSesison) {
-            Intent siguiente = new Intent(MainActivity.this, Inicio.class);
+            Intent siguiente = new Intent(this, Inicio.class);
             MainActivity.this.startActivity(siguiente);
 
         }

@@ -11,46 +11,36 @@
     android:orientation="vertical"
     tools:context="com.ludi.tt_ludi.Actualizar">
 
-
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="CAMBIA"
-        android:id="@+id/txtRegister"
-        android:textSize="90dp"
-        android:textColor="#ff8e38" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="TUS DATOS"
+        android:text="CAMBIA TUS DATOS"
         android:id="@+id/txtRegister2"
         android:textSize="90dp"
         android:textColor="#ff8e38"
-        android:layout_marginLeft="400dp" />
+        android:textIsSelectable="false" />
 
     <LinearLayout
-        android:layout_width="666dp"
+        android:layout_width="1182dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
-            android:layout_width="118dp"
-            android:layout_height="96dp"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
             android:background="@drawable/nino" />
 
         <EditText
             android:layout_width="666dp"
             android:layout_height="wrap_content"
             android:id="@+id/editTextUsuario"
-            android:text="Usuario"
+            android:text="USUARIO"
             android:layout_gravity="center"
             android:textColor="#006064"
-            android:textSize="30dp" />
+            android:textSize="30dp"
+            android:layout_marginLeft="30dp" />
 
     </LinearLayout>
-
 
 
     <LinearLayout
@@ -61,76 +51,102 @@
 
 
         <EditText
-            android:layout_width="666dp"
+            android:layout_width="621dp"
             android:layout_height="wrap_content"
-            android:text="Nombre "
+            android:text="NOMBRE COMPLETO"
             android:id="@+id/editTextNombre"
             android:textColor="#006064"
-            android:textSize="30dp" />
+            android:textSize="30dp"
+            android:layout_marginLeft="50dp" />
 
     </LinearLayout>
 
 
-
-   <LinearLayout
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="1182dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingLeft="120dp">
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            android:background="@drawable/edad" />
 
         <EditText
             android:layout_width="666dp"
             android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:id="@+id/editTextPeso"
-            android:text="Peso"
+            android:id="@+id/editTextEdad"
+            android:text="EDAD"
+            android:layout_gravity="center"
             android:textColor="#006064"
-            android:textSize="30dp" />
-
-       <EditText
-           android:layout_width="666dp"
-           android:layout_height="wrap_content"
-           android:inputType="numberDecimal"
-           android:id="@+id/editTextEstatura"
-           android:text="Estatura"
-           android:textColor="#006064"
-           android:textSize="30dp" />
-
-       <EditText
-           android:layout_width="666dp"
-           android:layout_height="wrap_content"
-           android:inputType="numberDecimal"
-           android:id="@+id/editTextEdad"
-           android:text="Edad"
-           android:textColor="#006064"
-           android:textSize="30dp" />
+            android:textSize="30dp"
+            android:layout_marginLeft="30dp" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="1182dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="621dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextEstatura"
+            android:text="ESTATURA"
+            android:textColor="#006064"
+            android:textSize="30dp"
+            android:layout_marginLeft="170dp" />
 
     </LinearLayout>
 
+
     <LinearLayout
+        android:layout_width="1182dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            android:background="@drawable/peso" />
+
+        <EditText
+            android:layout_width="666dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextPeso"
+            android:text="PESO"
+            android:layout_gravity="center"
+            android:textColor="#006064"
+            android:textSize="30dp"
+            android:layout_marginLeft="30dp" />
+
+    </LinearLayout>
+
+
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="131dp"
         android:orientation="horizontal"
         android:weightSum="1"
         android:paddingLeft="0dp">
 
         <Button
-            android:layout_width="132dp"
+            android:layout_width="112dp"
             android:layout_height="104dp"
             android:background="@drawable/guardar"
             android:id="@+id/buttonUpdate"
-            android:layout_marginLeft="900dp" />
+            android:layout_marginLeft="900dp"
+            android:layout_alignParentTop="true" />
 
-    </LinearLayout>
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/regreso"
+            android:id="@+id/buttonRegreso"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentBottom="true" />
 
-
+    </RelativeLayout>
 
 
 

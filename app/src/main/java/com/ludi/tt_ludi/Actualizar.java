@@ -184,8 +184,15 @@ public class Actualizar extends AppCompatActivity implements View.OnClickListene
 
     @Override
     public void onClick(View v) {
-        if(v == buttonUpdate){
-            updateUser(this.id);
+
+        switch (v.getId()) {
+            case (R.id.btnActividades):
+                updateUser(this.id);
+                break;
+            case (R.id.buttonRegreso):
+                finish();
+                break;
+
         }
     }
 

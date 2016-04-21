@@ -10,32 +10,43 @@
     android:orientation="vertical"
     tools:context="com.ludi.tt_ludi.Registro">
 
+
+
+<LinearLayout
+    android:layout_width="786dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="REGISTRATE"
         android:id="@+id/txtRegister"
-        android:textSize="130dp"
-        android:textColor="#ff8e38" />
+        android:textSize="120dp"
+        android:textColor="#ff8e38"
+        android:textIsSelectable="false"
+        android:layout_gravity="center" />
 
     <LinearLayout
         android:layout_width="1182dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
-            android:layout_width="118dp"
-            android:layout_height="96dp"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
             android:background="@drawable/nino" />
 
         <EditText
             android:layout_width="666dp"
             android:layout_height="wrap_content"
             android:id="@+id/editTextUserName"
-            android:text="Usuario"
+            android:text="USUARIO"
             android:layout_gravity="center"
             android:textColor="#006064"
-            android:textSize="30dp" />
+            android:textSize="30dp"
+            android:layout_marginLeft="30dp" />
 
     </LinearLayout>
 
@@ -47,69 +58,108 @@
         android:paddingLeft="120dp">
 
 
-    <EditText
-        android:layout_width="666dp"
+        <EditText
+            android:layout_width="621dp"
+            android:layout_height="wrap_content"
+            android:text="NOMBRE COMPLETO"
+            android:id="@+id/editTextName"
+            android:textColor="#006064"
+            android:textSize="30dp"
+            android:layout_marginLeft="50dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="1182dp"
         android:layout_height="wrap_content"
-        android:text="Nombre"
-        android:id="@+id/editTextName"
-        android:textColor="#006064"
-        android:textSize="30dp" />
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            android:background="@drawable/edad" />
 
         <EditText
             android:layout_width="666dp"
             android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
             android:id="@+id/editTextDate"
-            android:text="Edad"
+            android:text="EDAD"
             android:layout_gravity="center"
             android:textColor="#006064"
-            android:textSize="30dp" />
+            android:textSize="30dp"
+            android:layout_marginLeft="30dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="1182dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="621dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextHeight"
+            android:text="ESTATURA"
+            android:textColor="#006064"
+            android:textSize="30dp"
+            android:layout_marginLeft="170dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="1182dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            android:background="@drawable/peso" />
+
+        <EditText
+            android:layout_width="666dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextWeight"
+            android:text="PESO"
+            android:layout_gravity="center"
+            android:textColor="#006064"
+            android:textSize="30dp"
+            android:layout_marginLeft="30dp" />
 
     </LinearLayout>
 
 
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingLeft="120dp">
 
-    <EditText
-        android:layout_width="666dp"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:id="@+id/editTextWeight"
-        android:text="Peso"
-        android:textColor="#006064"
-        android:textSize="30dp" />
+</LinearLayout>
 
-    <EditText
-        android:layout_width="666dp"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:id="@+id/editTextHeight"
-        android:text="Altura"
-        android:textColor="#006064"
-        android:textSize="30dp" />
 
-    </LinearLayout>
 
-    <LinearLayout
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="217dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="1"
         android:paddingLeft="0dp">
 
         <Button
-            android:layout_width="132dp"
+            android:layout_width="112dp"
             android:layout_height="104dp"
             android:background="@drawable/guardar"
             android:id="@+id/buttonRegister"
             android:layout_marginLeft="900dp" />
 
-    </LinearLayout>
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/regreso"
+            android:id="@+id/buttonRegreso"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
 
 
 

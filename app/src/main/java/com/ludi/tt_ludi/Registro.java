@@ -37,7 +37,7 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
     private TextView txtRegister;
 
 
-    private Button buttonRegister;
+    private Button buttonRegister,buttonRegreso;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +67,9 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
 
         buttonRegister = (Button) findViewById(R.id.buttonRegister);
         buttonRegister.setOnClickListener(this);
+
+        buttonRegreso = (Button) findViewById(R.id.buttonRegreso);
+        buttonRegreso.setOnClickListener(this);
     }
 
     private void registerUser(){
@@ -116,8 +119,15 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
 
     @Override
     public void onClick(View v) {
-        if(v == buttonRegister){
-            registerUser();
+
+        switch (v.getId()) {
+            case (R.id.btnActividades):
+                registerUser();
+                break;
+            case (R.id.buttonRegreso):
+                finish();
+                break;
+
         }
     }
 }
