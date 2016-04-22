@@ -106,8 +106,13 @@
         <activity android:name=".CuestionarioAct5" />
         <activity
             android:name=".Informacion"
-            android:label="@string/title_activity_informacion"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:label="@string/title_activity_informacion"/>
+
+        <activity
+            android:name=".Avance"
+            android:label="@string/title_activity_avance"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>
