@@ -4,22 +4,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondoinicio"
+    android:focusableInTouchMode="true"
+    android:transitionGroup="false"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="100dp"
     android:paddingRight="100dp"
     android:orientation="vertical"
-    tools:context="com.ludi.tt_ludi.Registro">
-
-
-
-<LinearLayout
-    android:layout_width="786dp"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:layout_gravity="center">
+    tools:context="com.ludi.tt_ludi.Registro"
+    android:clickable="true">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="REGISTRATE"
@@ -29,20 +24,30 @@
         android:textIsSelectable="false"
         android:layout_gravity="center" />
 
+<LinearLayout
+    android:layout_width="786dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center">
+
+
+
     <LinearLayout
         android:layout_width="1182dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
             android:layout_width="100dp"
-            android:layout_height="90dp"
+            android:layout_height="80dp"
             android:background="@drawable/nino" />
 
         <EditText
             android:layout_width="666dp"
             android:layout_height="wrap_content"
             android:id="@+id/editTextUserName"
-            android:text="USUARIO"
+            android:hint="USUARIO"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
             android:layout_gravity="center"
             android:textColor="#006064"
             android:textSize="30dp"
@@ -61,8 +66,10 @@
         <EditText
             android:layout_width="621dp"
             android:layout_height="wrap_content"
-            android:text="NOMBRE COMPLETO"
+            android:hint="NOMBRE COMPLETO"
             android:id="@+id/editTextName"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
             android:textColor="#006064"
             android:textSize="30dp"
             android:layout_marginLeft="50dp" />
@@ -75,15 +82,17 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
-            android:layout_width="100dp"
-            android:layout_height="90dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:background="@drawable/edad" />
 
         <EditText
             android:layout_width="666dp"
             android:layout_height="wrap_content"
             android:id="@+id/editTextDate"
-            android:text="EDAD"
+            android:hint="EDAD"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
             android:layout_gravity="center"
             android:textColor="#006064"
             android:textSize="30dp"
@@ -100,7 +109,9 @@
             android:layout_width="621dp"
             android:layout_height="wrap_content"
             android:id="@+id/editTextHeight"
-            android:text="ESTATURA"
+            android:hint="ESTATURA"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
             android:textColor="#006064"
             android:textSize="30dp"
             android:layout_marginLeft="170dp" />
@@ -113,15 +124,17 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
-            android:layout_width="100dp"
-            android:layout_height="90dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:background="@drawable/peso" />
 
         <EditText
             android:layout_width="666dp"
             android:layout_height="wrap_content"
             android:id="@+id/editTextWeight"
-            android:text="PESO"
+            android:hint="PESO"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
             android:layout_gravity="center"
             android:textColor="#006064"
             android:textSize="30dp"

@@ -73,6 +73,16 @@ public class AvanceFragment extends Fragment implements View.OnClickListener {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+
+
+        View view = inflater.inflate(R.layout.fragment_avance, container, false);
+
         this.id = (getActivity().getApplicationContext().getSharedPreferences("ludi", 0)).getString("id",null);
         estatusAct1 = (TextView) getView().findViewById(R.id.btn_act1);
         estatusAct2 = (TextView) getView().findViewById(R.id.btn_act2);
@@ -86,13 +96,8 @@ public class AvanceFragment extends Fragment implements View.OnClickListener {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_avance, container, false);
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -108,8 +113,8 @@ public class AvanceFragment extends Fragment implements View.OnClickListener {
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
         } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
+            //throw new RuntimeException(context.toString()
+                  //  + " must implement OnFragmentInteractionListener");
         }
     }
 

@@ -40,10 +40,10 @@ public class Actualizar extends AppCompatActivity implements View.OnClickListene
     private EditText editTextEdad;
 
 
-    private TextView txtRegister,txtRegister2;
+    private TextView txtRegister,textPerfil;
     private String id;
 
-    private Button buttonUpdate;
+    private Button buttonUpdate,buttonRegreso;
 
 
     @Override
@@ -58,10 +58,11 @@ public class Actualizar extends AppCompatActivity implements View.OnClickListene
         txtRegister = (TextView) findViewById(R.id.txtRegister);
         txtRegister.setTypeface(myTypeFace);
 
-        txtRegister2 = (TextView) findViewById(R.id.txtRegister2);
-        txtRegister2.setTypeface(myTypeFace);
 
         Typeface myTypeFace2 = Typeface.createFromAsset(getAssets(),"DK.ttf");
+
+        textPerfil = (TextView) findViewById(R.id.textPerfil);
+        textPerfil.setTypeface(myTypeFace2);
 
         editTextUsuario = (EditText) findViewById(R.id.editTextUsuario);
         editTextUsuario.setTypeface(myTypeFace2);
@@ -78,6 +79,10 @@ public class Actualizar extends AppCompatActivity implements View.OnClickListene
 
         buttonUpdate = (Button) findViewById(R.id.buttonUpdate);
         buttonUpdate.setOnClickListener(this);
+
+
+        buttonRegreso = (Button) findViewById(R.id.buttonRegreso);
+        buttonRegreso.setOnClickListener(this);
 
         retrieveUser(this.id);
     }
@@ -186,7 +191,7 @@ public class Actualizar extends AppCompatActivity implements View.OnClickListene
     public void onClick(View v) {
 
         switch (v.getId()) {
-            case (R.id.btnActividades):
+            case (R.id.buttonUpdate):
                 updateUser(this.id);
                 break;
             case (R.id.buttonRegreso):

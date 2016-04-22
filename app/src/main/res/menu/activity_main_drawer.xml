@@ -23,7 +23,7 @@
 
     </group>
 
-    <item android:title="Configuracion">
+    <item android:title="INFORMACION">
         <menu>
             <item
                 android:id="@+id/nav_perfil"
