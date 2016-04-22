@@ -35,9 +35,9 @@
     <string name="title_activity_instrucciones_act2">InstruccionesAct2</string>
     <string name="title_activity_instrucciones_act3">InstruccionesAct3</string>
     <string name="title_activity_actualizar">Actualizar</string>
-<<<<<<< HEAD
+
     <string name="title_activity_informacion">Informacion</string>
-=======
+
     <string name="title_activity_avance">Avance</string>
->>>>>>> 43db5ecb6c5dc358b6a636fff198bc8561a0a67a
+
 </resources>

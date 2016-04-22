@@ -2,11 +2,8 @@ package com.ludi.tt_ludi;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -38,11 +35,11 @@ public class Avance extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         this.id = (getApplicationContext().getSharedPreferences("ludi", 0)).getString("id",null);
-        estatusAct1 = (TextView) findViewById(R.id.btn_act1);
-        estatusAct2 = (TextView) findViewById(R.id.btn_act2);
-        estatusAct3 = (TextView) findViewById(R.id.btn_act3);
-        estatusAct4 = (TextView) findViewById(R.id.btn_act4);
-        estatusAct5 = (TextView) findViewById(R.id.btn_act5);
+        estatusAct1 = (TextView) findViewById(R.id.estado_act1);
+        estatusAct2 = (TextView) findViewById(R.id.estado_act2);
+        estatusAct3 = (TextView) findViewById(R.id.estado_act3);
+        estatusAct4 = (TextView) findViewById(R.id.estado_act4);
+        estatusAct5 = (TextView) findViewById(R.id.estado_act5);
 
         getEstatus();
 
@@ -55,6 +52,7 @@ public class Avance extends AppCompatActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
+                        System.out.println(response);
                         actualizarEstatus(response);
                     }
                 },
@@ -78,7 +76,6 @@ public class Avance extends AppCompatActivity {
 
     private void actualizarEstatus(String json){
 
-        Drawable tache = getResources().getDrawable(R.drawable.tache);
         Drawable paloma = getResources().getDrawable(R.drawable.paloma);
 
         try {

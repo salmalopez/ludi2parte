@@ -20,13 +20,14 @@ import java.util.Map;
 
 public class Registro extends AppCompatActivity implements View.OnClickListener {
 
-    private static final String REGISTER_URL = "http://ludi.mx/api/user";
+    private static final String REGISTER_URL = "http://ludi.mx/api/usuario";
 
-    public static final String KEY_USERNAME = "userName";
-    public static final String KEY_NAME = "name";
-    public static final String KEY_DATE = "date";
-    public static final String KEY_WEIGHT = "weight";
-    public static final String KEY_HEIGHT = "height";
+    public static final String KEY_ID = "idtipousuario";
+    public static final String KEY_USERNAME = "usuario";
+    public static final String KEY_NAME = "nombre";
+    public static final String KEY_DATE = "edad";
+    public static final String KEY_WEIGHT = "peso";
+    public static final String KEY_HEIGHT = "estatura";
 
     private EditText editTextUserName;
     private EditText editTextName;
@@ -52,16 +53,16 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
         Typeface myTypeFace2 = Typeface.createFromAsset(getAssets(),"DK.ttf");
         editTextUserName = (EditText) findViewById(R.id.editTextUserName);
         editTextUserName.setTypeface(myTypeFace2);
+
         editTextName = (EditText) findViewById(R.id.editTextName);
         editTextName.setTypeface(myTypeFace2);
 
-        editTextUserName = (EditText) findViewById(R.id.editTextUsuario);
-        editTextName = (EditText) findViewById(R.id.editTextNombre);
         editTextDate= (EditText) findViewById(R.id.editTextDate);
         editTextDate.setTypeface(myTypeFace2);
-        editTextWeight= (EditText) findViewById(R.id.editTextWeight);
 
+        editTextWeight= (EditText) findViewById(R.id.editTextWeight);
         editTextWeight.setTypeface(myTypeFace2);
+
         editTextHeight= (EditText) findViewById(R.id.editTextHeight);
         editTextHeight.setTypeface(myTypeFace2);
 
@@ -103,6 +104,7 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
             protected Map<String,String> getParams(){
 
                 Map<String,String> params = new HashMap<String, String>();
+                params.put(KEY_ID,"2");
                 params.put(KEY_USERNAME,userName);
                 params.put(KEY_NAME,name);
                 params.put(KEY_DATE, date);
@@ -121,11 +123,11 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
     public void onClick(View v) {
 
         switch (v.getId()) {
-            case (R.id.btnActividades):
-                registerUser();
-                break;
             case (R.id.buttonRegreso):
                 finish();
+                break;
+            case (R.id.buttonRegister):
+                registerUser();
                 break;
 
         }
