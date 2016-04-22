@@ -187,11 +187,8 @@ public class MainActivity extends AppCompatActivity
                 getSupportActionBar().setTitle("Noticias");
                 break;
             case (R.id.btnAvance):
-                AvanceFragment fragment4 = new AvanceFragment();
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.content_nav_drawer, fragment4)
-                        .commit();
-                getSupportActionBar().setTitle("Avance");
+                Intent avance = new Intent(this, Avance.class);
+                MainActivity.this.startActivity(avance);
                 break;
         }
     }

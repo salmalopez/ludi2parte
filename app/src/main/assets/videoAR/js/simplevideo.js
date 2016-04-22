@@ -23,22 +23,22 @@ var World = {
 							offsetY: 0
         				});
 
-        var videofyv = new AR.VideoDrawable("assets/fyv.mp4", 0.40, {
+        var videofyv = new AR.VideoDrawable("assets/frutas_verduras.mp4", 0.40, {
 							offsetX: 0,
 							offsetY: 0
         				});
 
-        var videocereales = new AR.VideoDrawable("assets/cereales.mp4", 0.40, {
+        var videocereales = new AR.VideoDrawable("assets/cereales_tuberculos.mp4", 0.40, {
                 			offsetX: 0,
                             offsetY: 0
                 		});
 
-        var videocarne = new AR.VideoDrawable("assets/carnes.mp4", 0.40, {
+        var videocarne = new AR.VideoDrawable("assets/leguminosas.mp4", 0.40, {
                 			offsetX: 0,
                             offsetY: 0
                 		});
 
-        var videoplato = new AR.VideoDrawable("assets/plato.mp4", 0.40, {
+        var videoplato = new AR.VideoDrawable("assets/plato_bien_comer.mp4", 0.40, {
                 			offsetX: 0,
                             offsetY: 0
                 		});

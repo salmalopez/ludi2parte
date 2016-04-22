@@ -72,11 +72,11 @@ public class Inicio extends AppCompatActivity implements View.OnClickListener{
                             @Override
                             public void onResponse(String response){
 
-                              //  if(Integer.valueOf(response)>0){
-                                    if(true){
+                                if(Integer.valueOf(response)>0){
+                                //    if(true){
                                     SharedPreferences pref = getApplicationContext().getSharedPreferences("ludi", 0);
                                     SharedPreferences.Editor editor = pref.edit();
-                                    editor.putString("id","1");
+                                    editor.putString("id",response);
                                     editor.commit();
 
                                     Intent siguiente = new Intent(Inicio.this, MainActivity.class);
@@ -92,6 +92,7 @@ public class Inicio extends AppCompatActivity implements View.OnClickListener{
                             public void onErrorResponse(VolleyError error) {
                                 System.out.println("No es posible iniciar sesión debido a un error inesperado: "+error);
                             }
+
                         }){
                     @Override
                     protected Map<String,String> getParams(){
