@@ -9,20 +9,20 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-public class Gato extends AppCompatActivity implements View.OnClickListener{
+public class Gato extends AppCompatActivity implements View.OnClickListener {
 
     private int[][] tablero = new int[3][3];
     private boolean ganar;
-    private final String[] consejos = { "La jarra del buen beber sugiere la cantidad de bebidas que podrías tomar en un día.",
-                                        "Si te gusta el café, solo deberías tomar hasta 2 tazas en un día.",
-                                        "Las bebidas que menos debes consumir son las que contienen azúcar.",
-                                        "La leche es una fuente importante de calcio para tu organismo.",
-                                        "El agua natural es muy importante porque nos ayuda a mantener la piel sana, es esencial para la digestión y previene el estreñimiento.",
-                                        "¿Sabías que la jarra del buen beber consta de 6 niveles?",
-                                        "Si tomas agua y te mandienes hidratado, tu organismo tendrá beneficios como activar órganos internos y bajar la presión sanguínea.",
-                                        "El nivel más grande y más importante dentro de la jarra del buen beber es el agua.",
-                                        "Trata de evitar el café y el té. Estas bebidas complican tu digestión.",
-                                        "Consumir leche es sano mientras no la consumas en exceso."};
+    private final String[] consejos = {"La jarra del buen beber sugiere la cantidad de bebidas que podrías tomar en un día.",
+            "Si te gusta el café, solo deberías tomar hasta 2 tazas en un día.",
+            "Las bebidas que menos debes consumir son las que contienen azúcar.",
+            "La leche es una fuente importante de calcio para tu organismo.",
+            "El agua natural es muy importante porque nos ayuda a mantener la piel sana, es esencial para la digestión y previene el estreñimiento.",
+            "¿Sabías que la jarra del buen beber consta de 6 niveles?",
+            "Si tomas agua y te mandienes hidratado, tu organismo tendrá beneficios como activar órganos internos y bajar la presión sanguínea.",
+            "El nivel más grande y más importante dentro de la jarra del buen beber es el agua.",
+            "Trata de evitar el café y el té. Estas bebidas complican tu digestión.",
+            "Consumir leche es sano mientras no la consumas en exceso."};
     private int pointer;
     ImageView casilla1, casilla2, casilla3, casilla4, casilla5, casilla6, casilla7, casilla8, casilla9;
     Button btnCuestionario, btnReiniciar, btn_regresar;
@@ -85,85 +85,86 @@ public class Gato extends AppCompatActivity implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.casilla1:
-                    if(tirar(0, 0, 1, casilla1))
-                        generarTiro();
+                if (tirar(0, 0, 1, casilla1))
+                    generarTiro();
                 break;
             case R.id.casilla2:
-                    if(tirar(0, 1, 1, casilla2))
-                        generarTiro();
+                if (tirar(0, 1, 1, casilla2))
+                    generarTiro();
                 break;
             case R.id.casilla3:
-                    if(tirar(0, 2, 1, casilla3))
-                        generarTiro();
+                if (tirar(0, 2, 1, casilla3))
+                    generarTiro();
                 break;
             case R.id.casilla4:
-                    if(tirar(1, 0, 1, casilla4))
-                        generarTiro();
+                if (tirar(1, 0, 1, casilla4))
+                    generarTiro();
                 break;
             case R.id.casilla5:
-                    if(tirar(1, 1, 1, casilla5))
-                        generarTiro();
+                if (tirar(1, 1, 1, casilla5))
+                    generarTiro();
                 break;
             case R.id.casilla6:
-                    if(tirar(1, 2, 1, casilla6))
-                        generarTiro();
+                if (tirar(1, 2, 1, casilla6))
+                    generarTiro();
                 break;
             case R.id.casilla7:
-                    if(tirar(2, 0, 1, casilla7))
-                        generarTiro();
+                if (tirar(2, 0, 1, casilla7))
+                    generarTiro();
                 break;
             case R.id.casilla8:
-                    if(tirar(2, 1, 1, casilla8))
-                        generarTiro();
+                if (tirar(2, 1, 1, casilla8))
+                    generarTiro();
                 break;
             case R.id.casilla9:
-                    if(tirar(2, 2, 1, casilla9))
-                        generarTiro();
+                if (tirar(2, 2, 1, casilla9))
+                    generarTiro();
                 break;
             case R.id.btnReiniciar:
                 iniciar();
                 break;
             case R.id.btnCuestionario:
-                Intent intent = new Intent(this,CuestionarioAct1.class);
+                Intent intent = new Intent(this, CuestionarioAct1.class);
                 startActivity(intent);
                 break;
         }
     }
 
     //Tirar una ficha
-    private boolean tirar (int i, int j, int jugador, ImageView casilla){
-        if(i>2 || j>2 || i<0 || j<0 || !disponibilidad())
+    private boolean tirar(int i, int j, int jugador, ImageView casilla) {
+        if (i > 2 || j > 2 || i < 0 || j < 0 || !disponibilidad())
             return false;
 
-            if(tablero[i][j]==0){
-                tablero[i][j] = jugador;
-                if(jugador == 1)
-                    casilla.setImageResource(R.drawable.gatox);
-                else{
-                    mostrarConsejo();
-                    casilla.setImageResource(R.drawable.gatoo);
-                }
-
+        if (tablero[i][j] == 0) {
+            tablero[i][j] = jugador;
+            if (jugador == 1)
+                casilla.setImageResource(R.drawable.gato_x);
+            else {
+                mostrarConsejo();
+                casilla.setImageResource(R.drawable.gato_o);
                 ganar = verificar(jugador);
-                if(ganar){
-                    estadoTablero(false);
-                    Toast toast = Toast.makeText(this, (jugador==1)?"¡Felicidades! Has ganado el juego :)":"¡Oops! Creo que la actividad ha ganado.",Toast.LENGTH_SHORT);
-                    toast.show();
-                }else if(!disponibilidad()){
-                    estadoTablero(false);
-                    Toast toast = Toast.makeText(this, "¡Ya no hay más casillas!. El juego se ha terminado.",Toast.LENGTH_SHORT);
-                    toast.show();
-                }
 
-                return true;
-            }else{
-                System.out.println("El jugador debe seleccionar otra casilla");
-                return false;
+                if (ganar) {
+                    estadoTablero(false);
+                    Toast toast = Toast.makeText(this, (jugador == 1) ? "¡Felicidades! Has ganado el juego :)" : "¡Oops! Creo que la actividad ha ganado.", Toast.LENGTH_SHORT);
+                    toast.show();
+                } else if (!disponibilidad()) {
+                    estadoTablero(false);
+                    Toast toast = Toast.makeText(this, "¡Ya no hay más casillas!. El juego se ha terminado.", Toast.LENGTH_SHORT);
+                    toast.show();
+                    return true;
+                } else {
+                    System.out.println("El jugador debe seleccionar otra casilla");
+
+                }
             }
 
+        }
+        return false;
     }
+
 
     //Reiniciar valores
     private void iniciar(){
@@ -281,5 +282,5 @@ public class Gato extends AppCompatActivity implements View.OnClickListener{
         casilla8.setEnabled(estado);
         casilla9.setEnabled(estado);
     }
-    
+
 }

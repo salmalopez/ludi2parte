@@ -44,17 +44,6 @@
         android:layout_margin="20dp"
         android:layout_gravity="center">
 
-        <TextView
-            android:layout_width="488dp"
-            android:layout_height="match_parent"
-            android:text="Es hora de usar tu cuadernillo\n Abre tu cuadernillo en el GRUPO 3"
-            android:id="@+id/textCuadernillo"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:textSize="40dp"
-            android:textColor="#f7df40"
-            android:textStyle="bold|italic" />
-
         <Button
             android:layout_width="300dp"
             android:layout_height="169dp"

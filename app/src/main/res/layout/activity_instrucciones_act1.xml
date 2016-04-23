@@ -21,7 +21,8 @@
         android:textSize="100dp"
         android:textColor="#cfa2f7"
         android:layout_gravity="center"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_marginTop="30dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -46,19 +47,8 @@
         android:layout_margin="20dp"
         android:layout_gravity="center">
 
-        <TextView
-            android:layout_width="502dp"
-            android:layout_height="175dp"
-            android:text="Es hora de usar tu cuadernillo\n Abre tu cuadernillo en la jarra del buen beber"
-            android:id="@+id/textCuadernillo"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:textSize="40dp"
-            android:textColor="#f7df40"
-            android:textStyle="bold|italic" />
-
         <Button
-            android:layout_width="300dp"
+            android:layout_width="400dp"
             android:layout_height="169dp"
             android:id="@+id/btn_ra"
             android:background="@drawable/play"
@@ -66,7 +56,7 @@
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
             android:paddingBottom="100dp"
-            android:layout_weight="0.03" />
+            android:layout_weight="0.01" />
 
     </LinearLayout>
 
