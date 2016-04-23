@@ -26,9 +26,10 @@ public class Inicio extends AppCompatActivity implements View.OnClickListener{
     TextView txtTittle, txtRegister;
 
 
-    private static final String REGISTER_URL = "http://54.191.222.236/api/loginApp";
+    //private static final String REGISTER_URL = "http://54.191.222.236/api/loginApp";
+    private static final String REGISTER_URL = "http://ludi.mx/api/loginApp";
 
-    public static final String KEY_USERNAME = "userName";
+    public static final String KEY_USUARIO = "usuario";
 
     private EditText editTextUserName;
 
@@ -66,17 +67,19 @@ public class Inicio extends AppCompatActivity implements View.OnClickListener{
                 break;
 
             case (R.id.btn_login):
-                final String userName = editTextUserName.getText().toString().trim();
+                final String usuario = editTextUserName.getText().toString().trim();
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, REGISTER_URL,
                         new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response){
 
                                 if(Integer.valueOf(response)>0){
-                                //    if(true){
+
+                                    System.out.println("hola entro en si"+response);
+                                    //if(true){
                                     SharedPreferences pref = getApplicationContext().getSharedPreferences("ludi", 0);
                                     SharedPreferences.Editor editor = pref.edit();
-                                    editor.putString("id",response);
+                                    editor.putString("id", response);
                                     editor.commit();
 
                                     Intent siguiente = new Intent(Inicio.this, MainActivity.class);
@@ -84,6 +87,7 @@ public class Inicio extends AppCompatActivity implements View.OnClickListener{
 
                                 }else{
                                     System.out.println("No fue posible iniciar sesión. La respuesta del servidor fue: "+response);
+
                                 }
                             }
                         },
@@ -98,7 +102,7 @@ public class Inicio extends AppCompatActivity implements View.OnClickListener{
                     protected Map<String,String> getParams(){
 
                         Map<String,String> params = new HashMap<String, String>();
-                        params.put(KEY_USERNAME,userName);
+                        params.put(KEY_USUARIO,usuario);
                         return params;
                     }
 

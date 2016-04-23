@@ -14,7 +14,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.ludi.tt_ludi.R;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -186,7 +185,7 @@ public class CuestionarioAct2 extends AppCompatActivity implements View.OnClickL
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-
+                        System.out.println(response);
                     }
                 },
                 new Response.ErrorListener() {

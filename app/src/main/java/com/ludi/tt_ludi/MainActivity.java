@@ -100,6 +100,10 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+
+            Intent actualizar = new Intent(MainActivity.this, Informacion.class);
+            MainActivity.this.startActivity(actualizar);
+
             return true;
         }
 
@@ -129,12 +133,11 @@ public class MainActivity extends AppCompatActivity
 
 
         } else if (id == R.id.nav_realidadAumentada) {
-
-            Intent ra = new Intent(this, Libro.class);
+            Intent ra = new Intent(MainActivity.this, Libro.class);
             MainActivity.this.startActivity(ra);
 
         } else if (id == R.id.nav_perfil) {
-            Intent actualizar = new Intent(this, Actualizar.class);
+            Intent actualizar = new Intent(MainActivity.this, Actualizar.class);
             MainActivity.this.startActivity(actualizar);
 
         } else if (id == R.id.nav_cerrarSesison) {
@@ -186,6 +189,7 @@ public class MainActivity extends AppCompatActivity
                         .commit();
                 getSupportActionBar().setTitle("Noticias");
                 break;
+
             case (R.id.btnAvance):
                 Intent avance = new Intent(this, Avance.class);
                 MainActivity.this.startActivity(avance);

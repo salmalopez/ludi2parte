@@ -23,11 +23,11 @@
         android:layout_alignParentStart="true"
         android:textSize="60dp"
         android:layout_marginRight="100dp"
-        android:layout_marginLeft="50dp"
-        android:textColor="#fdfdfd" />
+        android:textColor="#fdfdfd"
+        android:layout_marginLeft="50dp" />
 
     <Button
-        android:layout_width="300dp"
+        android:layout_width="250dp"
         android:layout_height="200dp"
         android:text="NOTICIAS"
         android:id="@+id/btnNoticias"
@@ -47,7 +47,8 @@
         android:layout_alignTop="@+id/btnNoticias"
         android:layout_toEndOf="@+id/btnNoticias"
         android:textSize="60dp"
-        android:textColor="#ffffff" />
+        android:textColor="#ffffff"
+        android:layout_marginRight="50dp" />
 
     <ImageView
         android:layout_width="wrap_content"

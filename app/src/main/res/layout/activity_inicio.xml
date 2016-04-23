@@ -31,6 +31,8 @@
         android:orientation="horizontal"
         android:layout_marginLeft="50dp"
         android:weightSum="2"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
         android:transitionGroup="false">
 
         <ImageView
@@ -44,23 +46,26 @@
         <EditText
             android:layout_width="390dp"
             android:layout_height="70dp"
-            android:id="@+id/editTextUsuario"
+            android:id="@+id/editTextUserName"
             android:padding="10dp"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
             android:background="#E0F7FA"
             android:paddingLeft="30dp"
             android:paddingTop="100dp"
             android:paddingRight="30dp"
             android:paddingBottom="30dp"
-            android:text="Nombre de usuario"
+            android:hint="NOMBRE DE USUARIO"
+
             android:textColor="#006064"
             android:textStyle="bold"
-            android:textIsSelectable="false"
             android:textSize="30dp"
             android:layout_weight="1.44"
             android:gravity="center"
             android:layout_gravity="center"
             android:layout_marginLeft="30dp"
-            android:width="1dp" />
+            android:width="1dp"
+            android:clickable="false" />
 
 
 
