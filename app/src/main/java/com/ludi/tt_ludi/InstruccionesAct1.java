@@ -2,8 +2,8 @@ package com.ludi.tt_ludi;
 
 import android.content.Intent;
 import android.graphics.Typeface;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -11,29 +11,33 @@ import android.widget.TextView;
 public class InstruccionesAct1 extends AppCompatActivity implements View.OnClickListener{
 
     Button btn_ra,btn_comenzar,btn_regresar;
-    TextView txtTittle;
+    TextView txtIntruciones,txtTitle,textCuadernillo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_instrucciones_act1);
-
-
+        //LETRAS TEXTVIE
         Typeface myTypeFace = Typeface.createFromAsset(getAssets(),"KGS.ttf");
-        txtTittle = (TextView) findViewById(R.id.txtTittle);
-        txtTittle.setTypeface(myTypeFace);
+        txtTitle = (TextView) findViewById(R.id.txtTitle);
+        txtTitle.setTypeface(myTypeFace);
 
         Typeface myTypeFace2 = Typeface.createFromAsset(getAssets(),"dot.ttf");
+        textCuadernillo = (TextView) findViewById(R.id.textCuadernillo);
+        textCuadernillo.setTypeface(myTypeFace2);
+
+        Typeface myTypeFace3 = Typeface.createFromAsset(getAssets(),"DK.ttf");
+        txtIntruciones = (TextView) findViewById(R.id.txtIntruciones);
+        txtIntruciones.setTypeface(myTypeFace3);
+        //FIN LETRAS
+
         btn_ra = (Button) findViewById (R.id.btn_ra);
-        btn_ra.setTypeface(myTypeFace2);
         btn_ra.setOnClickListener(this);
 
         btn_comenzar = (Button) findViewById (R.id.btn_comenzar);
-        btn_comenzar.setTypeface(myTypeFace2);
         btn_comenzar.setOnClickListener(this);
 
         btn_regresar = (Button) findViewById (R.id.btn_regresar);
-        btn_regresar.setTypeface(myTypeFace2);
         btn_regresar.setOnClickListener(this);
     }
 

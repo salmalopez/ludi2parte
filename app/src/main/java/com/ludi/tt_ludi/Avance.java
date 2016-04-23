@@ -4,6 +4,8 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -20,11 +22,12 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Avance extends AppCompatActivity {
+public class Avance extends AppCompatActivity implements View.OnClickListener {
 
     private static final String WS_ESTATUS = "http://ludi.mx/api/estatus/";
     private String id;
     private TextView estatusAct1, estatusAct2, estatusAct3, estatusAct4, estatusAct5;
+    private Button btn_regresar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +43,9 @@ public class Avance extends AppCompatActivity {
         estatusAct3 = (TextView) findViewById(R.id.estado_act3);
         estatusAct4 = (TextView) findViewById(R.id.estado_act4);
         estatusAct5 = (TextView) findViewById(R.id.estado_act5);
+
+        btn_regresar = (Button) findViewById (R.id.btn_regresar);
+        btn_regresar.setOnClickListener(this);
 
         getEstatus();
 
@@ -109,4 +115,8 @@ public class Avance extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onClick(View v) {
+        finish();
+    }
 }

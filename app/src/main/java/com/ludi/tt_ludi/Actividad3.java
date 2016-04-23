@@ -219,7 +219,7 @@ public class Actividad3 extends AppCompatActivity implements View.OnTouchListene
 
         switch (v.getId()){
             case (R.id.btnCuestionario):
-                Intent i = new Intent(this, CuestionarioAct1.class);
+                Intent i = new Intent(this, CuestionarioAct4.class);
                 startActivity(i);
                 break;
 

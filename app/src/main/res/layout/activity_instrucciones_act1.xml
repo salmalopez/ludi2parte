@@ -3,48 +3,74 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/instruccioneslayout"
     android:orientation="vertical"
     tools:context="com.ludi.tt_ludi.InstruccionesAct1"
     android:weightSum="1"
-    android:background="#CE93D8"
+    android:background="#8c4a97"
     android:paddingLeft="50dp"
     android:paddingRight="50dp"
     android:paddingBottom="50dp">
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="INSTRUCCIONES"
-        android:id="@+id/txtTittle"
+        android:id="@+id/txtTitle"
         android:textSize="100dp"
-        android:textColor="#fefefe"
-        android:paddingTop="30dp"
-        android:layout_gravity="center" />
+        android:textColor="#cfa2f7"
+        android:layout_gravity="center"
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Elige la imagen con la respuesta correcta para llenar la jarra del buen beber"
+        android:text="Vamos a llenar juntos la jarra del buen beber.\n Lee con atención la pregunta y selecciona la imagen correcta para contestar la pregunta."
         android:id="@+id/txtIntruciones"
-        android:textSize="50dp"
-        android:textColor="#000000"
+        android:textSize="70dp"
+        android:textColor="#ffffff"
         android:paddingTop="30dp"
         android:layout_marginBottom="0dp"
         android:layout_gravity="center"
         android:textIsSelectable="true"
         android:textStyle="bold|normal"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:layout_weight="0.80" />
 
-    <Button
-        android:layout_width="615dp"
-        android:layout_height="169dp"
-        android:id="@+id/btn_ra"
-        android:background="@drawable/play"
-        android:layout_above="@+id/btn_comenzar"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="center"
-        android:paddingBottom="100dp"
-        android:layout_weight="0.96" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20dp"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Es hora de usar tu cuadernillo\n Abre tu cuadernillo la jarra del buen bber y ponle play"
+            android:id="@+id/textCuadernillo"
+            android:layout_weight="0.96"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="40dp"
+            android:textColor="#f7df40"
+            android:textStyle="bold|italic" />
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="169dp"
+            android:id="@+id/btn_ra"
+            android:background="@drawable/play"
+            android:layout_above="@+id/btn_comenzar"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:paddingBottom="100dp"
+            android:layout_weight="0.06" />
+
+    </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="wrap_content"

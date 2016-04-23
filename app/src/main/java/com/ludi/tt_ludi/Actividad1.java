@@ -194,7 +194,7 @@ public class Actividad1 extends Activity implements Animation.AnimationListener,
                     break;
 
             case (R.id.btnCuestionario):
-                Intent i = new Intent(this, CuestionarioAct1.class);
+                Intent i = new Intent(this, CuestionarioAct5.class);
                 startActivity(i);
                 break;
 

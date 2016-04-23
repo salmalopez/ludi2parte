@@ -1,23 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="0dp"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:layout_gravity="center"
     android:layout_weight="1"
-    android:background="@drawable/stroke_bg">
+
+    >
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    android:layout_width="match_parent">
+    android:layout_width="match_parent"
+    >
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="New Text"
+        android:textSize="30dp"
         android:id="@+id/txtPregunta1"
         android:textColor="#4871A8"
         android:textStyle="bold"/>
+
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -28,6 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="New RadioButton"
+            android:textSize="20dp"
             android:id="@+id/rb1_0"
             android:checked="false" />
 
@@ -35,6 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="New RadioButton"
+            android:textSize="20dp"
             android:id="@+id/rb1_1"
             android:checked="false" />
 
@@ -42,6 +49,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="New RadioButton"
+            android:textSize="20dp"
             android:id="@+id/rb1_2"
             android:checked="false" />
 
@@ -56,6 +64,7 @@
         android:layout_height="wrap_content"
         android:text="New Text"
         android:id="@+id/txtPregunta2"
+        android:textSize="30dp"
         android:textColor="#4871A8"
         android:textStyle="bold"/>
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
@@ -69,6 +78,7 @@
             android:layout_height="wrap_content"
             android:text="New RadioButton"
             android:id="@+id/rb2_0"
+            android:textSize="20dp"
             android:checked="false" />
 
         <RadioButton
@@ -76,6 +86,7 @@
             android:layout_height="wrap_content"
             android:text="New RadioButton"
             android:id="@+id/rb2_1"
+            android:textSize="20dp"
             android:checked="false" />
 
         <RadioButton
@@ -83,6 +94,7 @@
             android:layout_height="wrap_content"
             android:text="New RadioButton"
             android:id="@+id/rb2_2"
+            android:textSize="20dp"
             android:checked="false" />
 
     </RadioGroup>
@@ -96,6 +108,7 @@
         android:layout_height="wrap_content"
         android:text="New Text"
         android:id="@+id/txtPregunta3"
+        android:textSize="30dp"
         android:textColor="#4871A8"
         android:textStyle="bold"/>
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
@@ -109,6 +122,7 @@
             android:layout_height="wrap_content"
             android:text="New RadioButton"
             android:id="@+id/rb3_0"
+            android:textSize="20dp"
             android:checked="false" />
 
         <RadioButton
@@ -116,6 +130,7 @@
             android:layout_height="wrap_content"
             android:text="New RadioButton"
             android:id="@+id/rb3_1"
+            android:textSize="20dp"
             android:checked="false" />
 
         <RadioButton
@@ -123,6 +138,7 @@
             android:layout_height="wrap_content"
             android:text="New RadioButton"
             android:id="@+id/rb3_2"
+            android:textSize="20dp"
             android:checked="false" />
 
     </RadioGroup>
@@ -136,6 +152,7 @@
         android:layout_height="wrap_content"
         android:text="New Text"
         android:id="@+id/txtPregunta4"
+        android:textSize="30dp"
         android:textColor="#4871A8"
         android:textStyle="bold"/>
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
@@ -149,6 +166,7 @@
             android:layout_height="wrap_content"
             android:text="New RadioButton"
             android:id="@+id/rb4_0"
+            android:textSize="20dp"
             android:checked="false" />
 
         <RadioButton
@@ -156,6 +174,7 @@
             android:layout_height="wrap_content"
             android:text="New RadioButton"
             android:id="@+id/rb4_1"
+            android:textSize="20dp"
             android:checked="false" />
 
     </RadioGroup>
@@ -169,6 +188,7 @@
         android:layout_height="wrap_content"
         android:text="New Text"
         android:id="@+id/txtPregunta5"
+        android:textSize="30dp"
         android:textColor="#4871A8"
         android:textStyle="bold"/>
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
@@ -182,6 +202,7 @@
             android:layout_height="wrap_content"
             android:text="New RadioButton"
             android:id="@+id/rb5_0"
+            android:textSize="20dp"
             android:checked="false" />
 
         <RadioButton
@@ -189,6 +210,7 @@
             android:layout_height="wrap_content"
             android:text="New RadioButton"
             android:id="@+id/rb5_1"
+            android:textSize="20dp"
             android:checked="false" />
 
         <RadioButton
@@ -196,6 +218,7 @@
             android:layout_height="wrap_content"
             android:text="New RadioButton"
             android:id="@+id/rb5_2"
+            android:textSize="20dp"
             android:checked="false" />
 
     </RadioGroup>
@@ -210,6 +233,7 @@
         android:layout_height="wrap_content"
         android:text="New Text"
         android:id="@+id/txtPregunta6"
+        android:textSize="30dp"
         android:textColor="#4871A8"
         android:textStyle="bold"/>
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
@@ -223,6 +247,7 @@
             android:layout_height="wrap_content"
             android:text="New RadioButton"
             android:id="@+id/rb6_0"
+            android:textSize="20dp"
             android:checked="false" />
 
         <RadioButton
@@ -230,6 +255,7 @@
             android:layout_height="wrap_content"
             android:text="New RadioButton"
             android:id="@+id/rb6_1"
+            android:textSize="20dp"
             android:checked="false" />
 
         <RadioButton
@@ -237,6 +263,7 @@
             android:layout_height="wrap_content"
             android:text="New RadioButton"
             android:id="@+id/rb6_2"
+            android:textSize="20dp"
             android:checked="false" />
 
     </RadioGroup>
@@ -250,6 +277,7 @@
         android:layout_height="wrap_content"
         android:text="New Text"
         android:id="@+id/txtPregunta7"
+        android:textSize="30dp"
         android:textColor="#4871A8"
         android:textStyle="bold"/>
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
@@ -263,6 +291,7 @@
             android:layout_height="wrap_content"
             android:text="New RadioButton"
             android:id="@+id/rb7_0"
+            android:textSize="20dp"
             android:checked="false" />
 
         <RadioButton
@@ -270,6 +299,7 @@
             android:layout_height="wrap_content"
             android:text="New RadioButton"
             android:id="@+id/rb7_1"
+            android:textSize="20dp"
             android:checked="false" />
 
     </RadioGroup>
@@ -283,6 +313,7 @@
         android:layout_height="wrap_content"
         android:text="New Text"
         android:id="@+id/txtPregunta8"
+        android:textSize="30dp"
         android:textColor="#4871A8"
         android:textStyle="bold"/>
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
@@ -296,6 +327,7 @@
             android:layout_height="wrap_content"
             android:text="New RadioButton"
             android:id="@+id/rb8_0"
+            android:textSize="20dp"
             android:checked="false" />
 
         <RadioButton
@@ -303,6 +335,7 @@
             android:layout_height="wrap_content"
             android:text="New RadioButton"
             android:id="@+id/rb8_1"
+            android:textSize="20dp"
             android:checked="false" />
 
         <RadioButton
@@ -310,6 +343,7 @@
             android:layout_height="wrap_content"
             android:text="New RadioButton"
             android:id="@+id/rb8_2"
+            android:textSize="20dp"
             android:checked="false" />
 
     </RadioGroup>
@@ -323,6 +357,7 @@
         android:layout_height="wrap_content"
         android:text="New Text"
         android:id="@+id/txtPregunta9"
+        android:textSize="30dp"
         android:textColor="#4871A8"
         android:textStyle="bold"/>
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
@@ -336,6 +371,7 @@
             android:layout_height="wrap_content"
             android:text="New RadioButton"
             android:id="@+id/rb9_0"
+            android:textSize="20dp"
             android:checked="false" />
 
         <RadioButton
@@ -343,6 +379,7 @@
             android:layout_height="wrap_content"
             android:text="New RadioButton"
             android:id="@+id/rb9_1"
+            android:textSize="20dp"
             android:checked="false" />
 
         <RadioButton
@@ -350,6 +387,7 @@
             android:layout_height="wrap_content"
             android:text="New RadioButton"
             android:id="@+id/rb9_2"
+            android:textSize="20dp"
             android:checked="false" />
 
     </RadioGroup>
@@ -363,6 +401,7 @@
         android:layout_height="wrap_content"
         android:text="New Text"
         android:id="@+id/txtPregunta10"
+        android:textSize="30dp"
         android:textColor="#4871A8"
         android:textStyle="bold"/>
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
@@ -376,6 +415,7 @@
             android:layout_height="wrap_content"
             android:text="New RadioButton"
             android:id="@+id/rb10_0"
+            android:textSize="20dp"
             android:checked="false" />
 
         <RadioButton
@@ -383,6 +423,7 @@
             android:layout_height="wrap_content"
             android:text="New RadioButton"
             android:id="@+id/rb10_1"
+            android:textSize="20dp"
             android:checked="false" />
 
     </RadioGroup>
