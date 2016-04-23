@@ -28,7 +28,7 @@
         android:text="Pon tu mente a volar con este memorama del grupo número 3.\n Selecciona una carta y busca su par para completar el juego."
         android:id="@+id/txtIntruciones"
         android:textSize="50dp"
-        android:textColor="#000000"
+        android:textColor="#ffffff"
         android:paddingTop="30dp"
         android:layout_marginBottom="0dp"
         android:layout_gravity="center"
@@ -43,18 +43,6 @@
         android:orientation="horizontal"
         android:layout_margin="20dp"
         android:layout_gravity="center">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Es hora de usar tu cuadernillo\n Abre tu cuadernillo en la página 4 y ponle PLAY"
-            android:id="@+id/textCuadernillo"
-            android:layout_weight="0.96"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:textSize="40dp"
-            android:textColor="#f7df40"
-            android:textStyle="bold|italic" />
 
         <Button
             android:layout_width="300dp"

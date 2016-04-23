@@ -8,47 +8,43 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:id="@+id/btnCuestionario"
     android:orientation="vertical"
-    tools:context="com.ludi.tt_ludi.CuestionarioAct4"
-    android:background="@drawable/fondoactiv">
-
+    tools:context="com.ludi.tt_ludi.CuestionarioAct4">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Selecciona la respuesta correcta en cada una de las 10 preguntas y al terminar indícalo presinando el botón azul."
-        android:id="@+id/instrucciones"
+        android:text="Selecciona la respuesta correcta para cada preguntas y al terminar selecciona el boton de terminado."
+        android:id="@+id/txtIntruciones"
         android:textColor="#000"
         android:textStyle="bold"
-        android:layout_margin="20dp"/>
+        android:layout_margin="20dp"
+        android:textSize="50dp" />
 
     <include layout="@layout/content_cuestionario" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_gravity="center_vertical|center_horizontal">
-
-        <TextView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:background="@drawable/nino"
-            android:layout_gravity="center_vertical"/>
+        android:layout_gravity="center_vertical|center_horizontal|top"
+        android:weightSum="1">
 
         <Button
-            android:layout_width="610px"
-            android:layout_height="130px"
-            android:id="@+id/btnFin"
-            android:layout_gravity="center_vertical|center_horizontal"
-            android:background="@drawable/btnfin"
-            android:layout_margin="50px"
-            />
-
-        <TextView
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_gravity="center_vertical"/>
+            android:id="@+id/btn_regresar"
+            android:background="@drawable/regreso"
+            android:layout_marginRight="900dp" />
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:id="@+id/btnFin"
+            android:background="@drawable/btnfin"
+            android:layout_weight="0.18" />
+
 
     </LinearLayout>
+
+
 
 </LinearLayout>

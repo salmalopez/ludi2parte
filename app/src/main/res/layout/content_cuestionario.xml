@@ -5,14 +5,13 @@
     android:layout_height="500dp"
     android:layout_gravity="center"
     android:layout_weight="1"
-
-    >
+    android:background="@drawable/btncuestionario">
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    >
+    android:padding="30dp">
 
     <TextView
         android:layout_width="wrap_content"
@@ -21,33 +20,33 @@
         android:textSize="30dp"
         android:id="@+id/txtPregunta1"
         android:textColor="#4871A8"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
         android:id="@+id/grpP1">
 
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="New RadioButton"
             android:textSize="20dp"
             android:id="@+id/rb1_0"
             android:checked="false" />
 
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="New RadioButton"
             android:textSize="20dp"
             android:id="@+id/rb1_1"
             android:checked="false" />
 
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="New RadioButton"
             android:textSize="20dp"
             android:id="@+id/rb1_2"
@@ -68,30 +67,30 @@
         android:textColor="#4871A8"
         android:textStyle="bold"/>
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
         android:id="@+id/grpP2">
 
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="New RadioButton"
             android:id="@+id/rb2_0"
             android:textSize="20dp"
             android:checked="false" />
 
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="New RadioButton"
             android:id="@+id/rb2_1"
             android:textSize="20dp"
             android:checked="false" />
 
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="New RadioButton"
             android:id="@+id/rb2_2"
             android:textSize="20dp"
@@ -112,30 +111,30 @@
         android:textColor="#4871A8"
         android:textStyle="bold"/>
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
         android:id="@+id/grpP3">
 
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="New RadioButton"
             android:id="@+id/rb3_0"
             android:textSize="20dp"
             android:checked="false" />
 
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="New RadioButton"
             android:id="@+id/rb3_1"
             android:textSize="20dp"
             android:checked="false" />
 
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="New RadioButton"
             android:id="@+id/rb3_2"
             android:textSize="20dp"
@@ -156,22 +155,22 @@
         android:textColor="#4871A8"
         android:textStyle="bold"/>
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
         android:id="@+id/grpP4">
 
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="New RadioButton"
             android:id="@+id/rb4_0"
             android:textSize="20dp"
             android:checked="false" />
 
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="New RadioButton"
             android:id="@+id/rb4_1"
             android:textSize="20dp"
@@ -192,30 +191,30 @@
         android:textColor="#4871A8"
         android:textStyle="bold"/>
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
         android:id="@+id/grpP5">
 
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="New RadioButton"
             android:id="@+id/rb5_0"
             android:textSize="20dp"
             android:checked="false" />
 
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="New RadioButton"
             android:id="@+id/rb5_1"
             android:textSize="20dp"
             android:checked="false" />
 
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="New RadioButton"
             android:id="@+id/rb5_2"
             android:textSize="20dp"
@@ -237,30 +236,30 @@
         android:textColor="#4871A8"
         android:textStyle="bold"/>
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
         android:id="@+id/grpP6">
 
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="New RadioButton"
             android:id="@+id/rb6_0"
             android:textSize="20dp"
             android:checked="false" />
 
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="New RadioButton"
             android:id="@+id/rb6_1"
             android:textSize="20dp"
             android:checked="false" />
 
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="New RadioButton"
             android:id="@+id/rb6_2"
             android:textSize="20dp"
@@ -273,30 +272,30 @@
         android:layout_marginBottom="20px"/>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:text="New Text"
         android:id="@+id/txtPregunta7"
         android:textSize="30dp"
         android:textColor="#4871A8"
         android:textStyle="bold"/>
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
         android:id="@+id/grpP7">
 
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="New RadioButton"
             android:id="@+id/rb7_0"
             android:textSize="20dp"
             android:checked="false" />
 
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="New RadioButton"
             android:id="@+id/rb7_1"
             android:textSize="20dp"
@@ -317,30 +316,30 @@
         android:textColor="#4871A8"
         android:textStyle="bold"/>
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
         android:id="@+id/grpP8">
 
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="New RadioButton"
             android:id="@+id/rb8_0"
             android:textSize="20dp"
             android:checked="false" />
 
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="New RadioButton"
             android:id="@+id/rb8_1"
             android:textSize="20dp"
             android:checked="false" />
 
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="New RadioButton"
             android:id="@+id/rb8_2"
             android:textSize="20dp"
@@ -361,30 +360,30 @@
         android:textColor="#4871A8"
         android:textStyle="bold"/>
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
         android:id="@+id/grpP9">
 
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="New RadioButton"
             android:id="@+id/rb9_0"
             android:textSize="20dp"
             android:checked="false" />
 
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="New RadioButton"
             android:id="@+id/rb9_1"
             android:textSize="20dp"
             android:checked="false" />
 
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="New RadioButton"
             android:id="@+id/rb9_2"
             android:textSize="20dp"
@@ -405,22 +404,22 @@
         android:textColor="#4871A8"
         android:textStyle="bold"/>
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
         android:id="@+id/grpP10">
 
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="New RadioButton"
             android:id="@+id/rb10_0"
             android:textSize="20dp"
             android:checked="false" />
 
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="New RadioButton"
             android:id="@+id/rb10_1"
             android:textSize="20dp"

@@ -22,9 +22,9 @@ public class InstruccionesAct3  extends AppCompatActivity implements View.OnClic
         txtTitle = (TextView) findViewById(R.id.txtTitle);
         txtTitle.setTypeface(myTypeFace);
 
-        Typeface myTypeFace2 = Typeface.createFromAsset(getAssets(),"dot.ttf");
-        textCuadernillo = (TextView) findViewById(R.id.textCuadernillo);
-        textCuadernillo.setTypeface(myTypeFace2);
+        //Typeface myTypeFace2 = Typeface.createFromAsset(getAssets(),"dot.ttf");
+        //textCuadernillo = (TextView) findViewById(R.id.textCuadernillo);
+        //textCuadernillo.setTypeface(myTypeFace2);
 
         Typeface myTypeFace3 = Typeface.createFromAsset(getAssets(),"DK.ttf");
         txtIntruciones = (TextView) findViewById(R.id.txtIntruciones);
