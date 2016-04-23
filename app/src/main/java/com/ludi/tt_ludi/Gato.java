@@ -13,16 +13,12 @@ public class Gato extends AppCompatActivity implements View.OnClickListener{
 
     private int[][] tablero = new int[3][3];
     private boolean ganar;
-    private final String[] consejos = { "La jarra del buen beber sugiere la cantidad de bebidas que podrías tomar en un día.",
-                                        "Si te gusta el café, solo deberías tomar hasta 2 tazas en un día.",
-                                        "Las bebidas que menos debes consumir son las que contienen azúcar.",
-                                        "La leche es una fuente importante de calcio para tu organismo.",
-                                        "El agua natural es muy importante porque nos ayuda a mantener la piel sana, es esencial para la digestión y previene el estreñimiento.",
-                                        "¿Sabías que la jarra del buen beber consta de 6 niveles?",
-                                        "Si tomas agua y te mandienes hidratado, tu organismo tendrá beneficios como activar órganos internos y bajar la presión sanguínea.",
-                                        "El nivel más grande y más importante dentro de la jarra del buen beber es el agua.",
-                                        "Trata de evitar el café y el té. Estas bebidas complican tu digestión.",
-                                        "Consumir leche es sano mientras no la consumas en exceso."};
+    private final String[] consejos = { "Es bueno consumir frutas y verduras porque contienen los nutrientes necesarios para que nuestro organismo funcione.",
+                                        "¿Sabías que las frutas y verduras tienen un alto contenido de agua?",
+                                        "Si ves frutas amarillas, ¡debes recordar que estas tienen un alto contenido de vitamina A!",
+                                        "Las frutas y verduras carecen de grasas.",
+                                        "Consumir frutas con vitamina C te ayuda a prevenir enfermedades respiratorias. Por ejemplo: naranja, limón y guayaba.",
+                                        "Es recomendable que consumas un promedio de 5 frutas y verduras al día."};
     private int pointer;
     ImageView casilla1, casilla2, casilla3, casilla4, casilla5, casilla6, casilla7, casilla8, casilla9;
     Button cuestionario;
@@ -120,8 +116,8 @@ public class Gato extends AppCompatActivity implements View.OnClickListener{
                 if(jugador == 1)
                     casilla.setImageResource(R.drawable.gato_x);
                 else{
-                    mostrarConsejo();
                     casilla.setImageResource(R.drawable.gato_o);
+                    mostrarConsejo();
                 }
 
                 ganar = verificar(jugador);

@@ -18,6 +18,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.ludi.tt_ludi.qr.IntentIntegrator;
+import com.ludi.tt_ludi.qr.IntentResult;
+
 public class MainActivity extends AppCompatActivity
         implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener,
         ActividadesFragment.OnFragmentInteractionListener,
@@ -27,7 +30,7 @@ public class MainActivity extends AppCompatActivity
 
 
     Button btnActividades, btnNoticias,btnAvance;
-
+    private IntentIntegrator integrator;
     boolean fragmentTransaction = false;
 
 
@@ -175,11 +178,14 @@ public class MainActivity extends AppCompatActivity
 
         switch (v.getId()) {
             case (R.id.btnActividades):
+                integrator.initiateScan();
+                /*
                 ActividadesFragment fragment2 = new ActividadesFragment();
                 getSupportFragmentManager().beginTransaction()
                             .replace(R.id.content_nav_drawer, fragment2)
                             .commit();
                 getSupportActionBar().setTitle("Actividades");
+                */
                 break;
 
             case (R.id.btnNoticias):
@@ -194,6 +200,37 @@ public class MainActivity extends AppCompatActivity
                 Intent avance = new Intent(this, Avance.class);
                 MainActivity.this.startActivity(avance);
                 break;
+        }
+    }
+
+    public void onActivityResult(int requestCode, int resultCode, Intent intent) {
+        System.out.println("resultCode: "+resultCode);
+        IntentResult scanResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
+        Class destino = null;
+
+        if (scanResult != null) {
+            String resultado = scanResult.getContents();
+
+            switch (resultado){
+                case "verduras":
+                    destino = Gato.class;
+                    break;
+                /*case "cereales":
+                    destino = Actividad2.class;
+                    break;*/
+                case "carne":
+                    destino = Actividad2.class;
+                    break;
+                case "bebidas":
+                    destino = Actividad1.class;
+                    break;
+                case "plato":
+                    destino = Actividad3.class;
+                    break;
+
+            }
+            Intent siguiente = new Intent(MainActivity.this, destino);
+            startActivity(siguiente);
         }
     }
 }
