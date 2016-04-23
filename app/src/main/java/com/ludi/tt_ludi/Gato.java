@@ -1,10 +1,7 @@
 package com.ludi.tt_ludi;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -121,10 +118,10 @@ public class Gato extends AppCompatActivity implements View.OnClickListener{
             if(tablero[i][j]==0){
                 tablero[i][j] = jugador;
                 if(jugador == 1)
-                    casilla.setImageResource(R.drawable.gatoX);
+                    casilla.setImageResource(R.drawable.gato_x);
                 else{
                     mostrarConsejo();
-                    casilla.setImageResource(R.drawable.gatoO);
+                    casilla.setImageResource(R.drawable.gato_o);
                 }
 
                 ganar = verificar(jugador);
@@ -264,5 +261,5 @@ public class Gato extends AppCompatActivity implements View.OnClickListener{
         casilla8.setEnabled(estado);
         casilla9.setEnabled(estado);
     }
-    
+
 }
