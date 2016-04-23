@@ -1,7 +1,9 @@
 package com.ludi.tt_ludi;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -33,8 +35,9 @@ public class InicioFragment extends Fragment implements View.OnClickListener {
 
     private OnFragmentInteractionListener mListener;
 
-
     Button btnActividades, btnNoticias,btnAvance;
+
+    MediaPlayer botonsonido, btncancion;
 
 
     boolean fragmentTransaction = false;
@@ -75,6 +78,9 @@ public class InicioFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_inicio, container, false);
+
+        botonsonido = MediaPlayer.create(getContext(), R.raw.inicio);
+        btncancion = MediaPlayer.create(getContext(), R.raw.cancion);
 
         btnActividades = (Button) view.findViewById(R.id.btnActividades);
         btnNoticias = (Button) view.findViewById(R.id.btnNoticias);
@@ -123,6 +129,7 @@ public class InicioFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case (R.id.btnActividades):
+                botonsonido.start();
                 ActividadesFragment fragment2 = new ActividadesFragment();
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -131,6 +138,7 @@ public class InicioFragment extends Fragment implements View.OnClickListener {
                 break;
 
             case (R.id.btnNoticias):
+                botonsonido.start();
                 NoticiasFragment fragment3 = new NoticiasFragment();
                 FragmentManager fragmentManager2 = getFragmentManager();
                 FragmentTransaction fragmentTransaction2 = fragmentManager2.beginTransaction();
@@ -138,6 +146,9 @@ public class InicioFragment extends Fragment implements View.OnClickListener {
                 fragmentTransaction2.commit();
                 break;
             case (R.id.btnAvance):
+                botonsonido.start();
+                Intent av = new Intent(getContext(), Avance.class);
+                startActivity(av);
 
                 break;
         }

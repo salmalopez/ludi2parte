@@ -40,10 +40,11 @@ public class NoticiasFragment extends Fragment implements View.OnClickListener {
     static String idNoticia = "1";
 
     private static final String USER_URL = "http://52.23.175.78/api/noticia/";
+    private static final String USER_URL2 = "http://ludi.mx/api/noticia/metodo/longitud";
 
     public static final String KEY_CONTENIDO = "contenido";
 
-
+    int longitudNoticia;
 
 
     private OnFragmentInteractionListener mListener;
@@ -95,6 +96,43 @@ public class NoticiasFragment extends Fragment implements View.OnClickListener {
         start.setOnClickListener(this);
         textView = (TextView) view.findViewById(R.id.textViewid);
 
+
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, USER_URL2,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        String  contenido= "";
+                        longitudNoticia = Integer.parseInt(response);
+                        System.out.println("RESPUESTA::" + response);
+
+
+                        try {
+
+                            JSONArray array = new JSONArray(response);
+                            JSONObject reader = array.getJSONObject(0);
+                            contenido = reader.getString(KEY_CONTENIDO);
+
+
+                        } catch (JSONException e) { e.printStackTrace();}
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        System.out.println("No se puso obtener el noticia ");
+                    }
+                }){
+            @Override
+            protected Map<String,String> getParams(){
+
+                Map<String,String> params = new HashMap<String, String>();
+                return params;
+            }
+
+        };
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this.getContext());
+        requestQueue.add(stringRequest);
 
         return view;
 
@@ -149,9 +187,14 @@ public class NoticiasFragment extends Fragment implements View.OnClickListener {
 
                         textView.setText(response);
                         int flag = Integer.parseInt(idNoticia);
-                        flag++;
-                        idNoticia =""+flag;
-                        System.out.println(idNoticia);
+                        if(flag<longitudNoticia){
+                            flag++;
+                            idNoticia =""+flag;
+                            System.out.println(idNoticia);
+                        }else{
+                            flag = 1;
+                            idNoticia = ""+flag;
+                        }
                     }
                 },
                 new Response.ErrorListener() {

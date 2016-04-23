@@ -1,6 +1,7 @@
 package com.ludi.tt_ludi;
 
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -40,11 +41,15 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
 
     private Button buttonRegister,buttonRegreso;
 
+    MediaPlayer botonsonido,botonsonido2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
 
+        botonsonido = MediaPlayer.create(Registro.this, R.raw.regreso);
+        botonsonido2 = MediaPlayer.create(Registro.this, R.raw.inicio);
         Typeface myTypeFace = Typeface.createFromAsset(getAssets(),"KGS.ttf");
         txtRegister = (TextView) findViewById(R.id.txtRegister);
         txtRegister.setTypeface(myTypeFace);
@@ -124,9 +129,11 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
 
         switch (v.getId()) {
             case (R.id.buttonRegreso):
+                botonsonido.start();
                 finish();
                 break;
             case (R.id.buttonRegister):
+                botonsonido2.start();
                 registerUser();
                 break;
 

@@ -1,5 +1,6 @@
 package com.ludi.tt_ludi;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -27,8 +28,9 @@ public class CuestionarioAct1  extends AppCompatActivity implements View.OnClick
     private static final String KEY_USUARIO = "idusuario";
     private static final String KEY_ACTIVIDAD = "idactividad";
 
+    TextView txtIntruciones;
     TextView txtP1, txtP2, txtP3, txtP4, txtP5, txtP6, txtP7, txtP8, txtP9, txtP10;
-    Button btnFin;
+    Button btnFin, btn_regresar;
     RadioButton
             rb1_0, rb1_1, rb1_2,
             rb2_0, rb2_1, rb2_2,
@@ -52,6 +54,10 @@ public class CuestionarioAct1  extends AppCompatActivity implements View.OnClick
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cuestionario1_layout);
+
+        Typeface myTypeFace3 = Typeface.createFromAsset(getAssets(),"DK.ttf");
+        txtIntruciones = (TextView) findViewById(R.id.txtIntruciones);
+        txtIntruciones.setTypeface(myTypeFace3);
 
         this.id = (getApplicationContext().getSharedPreferences("ludi", 0)).getString("id",null);
 
@@ -145,6 +151,14 @@ public class CuestionarioAct1  extends AppCompatActivity implements View.OnClick
 
         btnFin = (Button) findViewById(R.id.btnFin);
         btnFin.setOnClickListener(this);
+
+        btn_regresar = (Button) findViewById(R.id.btn_regresar);
+        btn_regresar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
 
     }

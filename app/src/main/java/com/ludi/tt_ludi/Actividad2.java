@@ -117,7 +117,7 @@ public class Actividad2 extends AppCompatActivity implements View.OnClickListene
 
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent(this,CuestionarioAct2.class);
+        Intent intent = new Intent(this,CuestionarioAct3.class);
         startActivity(intent);
     }
 
