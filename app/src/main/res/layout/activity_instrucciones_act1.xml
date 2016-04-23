@@ -28,15 +28,15 @@
         android:layout_height="wrap_content"
         android:text="Vamos a llenar juntos la jarra del buen beber.\n Lee con atención la pregunta y selecciona la imagen correcta para contestar la pregunta."
         android:id="@+id/txtIntruciones"
-        android:textSize="70dp"
+        android:textSize="50dp"
         android:textColor="#ffffff"
         android:paddingTop="30dp"
         android:layout_marginBottom="0dp"
         android:layout_gravity="center"
-        android:textIsSelectable="true"
+        android:textIsSelectable="false"
         android:textStyle="bold|normal"
         android:textAlignment="center"
-        android:layout_weight="0.80" />
+        android:layout_weight="0.83" />
 
 
     <LinearLayout
@@ -47,11 +47,10 @@
         android:layout_gravity="center">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Es hora de usar tu cuadernillo\n Abre tu cuadernillo la jarra del buen bber y ponle play"
+            android:layout_width="502dp"
+            android:layout_height="175dp"
+            android:text="Es hora de usar tu cuadernillo\n Abre tu cuadernillo en la jarra del buen beber"
             android:id="@+id/textCuadernillo"
-            android:layout_weight="0.96"
             android:layout_gravity="center"
             android:gravity="center"
             android:textSize="40dp"
@@ -67,7 +66,7 @@
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
             android:paddingBottom="100dp"
-            android:layout_weight="0.06" />
+            android:layout_weight="0.03" />
 
     </LinearLayout>
 

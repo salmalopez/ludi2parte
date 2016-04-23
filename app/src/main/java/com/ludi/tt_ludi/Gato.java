@@ -1,15 +1,12 @@
 package com.ludi.tt_ludi;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class Gato extends AppCompatActivity implements View.OnClickListener{
@@ -28,7 +25,7 @@ public class Gato extends AppCompatActivity implements View.OnClickListener{
                                         "Consumir leche es sano mientras no la consumas en exceso."};
     private int pointer;
     ImageView casilla1, casilla2, casilla3, casilla4, casilla5, casilla6, casilla7, casilla8, casilla9;
-    Button cuestionario;
+    Button btnCuestionario, btnReiniciar, btn_regresar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +34,23 @@ public class Gato extends AppCompatActivity implements View.OnClickListener{
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Button cuestionario = (Button) findViewById(R.id.btnCuestionario);
+        Button btnCuestionario = (Button) findViewById(R.id.btnCuestionario);
+        btnCuestionario.setOnClickListener(this);
+
+        Button btnReiniciar = (Button) findViewById(R.id.btnReiniciar);
+        btnReiniciar.setOnClickListener(this);
+
+        Button btn_regresar = (Button) findViewById(R.id.btn_regresar);
+        btn_regresar.setOnClickListener(this);
+
+        btn_regresar = (Button) findViewById(R.id.btn_regresar);
+        btn_regresar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
 
         casilla1 = (ImageView) findViewById(R.id.casilla1);
         casilla2 = (ImageView) findViewById(R.id.casilla2);
@@ -59,8 +72,14 @@ public class Gato extends AppCompatActivity implements View.OnClickListener{
         casilla8.setOnClickListener(this);
         casilla9.setOnClickListener(this);
 
-        iniciar();
 
+        btn_regresar = (Button) findViewById(R.id.btn_regresar);
+        btn_regresar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
     }
 
@@ -107,7 +126,7 @@ public class Gato extends AppCompatActivity implements View.OnClickListener{
                 iniciar();
                 break;
             case R.id.btnCuestionario:
-                Intent intent = new Intent(this,CuestionarioAct5.class);
+                Intent intent = new Intent(this,CuestionarioAct1.class);
                 startActivity(intent);
                 break;
         }
@@ -121,20 +140,18 @@ public class Gato extends AppCompatActivity implements View.OnClickListener{
             if(tablero[i][j]==0){
                 tablero[i][j] = jugador;
                 if(jugador == 1)
-                    casilla.setImageResource(R.drawable.gatoX);
+                    casilla.setImageResource(R.drawable.gatox);
                 else{
                     mostrarConsejo();
-                    casilla.setImageResource(R.drawable.gatoO);
+                    casilla.setImageResource(R.drawable.gatoo);
                 }
 
                 ganar = verificar(jugador);
                 if(ganar){
-                    cuestionario.setEnabled(true);
                     estadoTablero(false);
                     Toast toast = Toast.makeText(this, (jugador==1)?"¡Felicidades! Has ganado el juego :)":"¡Oops! Creo que la actividad ha ganado.",Toast.LENGTH_SHORT);
                     toast.show();
                 }else if(!disponibilidad()){
-                    cuestionario.setEnabled(true);
                     estadoTablero(false);
                     Toast toast = Toast.makeText(this, "¡Ya no hay más casillas!. El juego se ha terminado.",Toast.LENGTH_SHORT);
                     toast.show();
@@ -150,7 +167,7 @@ public class Gato extends AppCompatActivity implements View.OnClickListener{
 
     //Reiniciar valores
     private void iniciar(){
-        cuestionario.setEnabled(false);
+        //cuestionario.setEnabled(false);
         pointer = 0;
         for(int i = 0 ; i<3; i++)
             for(int j = 0 ; j<3; j++)

@@ -131,7 +131,8 @@ public class ActividadesFragment extends Fragment implements View.OnClickListene
         switch (v.getId()) {
 
             case (R.id.btn_act1):
-
+                Intent intentAct5  = new Intent(getContext(), Gato.class);
+                startActivity(intentAct5);
                 break;
 
             case (R.id.btn_act2):

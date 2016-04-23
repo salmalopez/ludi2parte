@@ -20,7 +20,8 @@
         android:textSize="100dp"
         android:textColor="#cfa2f7"
         android:layout_gravity="center"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_marginTop="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -45,11 +46,10 @@
         android:layout_gravity="center">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="549dp"
             android:layout_height="match_parent"
-            android:text="Es hora de usar tu cuadernillo\n Abre tu cuadernillo en la página 4 y ponle PLAY"
+            android:text="Es hora de usar tu cuadernillo\n Abre tu cuadernillo en el plato del buen comer"
             android:id="@+id/textCuadernillo"
-            android:layout_weight="0.96"
             android:layout_gravity="center"
             android:gravity="center"
             android:textSize="40dp"
@@ -65,7 +65,7 @@
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
             android:paddingBottom="100dp"
-            android:layout_weight="0.06" />
+            android:layout_weight="0.09" />
 
     </LinearLayout>
 
