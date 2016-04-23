@@ -69,7 +69,7 @@ public class PreguntasCuestionario5 {
 
         //Pregunta no. 7
         PreguntasCuestionario5 p7 = new PreguntasCuestionario5();
-        p7.pregunta = "7) El hidratarse adecuadamente nos brinda beneficios como activar órganos internos, bajar la presión sanguínea, etc.";
+        p7.pregunta = "7) El hidratarse adecuadamente nos brinda beneficios como activar órganos internos y bajar la presión sanguínea.";
         p7.correcta = 0;
         p7.respuesta[0] = "Verdadero.";
         p7.respuesta[1] = "Falso.";

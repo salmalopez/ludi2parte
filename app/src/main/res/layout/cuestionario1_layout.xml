@@ -39,7 +39,7 @@
             android:layout_height="130px"
             android:id="@+id/btnFin"
             android:layout_gravity="center_vertical|center_horizontal"
-            android:background="@drawable/btnFin"
+            android:background="@drawable/btnfin"
             android:layout_margin="50px"
             />
 

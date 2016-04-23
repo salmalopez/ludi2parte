@@ -107,6 +107,10 @@
         <activity
             android:name=".Avance"
             android:label="@string/title_activity_avance"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Gato"
+            android:label="@string/title_activity_gato"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

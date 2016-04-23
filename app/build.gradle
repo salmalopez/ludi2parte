@@ -30,11 +30,6 @@ dependencies {
 }
 
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 8d491681217e179f5d95e801eb28c4acf566f45d
 repositories {
     flatDir {
         dirs 'libs'

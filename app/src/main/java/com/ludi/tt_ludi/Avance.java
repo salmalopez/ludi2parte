@@ -78,7 +78,6 @@ public class Avance extends AppCompatActivity {
 
     private void actualizarEstatus(String json){
 
-        Drawable tache = getResources().getDrawable(R.drawable.tache);
         Drawable paloma = getResources().getDrawable(R.drawable.paloma);
 
         try {
