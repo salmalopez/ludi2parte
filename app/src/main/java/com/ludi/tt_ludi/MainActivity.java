@@ -44,8 +44,7 @@ public class MainActivity extends AppCompatActivity
         btnNoticias = (Button) findViewById(R.id.btnNoticias);
         btnAvance = (Button) findViewById(R.id.btnAvance);
 
-
-
+        integrator = new IntentIntegrator(this);
 
         Typeface myTypeFace2 = Typeface.createFromAsset(getAssets(),"DK.ttf");
         btnActividades.setTypeface(myTypeFace2);
