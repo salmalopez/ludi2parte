@@ -170,11 +170,29 @@ public class Gato extends AppCompatActivity implements View.OnClickListener{
         //Caso B: diagonal creciente
         if( tablero[2][0] == jugador && tablero[2][0] == tablero[1][1] && tablero[1][1] == tablero[0][2] )
             return true;
-        //Caso C: línea horizontal
+
+        //Caso C: línea horizontal central
         if( tablero[1][0] == jugador && tablero[1][0] == tablero[1][1] && tablero[1][1] == tablero[1][2] )
             return true;
-        //Caso D: línea vertical
+
+        //Caso D: línea horizontal superior
+        if( tablero[0][0] == jugador && tablero[0][0] == tablero[0][1] && tablero[0][1] == tablero[0][2] )
+            return true;
+
+        //Caso E: línea horizontal inferior
+        if( tablero[2][0] == jugador && tablero[2][0] == tablero[2][1] && tablero[2][1] == tablero[2][2] )
+            return true;
+
+        //Caso F: línea vertical central
         if( tablero[0][1] == jugador && tablero[0][1] == tablero[1][1] && tablero[1][1] == tablero[2][1] )
+            return true;
+
+        //Caso G: línea vertical derecha
+        if( tablero[0][2] == jugador && tablero[0][2] == tablero[1][2] && tablero[1][2] == tablero[2][2] )
+            return true;
+
+        //Caso H: línea vertical izquierda
+        if( tablero[0][0] == jugador && tablero[0][0] == tablero[1][0] && tablero[1][0] == tablero[2][0] )
             return true;
 
         return false;
