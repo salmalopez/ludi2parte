@@ -37,4 +37,5 @@
     <string name="title_activity_actualizar">Actualizar</string>
     <string name="title_activity_avance">Avance</string>
     <string name="title_activity_gato">Gato</string>
+    <string name="title_activity_ahorcado">Ahorcado</string>
 </resources>
