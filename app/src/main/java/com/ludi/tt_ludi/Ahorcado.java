@@ -30,13 +30,9 @@ public class Ahorcado extends AppCompatActivity implements View.OnClickListener{
             "Nutriente que nos ayuda a regular los procesos digestivos y disminuye las cantidades de colesterol en la sangre.",
             "Son los cereales que contienen mucha azúcar y químicos, los cuales no nutren."};
 
-    //IMPORTANTE: No quitar los puntos de las respuestas que lo contienen
     private final String[] arregloRespuestas = {
-        "Cereales.", "Integral", "Amarillo", "Cereales", "Fibra", "Tuberculos", "Fibra.", "Industrializados"
+        "Cereales", "Integral", "Amarillo", "Cereales", "Fibra", "Tuberculos", "Fibra", "Industrializados"
     };
-
-    HashMap<Integer, String> respuestas;
-    HashMap<String, Integer> posicionPreguntas;
 
     private final Button[] opciones = {
             (Button) findViewById(R.id.button3),
@@ -75,44 +71,79 @@ public class Ahorcado extends AppCompatActivity implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
-        if(esBoton(v)){
-            Button boton = (Button)findViewById(v.getId());
 
-            /*
-            * 1) Obtiene el texto del botón.
-            * 2) Obtiene la posición a la que corresponde dicha respuesta.
-            * 3) Compara la posición de la pregunta actual con la posición correspondiente de la respuesta elegida.
-            * 4) Verifica si son iguales para saber si es correcta.
-            * */
-            if(posicionPreguntas.get(boton.getText())==(pointerPreguntas-1)){
-                Toast toast = Toast.makeText(this, "¡Correcto!",Toast.LENGTH_SHORT);
-                toast.show();
-                correctas++;
-                boton.setEnabled(false);
-                if(correctas < 8)
-                    mostrarPregunta();
-                else{
-                    ganar();
+        switch (v.getId()){
+
+                case R.id.button3: case R.id.button7: //Pregunta 1 y 4
+                    if(pointerPreguntas-1 == 0 || pointerPreguntas-1 == 3){
+                        correcta(v);
+                    }else{
+                        avanzarAhorcado();
+                    }
+                    break;
+                case R.id.button2://Pregunta 2
+                    if(pointerPreguntas-1 == 1 ){
+                        correcta(v);
+                    }else{
+                        avanzarAhorcado();
+                    }
+                    break;
+                case R.id.button5://Pregunta 3
+                    if(pointerPreguntas-1 == 2 ){
+                        correcta(v);
+                    }else{
+                        avanzarAhorcado();
+                    }
+                    break;
+                case R.id.button1: case R.id.button4: //Pregunta 5 y 7
+                if(pointerPreguntas-1 == 4 || pointerPreguntas-1 == 6){
+                    correcta(v);
+                }else{
+                    avanzarAhorcado();
                 }
-            }else{
-                avanzarAhorcado();
-            }
-        }else{
-            switch (v.getId()){
-                case R.id.btnReiniciar:
+                    break;
+                case R.id.button8://Pregunta 6
+                    if(pointerPreguntas-1 == 5 ){
+                        correcta(v);
+                    }else{
+                        avanzarAhorcado();
+                    }
+                    break;
+                case R.id.button6://Pregunta 8
+                    if(pointerPreguntas-1 == 7 ){
+                        correcta(v);
+                    }else{
+                        avanzarAhorcado();
+                    }
+                    break;
+                case R.id.btnReiniciar://Reinicio
                     iniciar();
                     break;
-                case R.id.btnCuestionario:
+                case R.id.btnCuestionario://Ir a cuestionario
                     Intent intent = new Intent(this,CuestionarioAct2.class);
                     startActivity(intent);
                     break;
-            }
         }
 
     }
 
+    private void correcta(View v){
+        Button boton = (Button)findViewById(v.getId());
+        Toast toast = Toast.makeText(this, "¡Correcto!",Toast.LENGTH_SHORT);
+        toast.show();
+        correctas++;
+        boton.setEnabled(false);
+        if(correctas < 8)
+            mostrarPregunta();
+        else{
+            ganar();
+        }
+    }
+
     private void ganar(){
+        //Se muestra ahorcado ganando
         ahorcado.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.ahorcadowin, null));
+        //Se hace saber al usuario que ya ganó
         AlertDialog alertDialog = new AlertDialog.Builder(Ahorcado.this).create();
         alertDialog.setTitle("¡Felicidades!");
         alertDialog.setMessage("Has ganado el juego, puedes continuar al cuestionario.");
@@ -126,13 +157,18 @@ public class Ahorcado extends AppCompatActivity implements View.OnClickListener{
     }
 
     private void mostrarPregunta(){
+        //Mostramos la pregunta que el pointer indica y lo aumentamos a la que se mostrará posteriormente.
         pregunta.setText(preguntas[pointerPreguntas++]);
     }
 
     private void avanzarAhorcado(){
+        // Se indica al usuario que se equivocó
         Toast toast = Toast.makeText(this, "¡Oops! Intenta con otra opicón.",Toast.LENGTH_SHORT);
         toast.show();
+        // Se cambia la imagen del ahorcado
         ahorcado.setBackground(imagenes[pointerAhorcado++]);
+
+        // Se verifica si el usuario ya perdió
         if(pointerAhorcado == 8){
             AlertDialog alertDialog = new AlertDialog.Builder(Ahorcado.this).create();
             alertDialog.setTitle("¡Vaya!");
@@ -148,22 +184,22 @@ public class Ahorcado extends AppCompatActivity implements View.OnClickListener{
     }
 
     private void iniciar(){
+
+        //Obtención de vistas
         pregunta = (TextView) findViewById(R.id.pregunta);
         ahorcado = (ImageView) findViewById(R.id.imagen);
 
-        respuestas = new HashMap<Integer,String>();
-        posicionPreguntas = new HashMap<String,Integer>();
-
+        //Iniciar imagen de ahorcado
         ahorcado.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.comenzar_ahorcado, null));
 
+        //Llenar los botones con los textos de las respuestas
         for(int i=0; i<arregloRespuestas.length; i++){
-            respuestas.put(opciones[i].getId(),arregloRespuestas[i]);
-            posicionPreguntas.put(arregloRespuestas[i], i);
             opciones[i].setText(arregloRespuestas[i]);
             opciones[i].setEnabled(true);
         }
 
 
+        //Indicar al niño que puede comenzar el juego
         AlertDialog alertDialog = new AlertDialog.Builder(Ahorcado.this).create();
         alertDialog.setTitle("¡Hola!");
         alertDialog.setMessage("Puedes comenzar a jugar seleccionando la respuesta correcta.");
@@ -175,20 +211,13 @@ public class Ahorcado extends AppCompatActivity implements View.OnClickListener{
                 });
         alertDialog.show();
 
-        pointerPreguntas = 0;
-        pointerAhorcado = 0;
-        correctas = 0;
+        //Inicializar todos los contadores
+        pointerPreguntas = 0; //Indica la pregunta siguiente, es decir, para iniciar, la siguiente pregunta es la primera (posición 0).
+        pointerAhorcado = 0; //Indica en qué etapa se encuentra el ahorcado, pierde en la etapa 8.
+        correctas = 0; //Indica las respuestas correctas que el usuario lleva.
+
         mostrarPregunta();
     }
 
-    private boolean esBoton(View v){
-        Iterator it = respuestas.entrySet().iterator();
-        Map.Entry pair;
-        while (it.hasNext()) {
-            pair = (Map.Entry)it.next();
-            if( v.getId() == (Integer)pair.getKey() )
-                return true;
-        }
-        return false;
-    }
+
 }
