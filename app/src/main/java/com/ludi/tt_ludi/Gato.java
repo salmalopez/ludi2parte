@@ -13,15 +13,16 @@ public class Gato extends AppCompatActivity implements View.OnClickListener{
 
     private int[][] tablero = new int[3][3];
     private boolean ganar;
-    private final String[] consejos = { "Es bueno consumir frutas y verduras porque contienen los nutrientes necesarios para que nuestro organismo funcione.",
-                                        "¿Sabías que las frutas y verduras tienen un alto contenido de agua?",
-                                        "Si ves frutas amarillas, ¡debes recordar que estas tienen un alto contenido de vitamina A!",
-                                        "Las frutas y verduras carecen de grasas.",
-                                        "Consumir frutas con vitamina C te ayuda a prevenir enfermedades respiratorias. Por ejemplo: naranja, limón y guayaba.",
-                                        "Es recomendable que consumas un promedio de 5 frutas y verduras al día."};
+    private final String[] consejos = { "Es bueno consumir frutas y verduras porque contienen los nutrientes necesarios para que nuestro organismo funcione.\n\n\n\n\n\n",
+                                        "¿Sabías que las frutas y verduras tienen un alto contenido de agua?\n\n\n\n\n",
+                                        "Si ves frutas amarillas, ¡debes recordar que estas tienen un alto contenido de vitamina A!\n\n\n\n\n",
+                                        "Las frutas y verduras carecen de grasas.\n\n\n\n\n",
+                                        "Consumir frutas con vitamina C te ayuda a prevenir enfermedades respiratorias. Por ejemplo: naranja, limón y guayaba.\n\n\n\n\n",
+                                        "Es recomendable que consumas un promedio de 5 frutas y verduras al día.\n\n\n\n\n"};
     private int pointer;
     ImageView casilla1, casilla2, casilla3, casilla4, casilla5, casilla6, casilla7, casilla8, casilla9;
-    Button cuestionario;
+    Button btnCuestionario,btnReiniciar,btn_regresar;
+    private static final int LONG_DELAY = 6500;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +31,20 @@ public class Gato extends AppCompatActivity implements View.OnClickListener{
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Button cuestionario = (Button) findViewById(R.id.btnCuestionario);
+        Button btnCuestionario = (Button) findViewById(R.id.btnCuestionario);
+        btnCuestionario.setOnClickListener(this);
+
+        Button btnReiniciar = (Button) findViewById(R.id.btnReiniciar);
+        btnReiniciar.setOnClickListener(this);
+
+        Button btn_regresar = (Button) findViewById(R.id.btn_regresar);
+        btn_regresar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+
+            }
+        });
 
         casilla1 = (ImageView) findViewById(R.id.casilla1);
         casilla2 = (ImageView) findViewById(R.id.casilla2);
@@ -52,7 +66,7 @@ public class Gato extends AppCompatActivity implements View.OnClickListener{
         casilla8.setOnClickListener(this);
         casilla9.setOnClickListener(this);
 
-        iniciar();
+
 
 
     }
@@ -100,7 +114,7 @@ public class Gato extends AppCompatActivity implements View.OnClickListener{
                 iniciar();
                 break;
             case R.id.btnCuestionario:
-                Intent intent = new Intent(this,CuestionarioAct5.class);
+                Intent intent = new Intent(this,CuestionarioAct1.class);
                 startActivity(intent);
                 break;
         }
@@ -114,36 +128,33 @@ public class Gato extends AppCompatActivity implements View.OnClickListener{
             if(tablero[i][j]==0){
                 tablero[i][j] = jugador;
                 if(jugador == 1)
-                    casilla.setImageResource(R.drawable.gato_x);
+                    casilla.setImageResource(R.drawable.brocolo);
                 else{
-                    casilla.setImageResource(R.drawable.gato_o);
+                    casilla.setImageResource(R.drawable.jitomate);
                     mostrarConsejo();
                 }
 
                 ganar = verificar(jugador);
                 if(ganar){
-                    cuestionario.setEnabled(true);
                     estadoTablero(false);
-                    Toast toast = Toast.makeText(this, (jugador==1)?"¡Felicidades! Has ganado el juego :)":"¡Oops! Creo que la actividad ha ganado.",Toast.LENGTH_SHORT);
+                    Toast toast = Toast.makeText(this, (jugador==1)?"¡Felicidades! Has ganado el juego :)\n\n\n\n\n":"¡Oops! Creo que la actividad ha ganado.\n\n\n\n\n",
+                            Toast.LENGTH_SHORT);
                     toast.show();
                 }else if(!disponibilidad()){
-                    cuestionario.setEnabled(true);
                     estadoTablero(false);
-                    Toast toast = Toast.makeText(this, "¡Ya no hay más casillas!. El juego se ha terminado.",Toast.LENGTH_SHORT);
+                    Toast toast = Toast.makeText(this, "¡Ya no hay más casillas!. El juego se ha terminado.\n\n\n\n\n",Toast.LENGTH_LONG);
                     toast.show();
+                    return true;
                 }
-
-                return true;
             }else{
-                System.out.println("El jugador debe seleccionar otra casilla");
+                System.out.println("El jugador debe seleccionar otra casilla.\n\n\n\n");
                 return false;
             }
-
+        return true;
     }
 
     //Reiniciar valores
     private void iniciar(){
-        cuestionario.setEnabled(false);
         pointer = 0;
         for(int i = 0 ; i<3; i++)
             for(int j = 0 ; j<3; j++)
@@ -162,24 +173,44 @@ public class Gato extends AppCompatActivity implements View.OnClickListener{
     }
 
     //Revisar si alguien ya ganó
-    private boolean verificar(int jugador){
+        private boolean verificar(int jugador){
 
-        //Caso A: diagonal decreciente
-        if( tablero[0][0] == jugador && tablero[0][0] == tablero[1][1] && tablero[1][1] == tablero[2][2] )
-            return true;
-        //Caso B: diagonal creciente
-        if( tablero[2][0] == jugador && tablero[2][0] == tablero[1][1] && tablero[1][1] == tablero[0][2] )
-            return true;
-        //Caso C: línea horizontal
-        if( tablero[1][0] == jugador && tablero[1][0] == tablero[1][1] && tablero[1][1] == tablero[1][2] )
-            return true;
-        //Caso D: línea vertical
-        if( tablero[0][1] == jugador && tablero[0][1] == tablero[1][1] && tablero[1][1] == tablero[2][1] )
-            return true;
+            //Caso A: diagonal decreciente
+            if( tablero[0][0] == jugador && tablero[0][0] == tablero[1][1] && tablero[1][1] == tablero[2][2] )
+                return true;
+            //Caso B: diagonal creciente
+            if( tablero[2][0] == jugador && tablero[2][0] == tablero[1][1] && tablero[1][1] == tablero[0][2] )
+                return true;
 
-        return false;
+            //Caso C: línea horizontal central
+            if( tablero[1][0] == jugador && tablero[1][0] == tablero[1][1] && tablero[1][1] == tablero[1][2] )
+                return true;
 
-    }
+            //Caso D: línea horizontal superior
+            if( tablero[0][0] == jugador && tablero[0][0] == tablero[0][1] && tablero[0][1] == tablero[0][2] )
+                return true;
+
+            //Caso E: línea horizontal inferior
+            if( tablero[2][0] == jugador && tablero[2][0] == tablero[2][1] && tablero[2][1] == tablero[2][2] )
+                return true;
+
+            //Caso F: línea vertical central
+            if( tablero[0][1] == jugador && tablero[0][1] == tablero[1][1] && tablero[1][1] == tablero[2][1] )
+                return true;
+
+            //Caso G: línea vertical derecha
+            if( tablero[0][2] == jugador && tablero[0][2] == tablero[1][2] && tablero[1][2] == tablero[2][2] )
+                return true;
+
+            //Caso H: línea vertical izquierda
+            if( tablero[0][0] == jugador && tablero[0][0] == tablero[1][0] && tablero[1][0] == tablero[2][0] )
+                return true;
+
+            return false;
+
+        }
+
+
 
     //Función matemática para obtener el mayor de dos enteros
     private int max(int a, int b){

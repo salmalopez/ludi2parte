@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -188,6 +189,11 @@ public class CuestionarioAct2 extends AppCompatActivity implements View.OnClickL
             correctas++;
 
         System.out.println("Las respuestas correctas fueron "+correctas);
+        Toast toast1 =
+                Toast.makeText(getApplicationContext(),
+                        "CONCLUISTE LA ACTIVIDAD", Toast.LENGTH_LONG);
+
+        toast1.show();
         updateEstatus(this.id,"2");
 
     }
@@ -206,6 +212,7 @@ public class CuestionarioAct2 extends AppCompatActivity implements View.OnClickL
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         System.out.println("No se pudo actualizar la actividad.");
+
                     }
                 }){
             @Override

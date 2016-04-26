@@ -2,6 +2,7 @@ package com.ludi.tt_ludi;
 
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -11,12 +12,16 @@ import android.widget.TextView;
 public class InstruccionesAct2 extends AppCompatActivity implements View.OnClickListener{
 
     Button btn_ra, btn_comenzar,btn_regresar;
-    TextView txtIntruciones,txtTitle,textCuadernillo;
+    TextView txtIntruciones,txtTitle;
+    MediaPlayer botonsonido,botonsalida;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_instrucciones_act2);
+
+        botonsonido = MediaPlayer.create(InstruccionesAct2.this, R.raw.regreso);
+        botonsalida = MediaPlayer.create(InstruccionesAct2.this, R.raw.inicio);
 
         //LETRAS TEXTVIEW
         Typeface myTypeFace = Typeface.createFromAsset(getAssets(),"KGS.ttf");
@@ -47,16 +52,19 @@ public class InstruccionesAct2 extends AppCompatActivity implements View.OnClick
         switch (v.getId()) {
 
             case (R.id.btn_ra):
+                botonsonido.start();
                 Intent siguiente = new Intent(InstruccionesAct2.this, Libro.class);
                 InstruccionesAct2.this.startActivity(siguiente);
                 break;
 
             case (R.id.btn_comenzar):
+                botonsonido.start();
                 Intent intentAct2 = new Intent(InstruccionesAct2.this, Actividad2.class);
                 startActivity(intentAct2);
                 break;
 
             case (R.id.btn_regresar):
+                botonsalida.start();
                 finish();
                 break;
         }

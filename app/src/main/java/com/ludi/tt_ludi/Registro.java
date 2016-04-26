@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -20,6 +21,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Registro extends AppCompatActivity implements View.OnClickListener {
+    private static final int LONG_DELAY = 3500;
 
     private static final String REGISTER_URL = "http://ludi.mx/api/usuario";
 
@@ -41,7 +43,7 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
 
     private Button buttonRegister,buttonRegreso;
 
-    MediaPlayer botonsonido,botonsonido2;
+    MediaPlayer botonsonido,botonsalida;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +51,7 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
         setContentView(R.layout.activity_registro);
 
         botonsonido = MediaPlayer.create(Registro.this, R.raw.regreso);
-        botonsonido2 = MediaPlayer.create(Registro.this, R.raw.inicio);
+        botonsalida = MediaPlayer.create(Registro.this, R.raw.inicio);
         Typeface myTypeFace = Typeface.createFromAsset(getAssets(),"KGS.ttf");
         txtRegister = (TextView) findViewById(R.id.txtRegister);
         txtRegister.setTypeface(myTypeFace);
@@ -79,6 +81,7 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
     }
 
     private void registerUser(){
+
         final String userName = editTextUserName.getText().toString().trim();
         final String name = editTextName.getText().toString().trim();
         final String date = editTextDate.getText().toString().trim();
@@ -94,6 +97,11 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
                         if(response.equals("{\"message\":OK}")){
                             System.out.println("bien");
                         }else{
+                            Toast toast1 =
+                                    Toast.makeText(getApplicationContext(),
+                                            response, Toast.LENGTH_LONG);
+
+                            toast1.show();
                             System.out.println("mal");
                         }
                     }
@@ -133,7 +141,7 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
                 finish();
                 break;
             case (R.id.buttonRegister):
-                botonsonido2.start();
+                botonsalida.start();
                 registerUser();
                 break;
 

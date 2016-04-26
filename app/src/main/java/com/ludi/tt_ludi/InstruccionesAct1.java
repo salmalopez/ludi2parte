@@ -2,6 +2,7 @@ package com.ludi.tt_ludi;
 
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -11,7 +12,8 @@ import android.widget.TextView;
 public class InstruccionesAct1 extends AppCompatActivity implements View.OnClickListener{
 
     Button btn_ra,btn_comenzar,btn_regresar;
-    TextView txtIntruciones,txtTitle,textCuadernillo;
+    TextView txtIntruciones,txtTitle;
+    MediaPlayer botonsonido,botonsalida;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +23,9 @@ public class InstruccionesAct1 extends AppCompatActivity implements View.OnClick
         Typeface myTypeFace = Typeface.createFromAsset(getAssets(),"KGS.ttf");
         txtTitle = (TextView) findViewById(R.id.txtTitle);
         txtTitle.setTypeface(myTypeFace);
+
+        botonsonido = MediaPlayer.create(InstruccionesAct1.this, R.raw.regreso);
+        botonsalida = MediaPlayer.create(InstruccionesAct1.this, R.raw.inicio);
 
         //Typeface myTypeFace2 = Typeface.createFromAsset(getAssets(),"dot.ttf");
       //  textCuadernillo = (TextView) findViewById(R.id.textCuadernillo);
@@ -46,16 +51,19 @@ public class InstruccionesAct1 extends AppCompatActivity implements View.OnClick
         switch (v.getId()) {
 
             case (R.id.btn_ra):
+                botonsonido.start();
                 Intent siguiente = new Intent(InstruccionesAct1.this, Libro.class);
                 InstruccionesAct1.this.startActivity(siguiente);
                 break;
 
             case (R.id.btn_comenzar):
+                botonsonido.start();
                 Intent intentAct2 = new Intent(InstruccionesAct1.this, Actividad1.class);
                 startActivity(intentAct2);
                 break;
 
             case (R.id.btn_regresar):
+                botonsalida.start();
                 finish();
                 break;
         }

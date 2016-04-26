@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -17,6 +18,7 @@ import android.widget.TextView;
  */
 public class Actividad1 extends Activity implements Animation.AnimationListener, View.OnClickListener{
 
+    MediaPlayer botonsonido,botonsalida;
     TextView txtPregunta;
     Button btnRespuesta1,btnRespuesta2, btnSiguiente, btn_regresar, btnCuestionario;
     Pregunta[] preguntas = new Pregunta().getPreguntas();
@@ -68,6 +70,9 @@ public class Actividad1 extends Activity implements Animation.AnimationListener,
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.actividad1_layout);
+
+        botonsonido = MediaPlayer.create(Actividad1.this, R.raw.regreso);
+        botonsalida = MediaPlayer.create(Actividad1.this, R.raw.inicio);
 
         imagenJarra = (ImageView) findViewById(R.id.imagenJarra);
         imagenJarra.setImageResource(NIVELES_JARRA[nivel]);

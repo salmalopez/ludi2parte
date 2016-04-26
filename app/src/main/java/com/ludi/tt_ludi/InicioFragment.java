@@ -14,6 +14,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.ludi.tt_ludi.qr.IntentIntegrator;
+import com.ludi.tt_ludi.qr.IntentResult;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -33,11 +36,13 @@ public class InicioFragment extends Fragment implements View.OnClickListener {
     private String mParam1;
     private String mParam2;
 
+
+    IntentIntegrator integrator;
     private OnFragmentInteractionListener mListener;
 
     Button btnActividades, btnNoticias,btnAvance;
 
-    MediaPlayer botonsonido, btncancion;
+    MediaPlayer botonsonido;
 
 
     boolean fragmentTransaction = false;
@@ -72,6 +77,8 @@ public class InicioFragment extends Fragment implements View.OnClickListener {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+
     }
 
     @Override
@@ -79,8 +86,9 @@ public class InicioFragment extends Fragment implements View.OnClickListener {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_inicio, container, false);
 
+
         botonsonido = MediaPlayer.create(getContext(), R.raw.inicio);
-        btncancion = MediaPlayer.create(getContext(), R.raw.cancion);
+
 
         btnActividades = (Button) view.findViewById(R.id.btnActividades);
         btnNoticias = (Button) view.findViewById(R.id.btnNoticias);
@@ -130,11 +138,13 @@ public class InicioFragment extends Fragment implements View.OnClickListener {
         switch (v.getId()) {
             case (R.id.btnActividades):
                 botonsonido.start();
-                ActividadesFragment fragment2 = new ActividadesFragment();
+                /*ActividadesFragment fragment2 = new ActividadesFragment();
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.content_nav_drawer, fragment2);
-                fragmentTransaction.commit();
+                fragmentTransaction.commit();*/
+                integrator = new IntentIntegrator(this.getActivity());
+                integrator.initiateScan();
                 break;
 
             case (R.id.btnNoticias):
@@ -154,6 +164,37 @@ public class InicioFragment extends Fragment implements View.OnClickListener {
         }
     }
 
+    public void onActivityResult(int requestCode, int resultCode, Intent intent) {
+        System.out.println("resultCode: "+resultCode);
+        IntentResult scanResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
+        Class destino = null;
+
+        if (scanResult != null) {
+            String resultado = scanResult.getContents();
+
+            switch (resultado){
+                case "verduras":
+                    destino = InstruccionesAct4.class;
+                    break;
+                /*case "cereales":
+                    destino = Actividad2.class;
+                    break;*/
+                case "carne":
+                    destino = InstruccionesAct2.class;
+                    break;
+                case "bebidas":
+                    destino = InstruccionesAct1.class;
+                    break;
+                case "plato":
+                    destino = InstruccionesAct3.class;
+                    break;
+
+            }
+            Intent siguiente = new Intent(getContext(), destino);
+            startActivity(siguiente);
+        }
+    }
+
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated
@@ -168,4 +209,6 @@ public class InicioFragment extends Fragment implements View.OnClickListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
+
 }

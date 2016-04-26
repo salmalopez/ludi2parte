@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -188,7 +189,29 @@ public class CuestionarioAct1  extends AppCompatActivity implements View.OnClick
             correctas++;
 
         System.out.println("Las respuestas correctas fueron "+correctas);
-        updateEstatus(this.id,"1");
+        updateEstatus(this.id, "1");
+        if(correctas==10){
+            Toast toast1 =
+                    Toast.makeText(getApplicationContext(),
+                            "¡EXCELENTE!\nCONCLUISTE LA ACTIVIDAD\n\n\n TUS RESPUESTAS CORRECTAS FUERON="+correctas, Toast.LENGTH_LONG);
+
+            toast1.show();
+        }else if(correctas>=5){
+            Toast toast1 =
+                    Toast.makeText(getApplicationContext(),
+                            "¡VAS POR BUEN CAMINO!\nCONCLUISTE LA ACTIVIDAD\n\n\n"+
+                                    "\nTUS RESPUESTAS CORRECTAS FUERON="+correctas, Toast.LENGTH_LONG);
+
+            toast1.show();
+        }else{
+            Toast toast1 =
+                    Toast.makeText(getApplicationContext(),
+                            "¡PRACTICA UN POCO MAS, VAS A LOGRARLO!\n" +
+                                    "CONCLUISTE LA ACTIVIDAD TUS RESPUESTAS\n\n\n CORRECTAS FUERON="+correctas, Toast.LENGTH_LONG);
+
+            toast1.show();
+        }
+
 
 
     }

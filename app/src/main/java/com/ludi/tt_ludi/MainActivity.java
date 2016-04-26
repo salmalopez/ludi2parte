@@ -4,6 +4,7 @@ package com.ludi.tt_ludi;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -22,16 +23,16 @@ import com.ludi.tt_ludi.qr.IntentIntegrator;
 import com.ludi.tt_ludi.qr.IntentResult;
 
 public class MainActivity extends AppCompatActivity
-        implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener,
-        ActividadesFragment.OnFragmentInteractionListener,
-        NoticiasFragment.OnFragmentInteractionListener,
-        InicioFragment.OnFragmentInteractionListener
+        implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener, ActividadesFragment.OnFragmentInteractionListener,
+        NoticiasFragment.OnFragmentInteractionListener, InicioFragment.OnFragmentInteractionListener
                     {
 
 
-    Button btnActividades, btnNoticias,btnAvance;
-    private IntentIntegrator integrator;
-    boolean fragmentTransaction = false;
+                        Button btnActividades, btnNoticias,btnAvance;
+                        private IntentIntegrator integrator;
+                        boolean fragmentTransaction = false;
+                        MediaPlayer botonsonido;
+
 
 
     @Override
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        botonsonido = MediaPlayer.create(MainActivity.this, R.raw.inicio);
 
         btnActividades = (Button) findViewById(R.id.btnActividades);
         btnNoticias = (Button) findViewById(R.id.btnNoticias);
@@ -57,14 +59,6 @@ public class MainActivity extends AppCompatActivity
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-       /* FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });*/
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -122,28 +116,33 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_actividades) {
             // Handle the camera action
+            botonsonido.start();
             fragment = new ActividadesFragment();
             fragmentTransaction = true;
 
         }  else if (id == R.id.nav_inicio) {
+            botonsonido.start();
             fragment = new InicioFragment();
             fragmentTransaction = true;
 
         } else if (id == R.id.nav_noticias) {
+            botonsonido.start();
             fragment = new NoticiasFragment();
             fragmentTransaction = true;
 
 
         } else if (id == R.id.nav_realidadAumentada) {
+            botonsonido.start();
             Intent ra = new Intent(MainActivity.this, Libro.class);
             MainActivity.this.startActivity(ra);
 
         } else if (id == R.id.nav_perfil) {
+            botonsonido.start();
             Intent actualizar = new Intent(MainActivity.this, Actualizar.class);
             MainActivity.this.startActivity(actualizar);
 
         } else if (id == R.id.nav_cerrarSesison) {
-
+            botonsonido.start();
             Intent siguiente = new Intent(this, Inicio.class);
             SharedPreferences.Editor editor = (getApplicationContext().getSharedPreferences("ludi", 0)).edit();
             editor.remove("id");
@@ -178,6 +177,8 @@ public class MainActivity extends AppCompatActivity
         switch (v.getId()) {
             case (R.id.btnActividades):
                 integrator.initiateScan();
+                botonsonido.start();
+
                 /*
                 ActividadesFragment fragment2 = new ActividadesFragment();
                 getSupportFragmentManager().beginTransaction()
@@ -188,6 +189,7 @@ public class MainActivity extends AppCompatActivity
                 break;
 
             case (R.id.btnNoticias):
+                botonsonido.start();
                 NoticiasFragment fragment3 = new NoticiasFragment();
                 getSupportFragmentManager().beginTransaction()
                         .replace(R.id.content_nav_drawer, fragment3)
@@ -196,8 +198,10 @@ public class MainActivity extends AppCompatActivity
                 break;
 
             case (R.id.btnAvance):
+                botonsonido.start();
                 Intent avance = new Intent(this, Avance.class);
                 MainActivity.this.startActivity(avance);
+                getSupportActionBar().setTitle("Avance");
                 break;
         }
     }
@@ -212,19 +216,22 @@ public class MainActivity extends AppCompatActivity
 
             switch (resultado){
                 case "verduras":
-                    destino = Gato.class;
+                    destino = InstruccionesAct4.class;
                     break;
                 /*case "cereales":
                     destino = Actividad2.class;
                     break;*/
                 case "carne":
-                    destino = Actividad2.class;
+                    destino = InstruccionesAct2.class;
                     break;
                 case "bebidas":
-                    destino = Actividad1.class;
+                    destino = InstruccionesAct1.class;
                     break;
                 case "plato":
-                    destino = Actividad3.class;
+                    destino = InstruccionesAct3.class;
+                    break;
+                default:
+                    destino = MainActivity.class;
                     break;
 
             }

@@ -9,29 +9,29 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class InstruccionesAct3  extends AppCompatActivity implements View.OnClickListener{
+public class InstruccionesAct4 extends AppCompatActivity implements View.OnClickListener{
 
     Button btn_ra,btn_comenzar,btn_regresar;
-    TextView txtTitle,txtIntruciones;
+    TextView txtIntruciones,txtTitle;
 
     MediaPlayer botonsonido,botonsalida;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_instrucciones_act3);
+        setContentView(R.layout.activity_instrucciones_act4);
 
-        botonsonido = MediaPlayer.create(InstruccionesAct3.this, R.raw.regreso);
-        botonsalida = MediaPlayer.create(InstruccionesAct3.this, R.raw.inicio);
+        botonsonido = MediaPlayer.create(InstruccionesAct4.this, R.raw.regreso);
+        botonsalida = MediaPlayer.create(InstruccionesAct4.this, R.raw.inicio);
 
-//LETRAS TEXTVIEW
+        //LETRAS TEXTVIE
         Typeface myTypeFace = Typeface.createFromAsset(getAssets(),"KGS.ttf");
         txtTitle = (TextView) findViewById(R.id.txtTitle);
         txtTitle.setTypeface(myTypeFace);
 
         //Typeface myTypeFace2 = Typeface.createFromAsset(getAssets(),"dot.ttf");
-        //textCuadernillo = (TextView) findViewById(R.id.textCuadernillo);
-        //textCuadernillo.setTypeface(myTypeFace2);
+        //  textCuadernillo = (TextView) findViewById(R.id.textCuadernillo);
+        //  textCuadernillo.setTypeface(myTypeFace2);
 
         Typeface myTypeFace3 = Typeface.createFromAsset(getAssets(),"DK.ttf");
         txtIntruciones = (TextView) findViewById(R.id.txtIntruciones);
@@ -54,13 +54,13 @@ public class InstruccionesAct3  extends AppCompatActivity implements View.OnClic
 
             case (R.id.btn_ra):
                 botonsonido.start();
-                Intent siguiente = new Intent(InstruccionesAct3.this, Libro.class);
-                InstruccionesAct3.this.startActivity(siguiente);
+                Intent siguiente = new Intent(InstruccionesAct4.this, Libro.class);
+                InstruccionesAct4.this.startActivity(siguiente);
                 break;
 
             case (R.id.btn_comenzar):
                 botonsonido.start();
-                Intent intentAct2 = new Intent(InstruccionesAct3.this, Actividad3.class);
+                Intent intentAct2 = new Intent(InstruccionesAct4.this, Gato.class);
                 startActivity(intentAct2);
                 break;
 

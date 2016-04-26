@@ -39,7 +39,7 @@ public class NoticiasFragment extends Fragment implements View.OnClickListener {
     TextView textView;
     static String idNoticia = "1";
 
-    private static final String USER_URL = "http://52.23.175.78/api/noticia/";
+    private static final String USER_URL = "http://52.23.175.78/api/noticia/metodo/texto/";
     private static final String USER_URL2 = "http://ludi.mx/api/noticia/metodo/longitud";
 
     public static final String KEY_CONTENIDO = "contenido";

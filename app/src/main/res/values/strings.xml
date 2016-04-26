@@ -37,4 +37,5 @@
     <string name="title_activity_actualizar">Actualizar</string>
     <string name="title_activity_avance">Avance</string>
     <string name="title_activity_gato">Gato</string>
+    <string name="title_activity_instrucciones_act4">InstruccionesAct4</string>
 </resources>

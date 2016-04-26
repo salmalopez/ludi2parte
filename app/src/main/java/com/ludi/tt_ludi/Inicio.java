@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -30,14 +31,11 @@ public class Inicio extends AppCompatActivity implements View.OnClickListener{
 
     Button btn_login, btn_register;
 
-
-
-
-
     //private static final String REGISTER_URL = "http://54.191.222.236/api/loginApp";
     private static final String REGISTER_URL = "http://ludi.mx/api/loginApp";
 
     public static final String KEY_USUARIO = "usuario";
+    private static final int LONG_DELAY = 3500;
 
     private EditText editTextUserName;
 
@@ -137,6 +135,11 @@ public class Inicio extends AppCompatActivity implements View.OnClickListener{
 
 
                                 }else{
+                                    Toast toast1 =
+                                            Toast.makeText(getApplicationContext(),
+                                                    "No te has registrado aún", Toast.LENGTH_LONG);
+
+                                    toast1.show();
                                     System.out.println("No fue posible iniciar sesión. La respuesta del servidor fue: "+response);
 
                                 }
