@@ -173,7 +173,8 @@ public class Gato extends AppCompatActivity implements View.OnClickListener{
     }
 
     //Revisar si alguien ya ganó
-        private boolean verificar(int jugador){
+
+    private boolean verificar(int jugador){
 
             //Caso A: diagonal decreciente
             if( tablero[0][0] == jugador && tablero[0][0] == tablero[1][1] && tablero[1][1] == tablero[2][2] )
@@ -209,8 +210,6 @@ public class Gato extends AppCompatActivity implements View.OnClickListener{
             return false;
 
         }
-
-
 
     //Función matemática para obtener el mayor de dos enteros
     private int max(int a, int b){

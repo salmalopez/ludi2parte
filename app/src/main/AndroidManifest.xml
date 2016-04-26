@@ -115,7 +115,10 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".InstruccionesAct4"
-            android:label="@string/title_activity_instrucciones_act4"
+            android:label="@string/title_activity_instrucciones_act4"/>
+        <activity
+            android:name=".Ahorcado"
+            android:label="@string/title_activity_ahorcado"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
