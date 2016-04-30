@@ -207,7 +207,7 @@ public class Ahorcado extends AppCompatActivity implements View.OnClickListener{
         AlertDialog alertDialog = new AlertDialog.Builder(Ahorcado.this).create();
         alertDialog.setTitle("¡Felicidades!");
         alertDialog.setMessage("Has ganado el juego, dirígete al cuestionario para reafirmar tus conocimientos");
-        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "✓✓",
+        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "ok",
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
@@ -233,7 +233,7 @@ public class Ahorcado extends AppCompatActivity implements View.OnClickListener{
             AlertDialog alertDialog = new AlertDialog.Builder(Ahorcado.this).create();
             alertDialog.setTitle("¡Sigue intentando!");
             alertDialog.setMessage("Se te agotaron los intentos\n Inténtalo de nuevo o dirígete al cuestionario para reafirmar tus conocimientos.");
-            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "✓✓",
+            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "ok",
                     new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             bloquear();

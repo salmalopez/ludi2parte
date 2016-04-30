@@ -164,9 +164,6 @@
 
     </LinearLayout>
 
-
-
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -187,7 +184,7 @@
                 android:layout_width="400dp"
                 android:layout_height="350dp"
                 android:background="@drawable/bolsa2"
-                android:text="G2"
+                android:text="GDOS"
                 android:textSize="35sp"
                 android:id="@+id/textGrupo2"
                 android:textColor="#ffffff" />
@@ -201,15 +198,9 @@
                 android:id="@+id/textGrupo3"
                 android:textColor="#ffffff" />
 
-
         </LinearLayout>
 
-
-
-
-
 </LinearLayout>
-
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -254,8 +245,5 @@
             android:layout_marginRight="50dp" />
 
     </LinearLayout>
-
-
-
 
 </LinearLayout>

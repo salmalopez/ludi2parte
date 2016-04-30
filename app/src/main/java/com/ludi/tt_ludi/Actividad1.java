@@ -156,7 +156,7 @@ public class Actividad1 extends Activity implements Animation.AnimationListener,
                         AlertDialog alertDialog = new AlertDialog.Builder(Actividad1.this).create();
                         alertDialog.setTitle("¡Felicidades!");
                         alertDialog.setMessage("Concluiste la actividad, ahora dirigete al cuestionario para reafirmar tus conocimientos.");
-                        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "✓✓",
+                        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "ok",
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
                                         dialog.dismiss();
@@ -200,7 +200,7 @@ public class Actividad1 extends Activity implements Animation.AnimationListener,
                         AlertDialog alertDialog = new AlertDialog.Builder(Actividad1.this).create();
                         alertDialog.setTitle("¡Felicidades!");
                         alertDialog.setMessage("Concluiste la actividad, ahora dirigete al cuestionario para reafirmar tus conocimientos.");
-                        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "ok",
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
                                         dialog.dismiss();
