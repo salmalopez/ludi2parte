@@ -1,6 +1,8 @@
 package com.ludi.tt_ludi;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
@@ -18,7 +20,7 @@ import android.widget.TextView;
  */
 public class Actividad1 extends Activity implements Animation.AnimationListener, View.OnClickListener{
 
-    MediaPlayer botonsonido,botonsalida;
+    MediaPlayer botonsonido,botonsalida, botonaplauso;
     TextView txtPregunta;
     Button btnRespuesta1,btnRespuesta2, btnSiguiente, btn_regresar, btnCuestionario;
     Pregunta[] preguntas = new Pregunta().getPreguntas();
@@ -73,6 +75,7 @@ public class Actividad1 extends Activity implements Animation.AnimationListener,
 
         botonsonido = MediaPlayer.create(Actividad1.this, R.raw.regreso);
         botonsalida = MediaPlayer.create(Actividad1.this, R.raw.inicio);
+        botonaplauso = MediaPlayer.create(Actividad1.this, R.raw.aplauso);
 
         imagenJarra = (ImageView) findViewById(R.id.imagenJarra);
         imagenJarra.setImageResource(NIVELES_JARRA[nivel]);
@@ -142,13 +145,24 @@ public class Actividad1 extends Activity implements Animation.AnimationListener,
                     btnRespuesta1.setBackground(image);
                     Drawable image2=(Drawable)getResources().getDrawable(PREGUNTA_RESOURCES[++respuesta]);
                     btnRespuesta2.setBackground(image2);
-
                     txtPregunta.setVisibility(View.VISIBLE);
                     txtPregunta.startAnimation(animFadein);
                     btnRespuesta1.startAnimation(bounce);
                     btnRespuesta2.startAnimation(bounce);
+                    botonsonido.start();
 
                     if(idpregunta==7){
+                        botonaplauso.start();
+                        AlertDialog alertDialog = new AlertDialog.Builder(Actividad1.this).create();
+                        alertDialog.setTitle("¡Felicidades!");
+                        alertDialog.setMessage("Concluiste la actividad, ahora dirigete al cuestionario para reafirmar tus conocimientos.");
+                        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "✓✓",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        dialog.dismiss();
+                                    }
+                                });
+                        alertDialog.show();
                         System.out.println("hshhshshs");
                     }
 
@@ -179,8 +193,20 @@ public class Actividad1 extends Activity implements Animation.AnimationListener,
                     btnRespuesta1.setBackground(image);
                     Drawable image2=(Drawable)getResources().getDrawable(PREGUNTA_RESOURCES[++respuesta]);
                     btnRespuesta2.setBackground(image2);
+                    botonsonido.start();
 
                     if(idpregunta==7){
+                        botonaplauso.start();
+                        AlertDialog alertDialog = new AlertDialog.Builder(Actividad1.this).create();
+                        alertDialog.setTitle("¡Felicidades!");
+                        alertDialog.setMessage("Concluiste la actividad, ahora dirigete al cuestionario para reafirmar tus conocimientos.");
+                        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        dialog.dismiss();
+                                    }
+                                });
+                        alertDialog.show();
                         System.out.println("hshhshshs");
                     }
                     break;

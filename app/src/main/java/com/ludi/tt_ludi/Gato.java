@@ -1,24 +1,27 @@
 package com.ludi.tt_ludi;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.Button;
-import android.widget.Toast;
+import android.widget.ImageView;
 
 public class Gato extends AppCompatActivity implements View.OnClickListener{
 
+    MediaPlayer botonaplauso;
     private int[][] tablero = new int[3][3];
     private boolean ganar;
-    private final String[] consejos = { "Es bueno consumir frutas y verduras porque contienen los nutrientes necesarios para que nuestro organismo funcione.\n\n\n\n\n\n",
-                                        "¿Sabías que las frutas y verduras tienen un alto contenido de agua?\n\n\n\n\n",
-                                        "Si ves frutas amarillas, ¡debes recordar que estas tienen un alto contenido de vitamina A!\n\n\n\n\n",
-                                        "Las frutas y verduras carecen de grasas.\n\n\n\n\n",
-                                        "Consumir frutas con vitamina C te ayuda a prevenir enfermedades respiratorias. Por ejemplo: naranja, limón y guayaba.\n\n\n\n\n",
-                                        "Es recomendable que consumas un promedio de 5 frutas y verduras al día.\n\n\n\n\n"};
+    private final String[] consejos = { "Es bueno consumir frutas y verduras porque contienen los nutrientes necesarios para que nuestro organismo funcione.",
+                                        "Las frutas y verduras tienen un alto contenido de agua.",
+                                        "Si ves frutas amarillas, ¡debes recordar que estas tienen un alto contenido de vitamina A!",
+                                        "Las frutas y verduras carecen de grasas.",
+                                        "Consumir frutas con vitamina C te ayuda a prevenir enfermedades respiratorias. Por ejemplo: naranja, limón y guayaba.",
+                                        "Es recomendable que consumas un promedio de 5 frutas y verduras al día."};
     private int pointer;
     ImageView casilla1, casilla2, casilla3, casilla4, casilla5, casilla6, casilla7, casilla8, casilla9;
     Button btnCuestionario,btnReiniciar,btn_regresar;
@@ -30,6 +33,8 @@ public class Gato extends AppCompatActivity implements View.OnClickListener{
         setContentView(R.layout.activity_gato);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        botonaplauso = MediaPlayer.create(Gato.this, R.raw.aplauso);
 
         Button btnCuestionario = (Button) findViewById(R.id.btnCuestionario);
         btnCuestionario.setOnClickListener(this);
@@ -65,7 +70,6 @@ public class Gato extends AppCompatActivity implements View.OnClickListener{
         casilla7.setOnClickListener(this);
         casilla8.setOnClickListener(this);
         casilla9.setOnClickListener(this);
-
 
 
 
@@ -130,21 +134,52 @@ public class Gato extends AppCompatActivity implements View.OnClickListener{
                 if(jugador == 1)
                     casilla.setImageResource(R.drawable.brocolo);
                 else{
-                    casilla.setImageResource(R.drawable.jitomate);
+                    casilla.setImageResource(R.drawable.manzana);
                     mostrarConsejo();
                 }
 
                 ganar = verificar(jugador);
+
+
                 if(ganar){
                     estadoTablero(false);
-                    Toast toast = Toast.makeText(this, (jugador==1)?"¡Felicidades! Has ganado el juego :)\n\n\n\n\n":"¡Oops! Creo que la actividad ha ganado.\n\n\n\n\n",
-                            Toast.LENGTH_SHORT);
-                    toast.show();
+                    if(jugador==1){
+                        botonaplauso.start();
+                        AlertDialog alertDialog = new AlertDialog.Builder(Gato.this).create();
+                        alertDialog.setTitle("¡Felicidades!");
+                        alertDialog.setMessage("Has ganado el juego, dirígete al cuestionario para reafirmar tus conocimientos");
+                        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "✓✓",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        dialog.dismiss();
+                                    }
+                                });
+                        alertDialog.show();
+                    }else{
+                        AlertDialog alertDialog = new AlertDialog.Builder(Gato.this).create();
+                        alertDialog.setTitle("¡Sigue intentando!");
+                        alertDialog.setMessage("La actividad te ha ganado, inténtalo de nuevo o dirígete al cuestionario para reafirmar tus conocimientos");
+                        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "✓✓",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        dialog.dismiss();
+                                    }
+                                });
+                        alertDialog.show();
+                    }
                 }else if(!disponibilidad()){
                     estadoTablero(false);
-                    Toast toast = Toast.makeText(this, "¡Ya no hay más casillas!. El juego se ha terminado.\n\n\n\n\n",Toast.LENGTH_LONG);
-                    toast.show();
-                    return true;
+                    AlertDialog alertDialog = new AlertDialog.Builder(Gato.this).create();
+                    alertDialog.setTitle("¡Ya no hay más casillas!");
+                    alertDialog.setMessage("El juego se ha terminado, inténtalo de nuevo o dirígete al cuestionario para reafirmar tus conocimientos ");
+                    alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "✓✓",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                }
+                            });
+                    alertDialog.show();
+                    return false;
                 }
             }else{
                 System.out.println("El jugador debe seleccionar otra casilla.\n\n\n\n");
@@ -160,6 +195,7 @@ public class Gato extends AppCompatActivity implements View.OnClickListener{
             for(int j = 0 ; j<3; j++)
                 tablero[i][j]=0;
         ganar = false;
+        estadoTablero(true);
         casilla1.setImageResource(R.drawable.signo);
         casilla2.setImageResource(R.drawable.signo);
         casilla3.setImageResource(R.drawable.signo);
@@ -169,7 +205,6 @@ public class Gato extends AppCompatActivity implements View.OnClickListener{
         casilla7.setImageResource(R.drawable.signo);
         casilla8.setImageResource(R.drawable.signo);
         casilla9.setImageResource(R.drawable.signo);
-        estadoTablero(true);
     }
 
     //Revisar si alguien ya ganó
@@ -234,7 +269,7 @@ public class Gato extends AppCompatActivity implements View.OnClickListener{
             i = (int)(Math.random()*3);
             j = (int)(Math.random()*3);
 
-        }while(!ganar && tablero[i][j]!=0);
+        }while(!ganar && tablero[i][j] !=0 && disponibilidad());
 
         if(!ganar){
             tirar(i,j,2,obtenerImageView(i,j));
@@ -270,8 +305,16 @@ public class Gato extends AppCompatActivity implements View.OnClickListener{
 
     //Cada vez que la computadora tire, le mostratá información importante al niño.
     private void mostrarConsejo(){
-        Toast toast = Toast.makeText(this,consejos[pointer],Toast.LENGTH_SHORT);
-        toast.show();
+        AlertDialog alertDialog = new AlertDialog.Builder(Gato.this).create();
+        alertDialog.setTitle("¿Sabias qué...  ?");
+        alertDialog.setMessage(consejos[pointer]);
+        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "✓✓",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+        alertDialog.show();
         pointer = (pointer + 1) % 10;
     }
 

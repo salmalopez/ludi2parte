@@ -7,26 +7,29 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:id="@+id/btnCuestionario"
+    android:background="#00BCD4"
     android:orientation="vertical"
-    tools:context="com.ludi.tt_ludi.CuestionarioAct1">
+    tools:context="com.ludi.tt_ludi.CuestionarioAct1"
+    android:gravity="center">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Selecciona la respuesta correcta para cada preguntas y al terminar selecciona el boton de terminado."
+        android:text="Selecciona la respuesta correcta"
         android:id="@+id/txtIntruciones"
-        android:textColor="#000"
+        android:textColor="#ffffff"
         android:textStyle="bold"
         android:layout_margin="20dp"
-        android:textSize="50dp" />
+        android:textSize="70dp"
+        android:gravity="center"
+        android:layout_gravity="left" />
 
     <include layout="@layout/content_cuestionario" />
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="1198dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_weight="0.31"
         android:layout_marginTop="10dp">
 
         <Button

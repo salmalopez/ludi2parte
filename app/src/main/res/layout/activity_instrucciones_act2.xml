@@ -20,40 +20,55 @@
         android:textSize="100dp"
         android:textColor="#cfa2f7"
         android:layout_gravity="center"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_marginTop="30dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pon tu mente a volar con este memorama del grupo número 3.\n Selecciona una carta y busca su par para completar el juego."
+        android:text="MEMORAMA\n\n PON TU MENTE A RECORDAR Y ENCUENTRA EL PAR DE LOS ALIMENTOS DEL TERCER GRUPO ALIMENTICIO"
         android:id="@+id/txtIntruciones"
         android:textSize="50dp"
         android:textColor="#ffffff"
-        android:paddingTop="30dp"
-        android:layout_marginBottom="0dp"
+        android:layout_marginBottom="20dp"
         android:layout_gravity="center"
-        android:textIsSelectable="true"
+        android:textIsSelectable="false"
         android:textStyle="bold|normal"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:layout_weight="0" />
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_margin="20dp"
-        android:layout_gravity="center">
+        android:layout_gravity="center"
+        android:weightSum="1"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:text="Abre tu cuadernillo, haz click en la lupa\n y pon la tableta en el marcador\n ¡Vamos a ver que sucede!"
+            android:id="@+id/textCuadernillo"
+            android:layout_marginLeft="90dp"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:layout_marginRight="20dp"
+            android:layout_weight="0.12" />
+
 
         <Button
-            android:layout_width="300dp"
-            android:layout_height="169dp"
+            android:layout_width="5dp"
+            android:layout_height="150dp"
             android:id="@+id/btn_ra"
-            android:background="@drawable/play"
+            android:background="@drawable/lupa"
             android:layout_above="@+id/btn_comenzar"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
             android:paddingBottom="100dp"
-            android:layout_weight="0.06" />
+            android:layout_weight="0.51" />
+
 
     </LinearLayout>
 

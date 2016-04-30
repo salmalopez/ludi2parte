@@ -34,12 +34,14 @@
     <string name="title_activity_instrucciones_act1">InstruccionesAct1</string>
     <string name="title_activity_instrucciones_act2">InstruccionesAct2</string>
     <string name="title_activity_instrucciones_act3">InstruccionesAct3</string>
+    <string name="title_activity_instrucciones_act4">Frutas y Verduras</string>
+
     <string name="title_activity_actualizar">Actualizar</string>
     <string name="title_activity_avance">Avance</string>
     <string name="title_activity_gato">Gato</string>
-<<<<<<< HEAD
-    <string name="title_activity_instrucciones_act4">InstruccionesAct4</string>
-=======
+
+
     <string name="title_activity_ahorcado">Ahorcado</string>
->>>>>>> ef2eceea9da9cfe04e349b108264db5b40e67448
+    <string name="title_activity_instrucciones_act5">InstruccionesAct5</string>
+
 </resources>

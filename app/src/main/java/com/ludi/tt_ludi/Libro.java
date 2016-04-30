@@ -43,7 +43,6 @@ public class Libro extends AppCompatActivity implements View.OnClickListener{
             @Override
             public void onClick(View view) {
                 finish();
-                btncancion.start();
             }
         });
 

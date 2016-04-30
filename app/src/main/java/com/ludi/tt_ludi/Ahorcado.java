@@ -3,7 +3,9 @@ package com.ludi.tt_ludi;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -14,11 +16,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-
 public class Ahorcado extends AppCompatActivity implements View.OnClickListener{
+
+    Button button1, button2,button3,button4,button5,button6,button7,button8;
+    MediaPlayer botonaplauso;
 
     private final String[] preguntas = {
             "Grupo alimenticio que te aporta principalmente fibra.",
@@ -34,28 +35,12 @@ public class Ahorcado extends AppCompatActivity implements View.OnClickListener{
         "Cereales", "Integral", "Amarillo", "Cereales", "Fibra", "Tuberculos", "Fibra", "Industrializados"
     };
 
-    private final Button[] opciones = {
-            (Button) findViewById(R.id.button3),
-            (Button) findViewById(R.id.button2),
-            (Button) findViewById(R.id.button5),
-            (Button) findViewById(R.id.button7),
-            (Button) findViewById(R.id.button1),
-            (Button) findViewById(R.id.button8),
-            (Button) findViewById(R.id.button4),
-            (Button) findViewById(R.id.button6),
-    };
+    private Button[] opciones;
+
+    private Button btnReiniciar,btnCuestionario,btn_regresar;
 
     private ImageView ahorcado;
-    private final Drawable[] imagenes = {
-            ResourcesCompat.getDrawable(getResources(), R.drawable.ahorcado0, null),
-            ResourcesCompat.getDrawable(getResources(), R.drawable.ahorcado1, null),
-            ResourcesCompat.getDrawable(getResources(), R.drawable.ahorcado2, null),
-            ResourcesCompat.getDrawable(getResources(), R.drawable.ahorcado3, null),
-            ResourcesCompat.getDrawable(getResources(), R.drawable.ahorcado4, null),
-            ResourcesCompat.getDrawable(getResources(), R.drawable.ahorcado5, null),
-            ResourcesCompat.getDrawable(getResources(), R.drawable.ahorcado6, null),
-            ResourcesCompat.getDrawable(getResources(), R.drawable.ahorcado7, null)
-    };
+    private  Drawable[] imagenes;
     private int pointerPreguntas, pointerAhorcado, correctas;
     private TextView pregunta;
 
@@ -65,6 +50,76 @@ public class Ahorcado extends AppCompatActivity implements View.OnClickListener{
         setContentView(R.layout.activity_ahorcado);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        botonaplauso = MediaPlayer.create(Ahorcado.this, R.raw.aplauso);
+
+        Typeface myTypeFace2 = Typeface.createFromAsset(getAssets(),"DK.ttf");
+        pregunta = (TextView) findViewById(R.id.pregunta);
+        pregunta.setTypeface(myTypeFace2);
+
+        button1 = (Button) findViewById(R.id.button1);
+        button1.setTypeface(myTypeFace2);
+        button1.setOnClickListener(this);
+
+        button2 = (Button) findViewById(R.id.button2);
+        button2.setTypeface(myTypeFace2);
+        button2.setOnClickListener(this);
+
+        button3 = (Button) findViewById(R.id.button3);
+        button3.setTypeface(myTypeFace2);
+        button3.setOnClickListener(this);
+
+        button4 = (Button) findViewById(R.id.button4);
+        button4.setTypeface(myTypeFace2);
+        button4.setOnClickListener(this);
+
+        button5 = (Button) findViewById(R.id.button5);
+        button5.setTypeface(myTypeFace2);
+        button5.setOnClickListener(this);
+
+        button6 = (Button) findViewById(R.id.button6);
+        button6.setTypeface(myTypeFace2);
+        button6.setOnClickListener(this);
+
+        button7 = (Button) findViewById(R.id.button7);
+        button7.setTypeface(myTypeFace2);
+        button7.setOnClickListener(this);
+
+        button8 = (Button) findViewById(R.id.button8);
+        button8.setTypeface(myTypeFace2);
+        button8.setOnClickListener(this);
+
+        btnReiniciar = (Button) findViewById(R.id.btnReiniciar);
+        btnReiniciar.setOnClickListener(this);
+
+        btnCuestionario = (Button) findViewById(R.id.btnCuestionario);
+        btnCuestionario.setOnClickListener(this);
+
+        btn_regresar = (Button) findViewById(R.id.btn_regresar);
+        btn_regresar.setOnClickListener(this);
+
+        opciones = new Button[]{
+                button3,
+                button2,
+                button5,
+                button7,
+                button1,
+                button8,
+                button4,
+                button6
+        };
+
+
+        imagenes = new Drawable[]{
+                ResourcesCompat.getDrawable(getResources(), R.drawable.ahorcado0, null),
+                ResourcesCompat.getDrawable(getResources(), R.drawable.ahorcado1, null),
+                ResourcesCompat.getDrawable(getResources(), R.drawable.ahorcado2, null),
+                ResourcesCompat.getDrawable(getResources(), R.drawable.ahorcado3, null),
+                ResourcesCompat.getDrawable(getResources(), R.drawable.ahorcado4, null),
+                ResourcesCompat.getDrawable(getResources(), R.drawable.ahorcado5, null),
+                ResourcesCompat.getDrawable(getResources(), R.drawable.ahorcado6, null),
+                ResourcesCompat.getDrawable(getResources(), R.drawable.ahorcado7, null)
+        };
 
         iniciar();
     }
@@ -123,6 +178,9 @@ public class Ahorcado extends AppCompatActivity implements View.OnClickListener{
                     Intent intent = new Intent(this,CuestionarioAct2.class);
                     startActivity(intent);
                     break;
+            case R.id.btn_regresar:
+                finish();
+                break;
         }
 
     }
@@ -133,6 +191,8 @@ public class Ahorcado extends AppCompatActivity implements View.OnClickListener{
         toast.show();
         correctas++;
         boton.setEnabled(false);
+        Drawable fin = (Drawable)getResources().getDrawable(R.drawable.btngrupo3);
+        boton.setBackground(fin);
         if(correctas < 8)
             mostrarPregunta();
         else{
@@ -144,10 +204,11 @@ public class Ahorcado extends AppCompatActivity implements View.OnClickListener{
         //Se muestra ahorcado ganando
         ahorcado.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.ahorcadowin, null));
         //Se hace saber al usuario que ya ganó
+        botonaplauso.start();
         AlertDialog alertDialog = new AlertDialog.Builder(Ahorcado.this).create();
         alertDialog.setTitle("¡Felicidades!");
-        alertDialog.setMessage("Has ganado el juego, puedes continuar al cuestionario.");
-        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+        alertDialog.setMessage("Has ganado el juego, dirígete al cuestionario para reafirmar tus conocimientos");
+        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "✓✓",
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
@@ -171,11 +232,12 @@ public class Ahorcado extends AppCompatActivity implements View.OnClickListener{
         // Se verifica si el usuario ya perdió
         if(pointerAhorcado == 8){
             AlertDialog alertDialog = new AlertDialog.Builder(Ahorcado.this).create();
-            alertDialog.setTitle("¡Vaya!");
-            alertDialog.setMessage("Se te han terminado los intentos, puedes intentarlo de nuevo o ir al cuestionario.");
-            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+            alertDialog.setTitle("¡Sigue intentando!");
+            alertDialog.setMessage("Se te agotaron los intentos\n Inténtalo de nuevo o dirígete al cuestionario para reafirmar tus conocimientos.");
+            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "✓✓",
                     new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
+                            bloquear();
                             dialog.dismiss();
                         }
                     });
@@ -196,20 +258,9 @@ public class Ahorcado extends AppCompatActivity implements View.OnClickListener{
         for(int i=0; i<arregloRespuestas.length; i++){
             opciones[i].setText(arregloRespuestas[i]);
             opciones[i].setEnabled(true);
+            Drawable fin = (Drawable)getResources().getDrawable(R.drawable.btncereales);
+            opciones[i].setBackground(fin);
         }
-
-
-        //Indicar al niño que puede comenzar el juego
-        AlertDialog alertDialog = new AlertDialog.Builder(Ahorcado.this).create();
-        alertDialog.setTitle("¡Hola!");
-        alertDialog.setMessage("Puedes comenzar a jugar seleccionando la respuesta correcta.");
-        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                });
-        alertDialog.show();
 
         //Inicializar todos los contadores
         pointerPreguntas = 0; //Indica la pregunta siguiente, es decir, para iniciar, la siguiente pregunta es la primera (posición 0).
@@ -220,4 +271,10 @@ public class Ahorcado extends AppCompatActivity implements View.OnClickListener{
     }
 
 
+    private void bloquear(){
+        for(int i=0; i<arregloRespuestas.length; i++){
+            opciones[i].setEnabled(false);
+
+        }
+    }
 }

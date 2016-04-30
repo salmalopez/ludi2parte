@@ -47,7 +47,7 @@ public class Actividad2 extends AppCompatActivity implements View.OnClickListene
         setContentView(R.layout.actividad2_layout);
         final TableLayout tabla = new TableLayout(this);
 
-        tabla.setBackgroundColor(Color.parseColor("#C2185B"));
+        tabla.setBackgroundColor(Color.parseColor("#F44336"));
 
         Button btnEspacio = new Button(this);
         Drawable image5 = (Drawable)getResources().getDrawable(R.drawable.espaciomem);
@@ -103,7 +103,7 @@ public class Actividad2 extends AppCompatActivity implements View.OnClickListene
             final TableRow fila = new TableRow(this);
             for(int x=0; x<tam; x++){
                 fila.addView(cartas[(y * tam) + x].boton);
-                fila.setBackgroundColor(Color.parseColor("#C2185B"));
+                fila.setBackgroundColor(Color.parseColor("#F44336"));
             }
 
             tabla.addView(fila);
@@ -135,7 +135,7 @@ public class Actividad2 extends AppCompatActivity implements View.OnClickListene
             this.boton.setLayoutParams(new TableRow.LayoutParams(320, 150));
             this.boton.setScaleType(ImageView.ScaleType.FIT_XY);
             this.boton.setImageResource(R.drawable.preguntamem);
-            this.boton.setBackgroundColor(Color.parseColor("#C2185B"));
+            this.boton.setBackgroundColor(Color.parseColor("#F44336"));
             this.boton.setOnClickListener(this);
         }
 

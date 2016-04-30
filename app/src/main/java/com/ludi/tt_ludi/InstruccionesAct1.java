@@ -12,7 +12,7 @@ import android.widget.TextView;
 public class InstruccionesAct1 extends AppCompatActivity implements View.OnClickListener{
 
     Button btn_ra,btn_comenzar,btn_regresar;
-    TextView txtIntruciones,txtTitle;
+    TextView txtIntruciones,txtTitle,textCuadernillo;
     MediaPlayer botonsonido,botonsalida;
 
     @Override
@@ -27,9 +27,9 @@ public class InstruccionesAct1 extends AppCompatActivity implements View.OnClick
         botonsonido = MediaPlayer.create(InstruccionesAct1.this, R.raw.regreso);
         botonsalida = MediaPlayer.create(InstruccionesAct1.this, R.raw.inicio);
 
-        //Typeface myTypeFace2 = Typeface.createFromAsset(getAssets(),"dot.ttf");
-      //  textCuadernillo = (TextView) findViewById(R.id.textCuadernillo);
-      //  textCuadernillo.setTypeface(myTypeFace2);
+        Typeface myTypeFace2 = Typeface.createFromAsset(getAssets(),"BU.ttf");
+        textCuadernillo = (TextView) findViewById(R.id.textCuadernillo);
+        textCuadernillo.setTypeface(myTypeFace2);
 
         Typeface myTypeFace3 = Typeface.createFromAsset(getAssets(),"DK.ttf");
         txtIntruciones = (TextView) findViewById(R.id.txtIntruciones);

@@ -4,7 +4,6 @@ import android.app.ActivityManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.graphics.drawable.AnimationDrawable;
 import android.media.MediaPlayer;
@@ -14,18 +13,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class Inicio extends AppCompatActivity implements View.OnClickListener{
 
@@ -115,7 +104,11 @@ public class Inicio extends AppCompatActivity implements View.OnClickListener{
 
             case (R.id.btn_login):
                 botonsonido.start();
-                final String usuario = editTextUserName.getText().toString().trim();
+                Intent siguiente2 = new Intent(Inicio.this, MainActivity.class);
+                Inicio.this.startActivity(siguiente2);
+                btncancion.stop();
+
+               /*final String usuario = editTextUserName.getText().toString().trim();
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, REGISTER_URL,
                         new Response.Listener<String>() {
                             @Override
@@ -132,14 +125,20 @@ public class Inicio extends AppCompatActivity implements View.OnClickListener{
 
                                     Intent siguiente = new Intent(Inicio.this, MainActivity.class);
                                     Inicio.this.startActivity(siguiente);
-
+                                    btncancion.stop();
 
                                 }else{
-                                    Toast toast1 =
-                                            Toast.makeText(getApplicationContext(),
-                                                    "No te has registrado aún", Toast.LENGTH_LONG);
+                                    AlertDialog alertDialog = new AlertDialog.Builder(Inicio.this).create();
+                                    alertDialog.setTitle("¡Oops!");
+                                    alertDialog.setMessage("El usuario no se encuentra registrado.");
+                                    alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                                            new DialogInterface.OnClickListener() {
+                                                public void onClick(DialogInterface dialog, int which) {
+                                                    dialog.dismiss();
+                                                }
+                                            });
+                                    alertDialog.show();
 
-                                    toast1.show();
                                     System.out.println("No fue posible iniciar sesión. La respuesta del servidor fue: "+response);
 
                                 }
@@ -163,7 +162,7 @@ public class Inicio extends AppCompatActivity implements View.OnClickListener{
                 };
 
                 RequestQueue requestQueue = Volley.newRequestQueue(this);
-                requestQueue.add(stringRequest);
+                requestQueue.add(stringRequest); */
                 break;
 
         }

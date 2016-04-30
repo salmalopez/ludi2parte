@@ -10,187 +10,186 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.ludi.tt_ludi.Gato"
+    android:background="@drawable/fondogato"
     android:gravity="center"
     tools:showIn="@layout/activity_gato">
 
 
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="3500dp"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_gravity="center_vertical|center_horizontal">
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:weightSum="1">
 
         <!--Primera fila-->
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="1131dp"
+            android:layout_height="166dp"
             android:orientation="horizontal"
-            android:layout_gravity="center_vertical|center_horizontal">
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginTop="60dp"
+            android:weightSum="1"
+            android:layout_marginBottom="30dp">
 
 
             <ImageView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
                 android:text="1"
                 android:id="@+id/casilla1"
-                android:background="@drawable/signo"
                 android:textColor="#ffffff"
                 android:textSize="20dp"
-                android:layout_margin="10px"
-                android:gravity="center"/>
-
+                android:gravity="center"
+                android:layout_weight="0.3"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="70dp" />
 
             <ImageView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
                 android:text="2"
                 android:id="@+id/casilla2"
-                android:background="@drawable/signo"
                 android:textColor="#ffffff"
                 android:textSize="20dp"
-                android:layout_margin="10px"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:layout_weight="0.3"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp" />
 
             <ImageView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center"
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
                 android:text="3"
                 android:id="@+id/casilla3"
-                android:background="@drawable/signo"
                 android:textColor="#ffffff"
                 android:textSize="20dp"
-                android:layout_margin="10px"
-                android:gravity="center"/>
-
-        </LinearLayout>
-
-
-        <!--Segunda fila-->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center_vertical|center_horizontal">
-
-
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:text="4"
-                android:id="@+id/casilla4"
-                android:background="@drawable/signo"
-                android:textColor="#ffffff"
-                android:textSize="20dp"
-                android:layout_margin="10px"
-                android:gravity="center"/>
-
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:text="5"
-                android:id="@+id/casilla5"
-                android:background="@drawable/signo"
-                android:textColor="#ffffff"
-                android:textSize="20dp"
-                android:layout_margin="10px"
-                android:gravity="center"/>
-
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center"
-                android:text="6"
-                android:id="@+id/casilla6"
-                android:background="@drawable/signo"
-                android:textColor="#ffffff"
-                android:textSize="20dp"
-                android:layout_margin="10px"
-                android:gravity="center"/>
-
-        </LinearLayout>
-
-        <!--Tercera fila-->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center_vertical|center_horizontal">
-
-
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:text="7"
-                android:id="@+id/casilla7"
-                android:background="@drawable/signo"
-                android:textColor="#ffffff"
-                android:textSize="20dp"
-                android:layout_margin="10px"
-                android:gravity="center"/>
-
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:text="8"
-                android:id="@+id/casilla8"
-                android:background="@drawable/signo"
-                android:textColor="#ffffff"
-                android:textSize="20dp"
-                android:layout_margin="10px"
-                android:gravity="center"/>
-
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center"
-                android:text="9"
-                android:id="@+id/casilla9"
-                android:background="@drawable/signo"
-                android:textColor="#ffffff"
-                android:textSize="20dp"
-                android:layout_margin="10px"
-                android:gravity="center"/>
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="1201dp"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="30dp">
-
-            <Button
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:id="@+id/btn_regresar"
-                android:visibility="visible"
-                android:background="@drawable/regreso"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="0.00"
+                android:gravity="center"
                 android:layout_marginLeft="50dp"
-                android:layout_marginRight="800dp" />
-
-            <Button
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:id="@+id/btnCuestionario"
-                android:background="@drawable/cuestionario"
-                android:visibility="visible"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="0.00" />
+                android:layout_weight="0.3"
+                android:layout_marginRight="20dp" />
 
             <Button
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:id="@+id/btnReiniciar"
                 android:background="@drawable/reinicio"
-                android:visibility="visible"
-                android:layout_marginLeft="50dp" />
+                android:visibility="visible" />
+
         </LinearLayout>
 
+
+        <!--Segunda fila-->
+        <LinearLayout
+            android:layout_width="1131dp"
+            android:layout_height="166dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:text="4"
+                android:id="@+id/casilla4"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:layout_weight="0.3"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="70dp" />
+
+            <ImageView
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:text="5"
+                android:id="@+id/casilla5"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:layout_weight="0.3"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp" />
+
+            <ImageView
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:text="6"
+                android:id="@+id/casilla6"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="50dp"
+                android:layout_weight="0.3"
+                android:layout_marginRight="20dp" />
+
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/btnCuestionario"
+                android:background="@drawable/cuestionario"
+                android:visibility="visible" />
+
+
+        </LinearLayout>
+
+
+        <!--Tercera fila-->
+        <LinearLayout
+            android:layout_width="1131dp"
+            android:layout_height="166dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="30dp">
+
+            <ImageView
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:text="7"
+                android:id="@+id/casilla7"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:layout_weight="0.3"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="70dp" />
+
+            <ImageView
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:text="8"
+                android:id="@+id/casilla8"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:layout_weight="0.3"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp" />
+
+            <ImageView
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:text="9"
+                android:id="@+id/casilla9"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="50dp"
+                android:layout_weight="0.3"
+                android:layout_marginRight="20dp" />
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/btn_regresar"
+                android:background="@drawable/regreso"
+                android:visibility="visible" />
+
+        </LinearLayout>
 
     </LinearLayout>
 

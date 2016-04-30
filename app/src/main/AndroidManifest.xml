@@ -96,29 +96,43 @@
         <activity
             android:name=".InstruccionesAct3"
             android:configChanges="orientation"
-            android:label="@string/title_activity_instrucciones_act3"
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Actualizar"
             android:configChanges="orientation"
             android:screenOrientation="landscape" />
-        <activity android:name=".CuestionarioAct4" />
-        <activity android:name=".CuestionarioAct5" />
+        <activity
+            android:name=".CuestionarioAct4"
+            android:configChanges="orientation"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".CuestionarioAct5"
+            android:configChanges="orientation"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".Avance"
-            android:label="@string/title_activity_avance"
+            android:configChanges="orientation"
+            android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Gato"
-            android:label="@string/title_activity_gato"
+            android:configChanges="orientation"
+            android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".InstruccionesAct4"
-            android:label="@string/title_activity_instrucciones_act4"/>
+            android:configChanges="orientation"
+            android:label="@string/title_activity_instrucciones_act4"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".Ahorcado"
-            android:label="@string/title_activity_ahorcado"
+            android:configChanges="orientation"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".InstruccionesAct5"
+            android:label="@string/title_activity_instrucciones_act5"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

@@ -1,5 +1,7 @@
 package com.ludi.tt_ludi;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -8,7 +10,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -97,11 +98,17 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
                         if(response.equals("{\"message\":OK}")){
                             System.out.println("bien");
                         }else{
-                            Toast toast1 =
-                                    Toast.makeText(getApplicationContext(),
-                                            response, Toast.LENGTH_LONG);
 
-                            toast1.show();
+                            AlertDialog alertDialog = new AlertDialog.Builder(Registro.this).create();
+                            alertDialog.setTitle("¡Oops!");
+                            alertDialog.setMessage(""+response);
+                            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                                    new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            dialog.dismiss();
+                                        }
+                                    });
+                            alertDialog.show();
                             System.out.println("mal");
                         }
                     }

@@ -7,42 +7,58 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:id="@+id/btnCuestionario"
+    android:background="#00BCD4"
     android:orientation="vertical"
-    tools:context="com.ludi.tt_ludi.CuestionarioAct4">
+    tools:context="com.ludi.tt_ludi.CuestionarioAct4"
+    android:gravity="center">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Selecciona la respuesta correcta para cada preguntas y al terminar selecciona el boton de terminado."
+        android:text="Selecciona la respuesta correcta"
         android:id="@+id/txtIntruciones"
-        android:textColor="#000"
+        android:textColor="#ffffff"
         android:textStyle="bold"
         android:layout_margin="20dp"
-        android:textSize="50dp" />
+        android:textSize="70dp"
+        android:gravity="center"
+        android:layout_gravity="center|left" />
 
     <include layout="@layout/content_cuestionario" />
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="1198dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_gravity="center_vertical|center_horizontal|top"
-        android:weightSum="1">
+        android:layout_marginTop="10dp">
 
         <Button
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:id="@+id/btn_regresar"
+            android:visibility="visible"
             android:background="@drawable/regreso"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.00"
+            android:layout_marginLeft="50dp"
             android:layout_marginRight="900dp" />
+
         <Button
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:id="@+id/btnFin"
             android:background="@drawable/btnfin"
-            android:layout_weight="0.18" />
+            android:visibility="visible"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.00" />
 
-
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/btnSiguiente"
+            android:background="@drawable/reinicio"
+            android:visibility="visible"
+            android:layout_marginLeft="50dp" />
     </LinearLayout>
 
 

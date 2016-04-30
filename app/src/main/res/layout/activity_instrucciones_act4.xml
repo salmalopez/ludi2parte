@@ -27,36 +27,49 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Frutas VS Verduras.\n Diviertete seleccionando la casilla para ganarle a la fruta."
+        android:text="FRUTAS VS VERTUDRAS\n\n DIVIÉRTETE SELECCIONANDO LAS CASILLAS PARA FORMAR LÍNEAS HORIZONTALES, VERTICALES O DIAGONALES Y ASÍ GANARLE A LA ACTIVIDAD"
         android:id="@+id/txtIntruciones"
-        android:textSize="50dp"
+        android:textSize="48dp"
         android:textColor="#ffffff"
-        android:paddingTop="30dp"
-        android:layout_marginBottom="0dp"
+        android:layout_marginBottom="20dp"
         android:layout_gravity="center"
         android:textIsSelectable="false"
         android:textStyle="bold|normal"
         android:textAlignment="center"
-        android:layout_weight="0.83" />
+        android:layout_weight="0" />
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_margin="20dp"
-        android:layout_gravity="center">
+        android:layout_gravity="center"
+        android:weightSum="1"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:text="Abre tu cuadernillo, haz click en la lupa\n y pon la tableta en el marcador\n ¡Vamos a ver que sucede!"
+            android:id="@+id/textCuadernillo"
+            android:layout_marginLeft="90dp"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:layout_marginRight="20dp"
+            android:layout_weight="0.12" />
+
 
         <Button
-            android:layout_width="400dp"
-            android:layout_height="169dp"
+            android:layout_width="5dp"
+            android:layout_height="150dp"
             android:id="@+id/btn_ra"
-            android:background="@drawable/play"
+            android:background="@drawable/lupa"
             android:layout_above="@+id/btn_comenzar"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
             android:paddingBottom="100dp"
-            android:layout_weight="0.01" />
+            android:layout_weight="0.51" />
+
 
     </LinearLayout>
 

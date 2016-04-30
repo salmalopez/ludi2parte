@@ -218,9 +218,9 @@ public class MainActivity extends AppCompatActivity
                 case "verduras":
                     destino = InstruccionesAct4.class;
                     break;
-                /*case "cereales":
-                    destino = Actividad2.class;
-                    break;*/
+                case "cereales":
+                    destino = InstruccionesAct5.class;
+                    break;
                 case "carne":
                     destino = InstruccionesAct2.class;
                     break;
@@ -230,10 +230,6 @@ public class MainActivity extends AppCompatActivity
                 case "plato":
                     destino = InstruccionesAct3.class;
                     break;
-                default:
-                    destino = MainActivity.class;
-                    break;
-
             }
             Intent siguiente = new Intent(MainActivity.this, destino);
             startActivity(siguiente);
