@@ -13,7 +13,7 @@ import android.widget.ImageView;
 
 public class Gato extends AppCompatActivity implements View.OnClickListener{
 
-    MediaPlayer botonaplauso;
+    MediaPlayer botonaplauso, sonidogato;
     private int[][] tablero = new int[3][3];
     private boolean ganar;
     private final String[] consejos = { "Es bueno consumir frutas y verduras porque contienen los nutrientes necesarios para que nuestro organismo funcione.",
@@ -35,6 +35,7 @@ public class Gato extends AppCompatActivity implements View.OnClickListener{
         setSupportActionBar(toolbar);
 
         botonaplauso = MediaPlayer.create(Gato.this, R.raw.aplauso);
+        sonidogato = MediaPlayer.create(Gato.this, R.raw.gato);
 
         Button btnCuestionario = (Button) findViewById(R.id.btnCuestionario);
         btnCuestionario.setOnClickListener(this);
@@ -131,8 +132,10 @@ public class Gato extends AppCompatActivity implements View.OnClickListener{
 
             if(tablero[i][j]==0){
                 tablero[i][j] = jugador;
-                if(jugador == 1)
+                if(jugador == 1){
+                    sonidogato.start();
                     casilla.setImageResource(R.drawable.brocolo);
+                }
                 else{
                     casilla.setImageResource(R.drawable.manzana);
                     mostrarConsejo();

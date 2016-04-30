@@ -19,17 +19,17 @@ import android.widget.Toast;
 public class Ahorcado extends AppCompatActivity implements View.OnClickListener{
 
     Button button1, button2,button3,button4,button5,button6,button7,button8;
-    MediaPlayer botonaplauso;
+    MediaPlayer botonaplauso, sonidoerror, sonidoperdio, sonidobien;
 
     private final String[] preguntas = {
-            "Grupo alimenticio que te aporta principalmente fibra.",
-            "Cereal que te aporta más energía.",
-            "Color que tienen los cereales y tubérculos en el plato del bien comer.",
-            "Avena, granola, tortillas y bolillo son ejemplos de...¿?",
-            "Nutriente que nos ayuda a regular los procesos digestivos y disminuye las cantidades de colesterol en la sangre.",
-            "Papa, camote, jícama y ajo son ejemplos de...¿?",
-            "Nutriente que nos ayuda a regular los procesos digestivos y disminuye las cantidades de colesterol en la sangre.",
-            "Son los cereales que contienen mucha azúcar y químicos, los cuales no nutren."};
+            "1) Grupo alimenticio que te aporta principalmente fibra.",
+            "2) Cereal que te aporta más energía.",
+            "3) Color que tienen los cereales y tubérculos en el plato del bien comer.",
+            "4) Avena, granola, tortillas y bolillo son ejemplos de...¿?",
+            "5) Nutriente que nos ayuda a regular los procesos digestivos y disminuye las cantidades de colesterol en la sangre.",
+            "6) Papa, camote, jícama y ajo son ejemplos de...¿?",
+            "7) Nutriente que nos ayuda a regular los procesos digestivos y disminuye las cantidades de colesterol en la sangre.",
+            "8) Son los cereales que contienen mucha azúcar y químicos, los cuales no nutren."};
 
     private final String[] arregloRespuestas = {
         "Cereales", "Integral", "Amarillo", "Cereales", "Fibra", "Tuberculos", "Fibra", "Industrializados"
@@ -52,6 +52,9 @@ public class Ahorcado extends AppCompatActivity implements View.OnClickListener{
         setSupportActionBar(toolbar);
 
         botonaplauso = MediaPlayer.create(Ahorcado.this, R.raw.aplauso);
+        sonidoerror  = MediaPlayer.create(Ahorcado.this, R.raw.sonidito);
+        sonidoperdio = MediaPlayer.create(Ahorcado.this, R.raw.tache1);
+        sonidobien = MediaPlayer.create(Ahorcado.this, R.raw.bien1);
 
         Typeface myTypeFace2 = Typeface.createFromAsset(getAssets(),"DK.ttf");
         pregunta = (TextView) findViewById(R.id.pregunta);
@@ -186,14 +189,17 @@ public class Ahorcado extends AppCompatActivity implements View.OnClickListener{
     }
 
     private void correcta(View v){
+
         Button boton = (Button)findViewById(v.getId());
         Toast toast = Toast.makeText(this, "¡Correcto!",Toast.LENGTH_SHORT);
         toast.show();
         correctas++;
         boton.setEnabled(false);
         boton.setVisibility(View.GONE);
-        if(correctas < 8)
+        if(correctas < 8){
+            sonidobien.start();
             mostrarPregunta();
+        }
         else{
             ganar();
         }
@@ -222,6 +228,7 @@ public class Ahorcado extends AppCompatActivity implements View.OnClickListener{
     }
 
     private void avanzarAhorcado(){
+        sonidoerror.start();
         // Se indica al usuario que se equivocó
         Toast toast = Toast.makeText(this, "¡Oops! Intenta con otra opicón.",Toast.LENGTH_SHORT);
         toast.show();
@@ -230,6 +237,7 @@ public class Ahorcado extends AppCompatActivity implements View.OnClickListener{
 
         // Se verifica si el usuario ya perdió
         if(pointerAhorcado == 8){
+            sonidoperdio.start();
             AlertDialog alertDialog = new AlertDialog.Builder(Ahorcado.this).create();
             alertDialog.setTitle("¡Sigue intentando!");
             alertDialog.setMessage("Se te agotaron los intentos\n Inténtalo de nuevo o dirígete al cuestionario para reafirmar tus conocimientos.");

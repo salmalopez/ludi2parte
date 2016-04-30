@@ -1,6 +1,7 @@
 package com.ludi.tt_ludi;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.DragEvent;
@@ -18,8 +19,9 @@ public class Actividad3 extends AppCompatActivity implements View.OnTouchListene
 
     private TextView textG1,textG1_1,textG1_2,textG1_3,textG1_4,textG2,textG2_1,textG2_2,textG3,textG3_1,textG3_2,textG3_3, textGrupo1,textGrupo2,textGrupo3;
 
-
+    MediaPlayer sonidobien, sonidomal,sonidoAplauso;
     Button btn_regresar,btnCuestionario,btn_reinicio;
+    int flag = 0;
 
     Animation error,bounce;
 
@@ -45,34 +47,51 @@ public class Actividad3 extends AppCompatActivity implements View.OnTouchListene
                         || dropped.equals(text.equals(textG2_1.getText().toString()))
                         || dropped.equals(text.equals(textG2_2.getText().toString()))){
                     dropTarget.setText(dropped.getText());
+
                 }else{
                     if(dropped.getText().toString().equals(textG1.getText())){
                         textG1.setVisibility(View.VISIBLE);
+                        sonidomal.start();
                         textG1.startAnimation(error);
                     }else if (dropped.getText().toString().equals(textG1_1.getText())){
                         textG1_1.setVisibility(View.VISIBLE);
+                        sonidomal.start();
                         textG1_1.startAnimation(error);
                     }else if (dropped.getText().toString().equals(textG1_2.getText())){
                         textG1_2.setVisibility(View.VISIBLE);
+                        sonidomal.start();
                         textG1_2.startAnimation(error);
                     }else if (dropped.getText().toString().equals(textG1_3.getText())){
                         textG1_3.setVisibility(View.VISIBLE);
+                        sonidomal.start();
                         textG1_3.startAnimation(error);
                     }else if (dropped.getText().toString().equals(textG1_4.getText())){
                         textG1_4.setVisibility(View.VISIBLE);
+                        sonidomal.start();
                         textG1_4.startAnimation(error);
                     }else if (dropped.getText().toString().equals(textG3.getText())){
                         textG3.setVisibility(View.VISIBLE);
+                        sonidomal.start();
                         textG3.startAnimation(error);
                     }else if (dropped.getText().toString().equals(textG3_1.getText())){
                         textG3_1.setVisibility(View.VISIBLE);
+                        sonidomal.start();
                         textG3_1.startAnimation(error);
                     }else if (dropped.getText().toString().equals(textG3_2.getText())){
                         textG3_2.setVisibility(View.VISIBLE);
+                        sonidomal.start();
                         textG3_2.startAnimation(error);
                     }else if (dropped.getText().toString().equals(textG3_3.getText())){
                         textG3_3.setVisibility(View.VISIBLE);
+                        sonidomal.start();
                         textG3_3.startAnimation(error);
+                    }else{
+                        sonidobien.start();
+                        if(flag==11){
+                            sonidoAplauso.start();
+                        }else{
+                            flag++;
+                        }
                     }
                 }
             }else if(text.equals("GUNO")){
@@ -81,28 +100,44 @@ public class Actividad3 extends AppCompatActivity implements View.OnTouchListene
                         || dropped.equals(text.equals(textG1_2.getText().toString()))
                         || dropped.equals(text.equals(textG1_3.getText().toString()))
                         || dropped.equals(text.equals(textG1_4.getText().toString()))){
+                    sonidobien.start();
+                    System.out.println("entro en el bien");
                 }else{
                     if(dropped.getText().toString().equals(textG2.getText())){
                         textG2.setVisibility(View.VISIBLE);
+                        sonidomal.start();
                         textG2.startAnimation(error);
                     }else if (dropped.getText().toString().equals(textG2_1.getText())){
                         textG2_1.setVisibility(View.VISIBLE);
+                        sonidomal.start();
                         textG2_1.startAnimation(error);
                     }else if (dropped.getText().toString().equals(textG2_2.getText())){
                         textG2_2.setVisibility(View.VISIBLE);
+                        sonidomal.start();
                         textG2_2.startAnimation(error);
                     }else if (dropped.getText().toString().equals(textG3.getText())){
                         textG3.setVisibility(View.VISIBLE);
+                        sonidomal.start();
                         textG3.startAnimation(error);
                     }else if (dropped.getText().toString().equals(textG3_1.getText())){
                         textG3_1.setVisibility(View.VISIBLE);
+                        sonidomal.start();
                         textG3_1.startAnimation(error);
                     }else if (dropped.getText().toString().equals(textG3_2.getText())){
                         textG3_2.setVisibility(View.VISIBLE);
+                        sonidomal.start();
                         textG3_2.startAnimation(error);
                     }else if (dropped.getText().toString().equals(textG3_3.getText())){
                         textG3_3.setVisibility(View.VISIBLE);
+                        sonidomal.start();
                         textG3_3.startAnimation(error);
+                    }else{
+                        sonidobien.start();
+                        if(flag==11){
+                            sonidoAplauso.start();
+                        }else{
+                            flag++;
+                        }
                     }
                 }
 
@@ -111,31 +146,47 @@ public class Actividad3 extends AppCompatActivity implements View.OnTouchListene
                         || dropped.equals(text.equals(textG3_1.getText().toString()))
                         || dropped.equals(text.equals(textG3_2.getText().toString()))
                         || dropped.equals(text.equals(textG3_3.getText().toString()))){
+                    sonidobien.start();
+                    System.out.println("entro en el bien");
                 }else{
                     if(dropped.getText().toString().equals(textG1.getText())){
                         textG1.setVisibility(View.VISIBLE);
+                        sonidomal.start();
                         textG1.startAnimation(error);
                     }else if (dropped.getText().toString().equals(textG1_1.getText())){
                         textG1_1.setVisibility(View.VISIBLE);
+                        sonidomal.start();
                         textG1_1.startAnimation(error);
                     }else if (dropped.getText().toString().equals(textG1_2.getText())){
                         textG1_2.setVisibility(View.VISIBLE);
+                        sonidomal.start();
                         textG1_2.startAnimation(error);
                     }else if (dropped.getText().toString().equals(textG1_3.getText())){
                         textG1_3.setVisibility(View.VISIBLE);
+                        sonidomal.start();
                         textG1_3.startAnimation(error);
                     }else if (dropped.getText().toString().equals(textG1_4.getText())){
                         textG1_4.setVisibility(View.VISIBLE);
+                        sonidomal.start();
                         textG1_4.startAnimation(error);
                     }else if (dropped.getText().toString().equals(textG2.getText())){
                         textG2.setVisibility(View.VISIBLE);
                         textG2.startAnimation(error);
                     }else if (dropped.getText().toString().equals(textG2_1.getText())){
                         textG2_1.setVisibility(View.VISIBLE);
+                        sonidomal.start();
                         textG2_1.startAnimation(error);
                     }else if (dropped.getText().toString().equals(textG2_2.getText())){
                         textG2_2.setVisibility(View.VISIBLE);
+                        sonidomal.start();
                         textG2_2.startAnimation(error);
+                    }else{
+                        sonidobien.start();
+                        if(flag==11){
+                            sonidoAplauso.start();
+                        }else{
+                            flag++;
+                        }
                     }
                 }
 
@@ -162,6 +213,10 @@ public class Actividad3 extends AppCompatActivity implements View.OnTouchListene
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.actividad3_layout);
+
+        sonidobien = MediaPlayer.create(Actividad3.this, R.raw.bienbolsitas);
+        sonidomal = MediaPlayer.create(Actividad3.this, R.raw.regresobolsitas);
+        sonidoAplauso = MediaPlayer.create(Actividad3.this, R.raw.aplauso);
 
         error = AnimationUtils.loadAnimation(getApplicationContext(),
                 R.anim.error);
