@@ -50,29 +50,28 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="150dp"
-            android:text="Abre tu cuadernillo, haz click en la lupa\n y pon la tableta en el marcador\n ¡Vamos a ver que sucede!"
+            android:text="¡Ponle PLAY y coloca la cámara \nen el marcador de tu cuadernillo!"
             android:id="@+id/textCuadernillo"
             android:layout_marginLeft="90dp"
             android:textSize="30dp"
             android:gravity="center"
             android:layout_marginRight="20dp"
-            android:layout_weight="0.12" />
+            android:layout_weight="0.12"
+            android:textColor="#FFB300" />
 
 
         <Button
             android:layout_width="5dp"
             android:layout_height="150dp"
             android:id="@+id/btn_ra"
-            android:background="@drawable/lupa"
+            android:background="@drawable/play"
             android:layout_above="@+id/btn_comenzar"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
             android:paddingBottom="100dp"
             android:layout_weight="0.51" />
 
-
     </LinearLayout>
-
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -84,16 +83,13 @@
             android:layout_height="80dp"
             android:id="@+id/btn_regresar"
             android:background="@drawable/regreso"
-            android:layout_marginRight="1000dp" />
+            android:layout_marginRight="900dp" />
 
         <Button
-            android:layout_width="80dp"
+            android:layout_width="200dp"
             android:layout_height="80dp"
             android:id="@+id/btn_comenzar"
-            android:background="@drawable/inicio" />
+            android:background="@drawable/botonjugar" />
     </LinearLayout>
-
-
-
 
 </LinearLayout>

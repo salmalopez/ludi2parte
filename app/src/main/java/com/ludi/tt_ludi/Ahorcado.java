@@ -191,8 +191,7 @@ public class Ahorcado extends AppCompatActivity implements View.OnClickListener{
         toast.show();
         correctas++;
         boton.setEnabled(false);
-        Drawable fin = (Drawable)getResources().getDrawable(R.drawable.btngrupo3);
-        boton.setBackground(fin);
+        boton.setVisibility(View.GONE);
         if(correctas < 8)
             mostrarPregunta();
         else{
@@ -258,8 +257,7 @@ public class Ahorcado extends AppCompatActivity implements View.OnClickListener{
         for(int i=0; i<arregloRespuestas.length; i++){
             opciones[i].setText(arregloRespuestas[i]);
             opciones[i].setEnabled(true);
-            Drawable fin = (Drawable)getResources().getDrawable(R.drawable.btncereales);
-            opciones[i].setBackground(fin);
+            opciones[i].setVisibility(View.VISIBLE);
         }
 
         //Inicializar todos los contadores

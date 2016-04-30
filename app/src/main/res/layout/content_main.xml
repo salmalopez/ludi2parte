@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/inicioapp"
+    android:background="@drawable/fondoinicio"
     android:id="@+id/content_nav_drawer"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.ludi.tt_ludi.MainActivity"
@@ -66,6 +66,14 @@
         android:layout_above="@+id/btnActividades"
         android:layout_alignEnd="@+id/btnActividades"
         android:layout_alignStart="@+id/btnActividades" />
+
+    <ImageView
+        android:layout_width="600dp"
+        android:layout_height="300dp"
+        android:id="@+id/imageLUDI"
+        android:background="@drawable/ludi"
+        android:layout_above="@+id/imageView6"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>

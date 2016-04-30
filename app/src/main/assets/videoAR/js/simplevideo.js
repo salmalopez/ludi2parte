@@ -18,11 +18,11 @@ var World = {
 
 			The URL and the size are required when creating a new AR.VideoDrawable. Optionally the offsetX and offsetY parameters are set to position the video on the target. The values for the offsets are in SDUs. If you want to know more about SDUs look up the code reference.
 		*/
-		var video = new AR.VideoDrawable("assets/ludi.mp4", 0.40, {
+/*		var video = new AR.VideoDrawable("assets/ludi.mp4", 0.40, {
 							offsetX: 0,
 							offsetY: 0
         				});
-
+*/
         var videofyv = new AR.VideoDrawable("assets/frutas_verduras.mp4", 0.40, {
 							offsetX: 0,
 							offsetY: 0
@@ -42,12 +42,12 @@ var World = {
                 			offsetX: 0,
                             offsetY: 0
                 		});
-
+/*
         var videojarra = new AR.VideoDrawable("assets/ludi.mp4", 0.40, {
                  			offsetX: 0,
                             offsetY: 0
                  		});
-
+*/
 		/*
 			Adding the video to the image target is straight forward and similar like adding any other drawable to an image target.
 
@@ -55,6 +55,8 @@ var World = {
 
 			To start the video immediately after the target is recognized we call play inside the onEnterFieldOfVision trigger. Supplying -1 to play tells the Wikitude SDK to loop the video infinitely. Choose any positive number to re-play it multiple times.
 		*/
+
+/*
 		var pageOne = new AR.Trackable2DObject(this.tracker, "logo", {
                 			drawables: {
                 				cam: [video]
@@ -67,6 +69,7 @@ var World = {
                             }
 
                 		});
+*/
 
 		var pageTwo = new AR.Trackable2DObject(this.tracker, "verduras", {
                 			drawables: {
@@ -121,19 +124,21 @@ var World = {
 
                 		});
 
-
+/*
 		var pageSix = new AR.Trackable2DObject(this.tracker, "bebidas", {
                 			drawables: {
-                				cam: [videojarra]
+                				cam: [videofyv]
                 			},
                 			onEnterFieldOfVision: function onEnterFieldOfVisionFn() {
-                				videojarra.play(1);
+                				videofyv.play(1);
                 			},
                 			onExitFieldOfVision: function onExitFieldOfVisionFn () {
-                           		videojarra.pause();
+                           		videofyv.pause();
                             }
 
                 		});
+*/
+
 
 	},
 
