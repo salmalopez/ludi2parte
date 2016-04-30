@@ -133,6 +133,10 @@
         <activity
             android:name=".InstruccionesAct5"
             android:label="@string/title_activity_instrucciones_act5"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Escuela"
+            android:label="@string/title_activity_escuela"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

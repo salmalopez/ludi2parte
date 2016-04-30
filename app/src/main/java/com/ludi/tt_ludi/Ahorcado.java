@@ -22,14 +22,14 @@ public class Ahorcado extends AppCompatActivity implements View.OnClickListener{
     MediaPlayer botonaplauso, sonidoerror, sonidoperdio, sonidobien;
 
     private final String[] preguntas = {
-            "Grupo alimenticio que te aporta principalmente fibra.",
-            "Cereal que te aporta más energía.",
-            "Color que tienen los cereales y tubérculos en el plato del bien comer.",
-            "Avena, granola, tortillas y bolillo son ejemplos de...¿?",
-            "Nutriente que nos ayuda a regular los procesos digestivos y disminuye las cantidades de colesterol en la sangre.",
-            "Papa, camote, jícama y ajo son ejemplos de...¿?",
-            "Nutriente que nos ayuda a regular los procesos digestivos y disminuye las cantidades de colesterol en la sangre.",
-            "Son los cereales que contienen mucha azúcar y químicos, los cuales no nutren."};
+            "1) Grupo alimenticio que te aporta principalmente fibra.",
+            "2) Cereal que te aporta más energía.",
+            "3) Color que tienen los cereales y tubérculos en el plato del bien comer.",
+            "4) Avena, granola, tortillas y bolillo son ejemplos de...¿?",
+            "5) Nutriente que nos ayuda a regular los procesos digestivos y disminuye las cantidades de colesterol en la sangre.",
+            "6) Papa, camote, jícama y ajo son ejemplos de...¿?",
+            "7) Nutriente que nos ayuda a regular los procesos digestivos y disminuye las cantidades de colesterol en la sangre.",
+            "8) Son los cereales que contienen mucha azúcar y químicos, los cuales no nutren."};
 
     private final String[] arregloRespuestas = {
         "Cereales", "Integral", "Amarillo", "Cereales", "Fibra", "Tuberculos", "Fibra", "Industrializados"
