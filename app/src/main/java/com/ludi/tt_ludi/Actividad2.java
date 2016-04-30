@@ -3,6 +3,7 @@ package com.ludi.tt_ludi;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -32,6 +33,8 @@ public class Actividad2 extends AppCompatActivity implements View.OnClickListene
             R.drawable.pescadomem,
 
     };
+    int flag = 0;
+    MediaPlayer sonidoAplauso,sonidobien;
 
 
 
@@ -48,6 +51,9 @@ public class Actividad2 extends AppCompatActivity implements View.OnClickListene
         final TableLayout tabla = new TableLayout(this);
 
         tabla.setBackgroundColor(Color.parseColor("#F44336"));
+        sonidoAplauso = MediaPlayer.create(Actividad2.this, R.raw.aplauso);
+        sonidobien = MediaPlayer.create(Actividad2.this, R.raw.bienmemorama);
+
 
         Button btnEspacio = new Button(this);
         Drawable image5 = (Drawable)getResources().getDrawable(R.drawable.espaciomem);
@@ -139,6 +145,7 @@ public class Actividad2 extends AppCompatActivity implements View.OnClickListene
             this.caraVisible = caraVisible;
             boton.setImageResource(caraVisible ? imagen : R.drawable.preguntamem);
 
+
         }
 
         @Override
@@ -168,6 +175,13 @@ public class Actividad2 extends AppCompatActivity implements View.OnClickListene
             celda.boton.setEnabled(false);
             visible.boton.setEnabled(false);
             visible = null;
+            if(flag==7){
+                sonidoAplauso.start();
+            }else{
+                flag++;
+                sonidobien.start();
+            }
+            System.out.println("cuando estoy bien");
         }
         else{
             celda.setCaraVisible(true);

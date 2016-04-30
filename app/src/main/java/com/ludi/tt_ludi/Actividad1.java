@@ -20,7 +20,7 @@ import android.widget.TextView;
  */
 public class Actividad1 extends Activity implements Animation.AnimationListener, View.OnClickListener{
 
-    MediaPlayer botonsonido,botonsalida, botonaplauso;
+    MediaPlayer botonsonido,botonsalida, botonaplauso, sonidomal;
     TextView txtPregunta;
     Button btnRespuesta1,btnRespuesta2, btnSiguiente, btn_regresar, btnCuestionario;
     Pregunta[] preguntas = new Pregunta().getPreguntas();
@@ -76,6 +76,7 @@ public class Actividad1 extends Activity implements Animation.AnimationListener,
         botonsonido = MediaPlayer.create(Actividad1.this, R.raw.regreso);
         botonsalida = MediaPlayer.create(Actividad1.this, R.raw.inicio);
         botonaplauso = MediaPlayer.create(Actividad1.this, R.raw.aplauso);
+        sonidomal = MediaPlayer.create(Actividad1.this, R.raw.sonidito);
 
         imagenJarra = (ImageView) findViewById(R.id.imagenJarra);
         imagenJarra.setImageResource(NIVELES_JARRA[nivel]);
@@ -170,6 +171,7 @@ public class Actividad1 extends Activity implements Animation.AnimationListener,
                 }
 
                 btnRespuesta1.startAnimation(error);
+                sonidomal.start();
                 break;
 
             case (R.id.btnRespuesta2):
@@ -212,6 +214,7 @@ public class Actividad1 extends Activity implements Animation.AnimationListener,
                     break;
                 }
                     btnRespuesta2.startAnimation(error);
+                sonidomal.start();
                 break;
 
 

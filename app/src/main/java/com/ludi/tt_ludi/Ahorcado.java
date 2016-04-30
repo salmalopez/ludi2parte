@@ -19,7 +19,7 @@ import android.widget.Toast;
 public class Ahorcado extends AppCompatActivity implements View.OnClickListener{
 
     Button button1, button2,button3,button4,button5,button6,button7,button8;
-    MediaPlayer botonaplauso;
+    MediaPlayer botonaplauso, sonidoerror, sonidoperdio, sonidobien;
 
     private final String[] preguntas = {
             "Grupo alimenticio que te aporta principalmente fibra.",
@@ -52,6 +52,9 @@ public class Ahorcado extends AppCompatActivity implements View.OnClickListener{
         setSupportActionBar(toolbar);
 
         botonaplauso = MediaPlayer.create(Ahorcado.this, R.raw.aplauso);
+        sonidoerror  = MediaPlayer.create(Ahorcado.this, R.raw.sonidito);
+        sonidoperdio = MediaPlayer.create(Ahorcado.this, R.raw.tache1);
+        sonidobien = MediaPlayer.create(Ahorcado.this, R.raw.bien1);
 
         Typeface myTypeFace2 = Typeface.createFromAsset(getAssets(),"DK.ttf");
         pregunta = (TextView) findViewById(R.id.pregunta);
@@ -186,14 +189,17 @@ public class Ahorcado extends AppCompatActivity implements View.OnClickListener{
     }
 
     private void correcta(View v){
+
         Button boton = (Button)findViewById(v.getId());
         Toast toast = Toast.makeText(this, "¡Correcto!",Toast.LENGTH_SHORT);
         toast.show();
         correctas++;
         boton.setEnabled(false);
         boton.setVisibility(View.GONE);
-        if(correctas < 8)
+        if(correctas < 8){
+            sonidobien.start();
             mostrarPregunta();
+        }
         else{
             ganar();
         }
@@ -222,6 +228,7 @@ public class Ahorcado extends AppCompatActivity implements View.OnClickListener{
     }
 
     private void avanzarAhorcado(){
+        sonidoerror.start();
         // Se indica al usuario que se equivocó
         Toast toast = Toast.makeText(this, "¡Oops! Intenta con otra opicón.",Toast.LENGTH_SHORT);
         toast.show();
@@ -230,6 +237,7 @@ public class Ahorcado extends AppCompatActivity implements View.OnClickListener{
 
         // Se verifica si el usuario ya perdió
         if(pointerAhorcado == 8){
+            sonidoperdio.start();
             AlertDialog alertDialog = new AlertDialog.Builder(Ahorcado.this).create();
             alertDialog.setTitle("¡Sigue intentando!");
             alertDialog.setMessage("Se te agotaron los intentos\n Inténtalo de nuevo o dirígete al cuestionario para reafirmar tus conocimientos.");
