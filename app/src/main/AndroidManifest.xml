@@ -137,6 +137,11 @@
             android:label="@string/title_activity_instrucciones_act5"
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".Escuela"
+            android:label="@string/title_activity_escuela"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

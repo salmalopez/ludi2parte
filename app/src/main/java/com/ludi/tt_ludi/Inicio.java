@@ -110,8 +110,15 @@ public class Inicio extends AppCompatActivity implements View.OnClickListener{
 
                 botonsonido.start();
                 //cargar actividad
+
+                /*
                 Intent siguiente = new Intent(Inicio.this, Registro.class);
                 Inicio.this.startActivity(siguiente);
+                */
+
+                Intent siguiente = new Intent(Inicio.this, Escuela.class);
+                Inicio.this.startActivity(siguiente);
+
                 break;
 
             case (R.id.btn_login):

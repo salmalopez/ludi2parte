@@ -1,4 +1,7 @@
 <resources>
+    <string-array name="estados">
+        <item>Seleccionar...</item>
+    </string-array>
     <string name="app_name">Ludi</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -41,7 +44,14 @@
     <string name="title_activity_gato">FRUTAS Y VERDURAS</string>
 
 
+<<<<<<< HEAD
     <string name="title_activity_ahorcado">CEREALES</string>
     <string name="title_activity_instrucciones_act5">CEREALES</string>
+=======
+    <string name="title_activity_ahorcado">Ahorcado</string>
+    <string name="title_activity_instrucciones_act5">InstruccionesAct5</string>
+    <string name="title_activity_escuela">Escuela</string>
+    <string name="title_activity_seleccionar_escuela">SeleccionarEscuela</string>
+>>>>>>> 76347c6eafbcdb960dd40ed364f132dbba9c7b4e
 
 </resources>

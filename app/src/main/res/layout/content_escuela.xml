@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondoinicio"
+    android:focusableInTouchMode="true"
+    android:transitionGroup="false"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="100dp"
+    android:paddingRight="100dp"
+    android:orientation="vertical"
+    tools:context="com.ludi.tt_ludi.Escuela"
+    android:clickable="true">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Selecciona tu escuela"
+        android:id="@+id/txtMensaje"
+        android:textSize="100dp"
+        android:textColor="#ff8e38"
+        android:textIsSelectable="false"
+        android:layout_gravity="center" />
+
+    <LinearLayout
+        android:layout_width="786dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+
+
+        <LinearLayout
+            android:layout_width="1182dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:background="@drawable/republica" />
+
+            <AutoCompleteTextView
+                android:id="@+id/estado"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="65dp"
+                android:ems="10" />
+
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="1182dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/escuela" />
+
+            <AutoCompleteTextView
+                android:id="@+id/escuela"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="65dp"
+                android:ems="10" />
+-->
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:paddingLeft="0dp">
+
+        <Button
+            android:layout_width="112dp"
+            android:layout_height="104dp"
+            android:background="@drawable/guardar"
+            android:id="@+id/buttonRegister"
+            android:layout_marginLeft="900dp" />
+
+    </RelativeLayout>
+
+
+
+
+
+
+</LinearLayout>
