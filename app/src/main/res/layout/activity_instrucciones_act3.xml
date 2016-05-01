@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.ludi.tt_ludi.InstruccionesAct1"
+    tools:context="com.ludi.tt_ludi.InstruccionesAct3"
     android:weightSum="1"
     android:background="#8c4a97"
     android:paddingLeft="50dp"

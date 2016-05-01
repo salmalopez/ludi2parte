@@ -201,4 +201,9 @@ public class Actualizar extends AppCompatActivity implements View.OnClickListene
         }
     }
 
+    @Override
+    public void onBackPressed(){
+
+    }
+
 }

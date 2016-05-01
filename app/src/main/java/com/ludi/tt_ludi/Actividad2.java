@@ -199,5 +199,10 @@ public class Actividad2 extends AppCompatActivity implements View.OnClickListene
 
     }
 
+    @Override
+    public void onBackPressed(){
+
+    }
+
 
 }

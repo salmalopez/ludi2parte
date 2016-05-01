@@ -5,6 +5,7 @@ import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -20,6 +21,9 @@ public class InstruccionesAct5 extends AppCompatActivity implements View.OnClick
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_instrucciones_act5);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         botonsonido = MediaPlayer.create(InstruccionesAct5.this, R.raw.regreso);
         botonsalida = MediaPlayer.create(InstruccionesAct5.this, R.raw.inicio);
@@ -69,5 +73,10 @@ public class InstruccionesAct5 extends AppCompatActivity implements View.OnClick
                 finish();
                 break;
         }
+    }
+
+    @Override
+    public void onBackPressed(){
+
     }
 }

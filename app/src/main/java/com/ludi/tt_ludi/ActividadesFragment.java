@@ -126,6 +126,13 @@ public class ActividadesFragment extends Fragment implements View.OnClickListene
         mListener = null;
     }
 
+
+    public void callParentMethod(){
+        getActivity().onBackPressed();
+    }
+
+
+
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -171,4 +178,6 @@ public class ActividadesFragment extends Fragment implements View.OnClickListene
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
+
 }

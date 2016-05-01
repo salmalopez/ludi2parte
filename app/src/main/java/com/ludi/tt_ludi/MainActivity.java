@@ -33,8 +33,6 @@ public class MainActivity extends AppCompatActivity
                         boolean fragmentTransaction = false;
                         MediaPlayer botonsonido;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,15 +68,6 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
-    @Override
-    public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -87,24 +76,6 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-
-            Intent actualizar = new Intent(MainActivity.this, Informacion.class);
-            MainActivity.this.startActivity(actualizar);
-
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -178,14 +149,6 @@ public class MainActivity extends AppCompatActivity
             case (R.id.btnActividades):
                 integrator.initiateScan();
                 botonsonido.start();
-
-                /*
-                ActividadesFragment fragment2 = new ActividadesFragment();
-                getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.content_nav_drawer, fragment2)
-                            .commit();
-                getSupportActionBar().setTitle("Actividades");
-                */
                 break;
 
             case (R.id.btnNoticias):
@@ -205,9 +168,15 @@ public class MainActivity extends AppCompatActivity
                 break;
         }
     }
+                        @Override
+                        public void onBackPressed(){
+
+                        }
+
+
 
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
-        System.out.println("resultCode: "+resultCode);
+        System.out.println("resultCode: " + resultCode);
         IntentResult scanResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
         Class destino = null;
 
@@ -235,4 +204,6 @@ public class MainActivity extends AppCompatActivity
             startActivity(siguiente);
         }
     }
+
+
 }

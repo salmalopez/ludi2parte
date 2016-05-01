@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 public class InstruccionesAct3  extends AppCompatActivity implements View.OnClickListener{
 
+
     Button btn_ra,btn_comenzar,btn_regresar;
     TextView txtTitle,txtIntruciones,textCuadernillo;
 
@@ -69,5 +70,10 @@ public class InstruccionesAct3  extends AppCompatActivity implements View.OnClic
                 finish();
                 break;
         }
+    }
+
+    @Override
+    public void onBackPressed(){
+
     }
 }

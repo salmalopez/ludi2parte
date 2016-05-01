@@ -36,4 +36,9 @@ public class Informacion extends AppCompatActivity implements View.OnClickListen
     public void onClick(View v) {
         finish();
     }
+
+    @Override
+    public void onBackPressed(){
+
+    }
 }

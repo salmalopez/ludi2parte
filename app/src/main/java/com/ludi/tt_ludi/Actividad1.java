@@ -266,4 +266,9 @@ public class Actividad1 extends Activity implements Animation.AnimationListener,
 
     }
 
+    @Override
+    public void onBackPressed(){
+
+    }
+
 }

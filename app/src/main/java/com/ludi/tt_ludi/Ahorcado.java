@@ -283,4 +283,9 @@ public class Ahorcado extends AppCompatActivity implements View.OnClickListener{
 
         }
     }
+
+    @Override
+    public void onBackPressed(){
+
+    }
 }

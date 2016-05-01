@@ -2,31 +2,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondoactiv"
+    android:background="@drawable/fondoinicio"
     tools:context="com.ludi.tt_ludi.NoticiasFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
-
-    <TextView
-        android:layout_width="600dp"
-        android:layout_height="400dp"
-        android:text="New Text"
-        android:id="@+id/textViewid"
-        android:layout_gravity="center_horizontal|top"
-        android:background="#ffffff"
+    <RelativeLayout
+        android:layout_width="900dp"
+        android:layout_height="500dp"
+        android:background="@drawable/periodico"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/relativeLayout"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        android:textSize="30dp" />
+        android:layout_marginTop="50dp">
 
-    <Button
+        <TextView
+            android:layout_width="590dp"
+            android:layout_height="200dp"
+            android:text="En esta sección vas a encontrar cada semana nuevos consejos y noticias para mejorar tus hábitos alimenticos.\n \n Dirígete a nuevas noticias y presiona el botón."
+            android:id="@+id/textViewid"
+            android:layout_gravity="center_horizontal|top"
+
+            android:textSize="30dp"
+            android:background="@drawable/btnnoticias"
+            android:scrollIndicators="start"
+            android:textAlignment="center"
+            android:padding="20dp"
+            android:layout_centerVertical="true"
+            android:layout_alignStart="@+id/btn"
+            android:layout_marginLeft="5dp" />
+
+        <Button
+            android:layout_width="590dp"
+            android:layout_height="100dp"
+            android:background="@drawable/btnnuevas"
+            android:text="NUEVAS NOTICIAS"
+            android:id="@+id/btn"
+            android:layout_above="@+id/textViewid"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="40dp"
+            android:textStyle="bold"
+            android:textSize="40dp"
+            android:textColor="#424242" />
+
+
+    </RelativeLayout>
+
+    <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:text="¿Qué hay de nuevo?"
-        android:id="@+id/btn"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/textViewid"
-        android:layout_below="@+id/textViewid"
-        android:layout_alignEnd="@+id/textViewid"
-        android:layout_marginBottom="100dp" />
+        android:id="@+id/imageView7"
+        android:background="@drawable/flecha"
+        android:layout_alignTop="@+id/relativeLayout"
+        android:layout_toStartOf="@+id/relativeLayout"
+        android:layout_marginTop="10dp" />
+
 </RelativeLayout>

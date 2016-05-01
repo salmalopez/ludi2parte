@@ -119,4 +119,9 @@ public class Avance extends AppCompatActivity implements View.OnClickListener {
     public void onClick(View v) {
         finish();
     }
+
+    @Override
+    public void onBackPressed(){
+
+    }
 }

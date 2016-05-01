@@ -12,4 +12,5 @@
     tools:context="com.ludi.tt_ludi.InstruccionesAct3"
     tools:showIn="@layout/instrucciones_act3">
 
+
 </RelativeLayout>

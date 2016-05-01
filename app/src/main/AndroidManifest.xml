@@ -118,6 +118,7 @@
         <activity
             android:name=".Gato"
             android:configChanges="orientation"
+            android:label="@string/title_activity_instrucciones_act4"
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
@@ -132,12 +133,10 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".InstruccionesAct5"
+            android:configChanges="orientation"
             android:label="@string/title_activity_instrucciones_act5"
+            android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Escuela"
-            android:label="@string/title_activity_escuela"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

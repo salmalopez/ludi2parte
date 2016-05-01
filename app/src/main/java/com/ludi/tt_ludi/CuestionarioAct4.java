@@ -328,4 +328,9 @@ public class CuestionarioAct4  extends AppCompatActivity implements View.OnClick
         requestQueue.add(stringRequest);
     }
 
+    @Override
+    public void onBackPressed(){
+
+    }
+
 }

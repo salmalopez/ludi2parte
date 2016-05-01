@@ -288,7 +288,10 @@ public class Actividad3 extends AppCompatActivity implements View.OnTouchListene
                 startActivity(i2);
                 break;
         }
+    }
 
+    @Override
+    public void onBackPressed(){
 
     }
 }

@@ -154,4 +154,9 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
 
         }
     }
+
+    @Override
+    public void onBackPressed(){
+
+    }
 }

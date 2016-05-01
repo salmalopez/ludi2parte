@@ -1,6 +1,8 @@
 package com.ludi.tt_ludi;
 
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -39,7 +41,7 @@ public class NoticiasFragment extends Fragment implements View.OnClickListener {
     TextView textView;
     static String idNoticia = "1";
 
-    private static final String USER_URL = "http://52.23.175.78/api/noticia/metodo/texto/";
+    private static final String USER_URL = "http://ludi.mx/api/noticia/metodo/texto/";
     private static final String USER_URL2 = "http://ludi.mx/api/noticia/metodo/longitud";
 
     public static final String KEY_CONTENIDO = "contenido";
@@ -92,9 +94,15 @@ public class NoticiasFragment extends Fragment implements View.OnClickListener {
 
         View view = inflater.inflate(R.layout.fragment_noticias, container, false);
 
+        Typeface myTypeFace = Typeface.createFromAsset(getContext().getAssets(),"KGS.ttf");
         start = (Button)view.findViewById(R.id.btn);
         start.setOnClickListener(this);
+        start.setTypeface(myTypeFace);
+
+
+        Typeface myTypeFace2 = Typeface.createFromAsset(getContext().getAssets(),"DK.ttf");
         textView = (TextView) view.findViewById(R.id.textViewid);
+        textView.setTypeface(myTypeFace2);
 
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, USER_URL2,
@@ -138,7 +146,10 @@ public class NoticiasFragment extends Fragment implements View.OnClickListener {
 
     }
 
-
+    public void onBackPressed(){
+        Intent intent = new Intent(getContext(), InicioFragment.class);
+        startActivity(intent);
+    }
 
 
     // TODO: Rename method, update argument and hook method into UI event

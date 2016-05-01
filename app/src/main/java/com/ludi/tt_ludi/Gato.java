@@ -334,4 +334,9 @@ public class Gato extends AppCompatActivity implements View.OnClickListener{
         casilla9.setEnabled(estado);
     }
 
+    @Override
+    public void onBackPressed(){
+
+    }
+
 }
