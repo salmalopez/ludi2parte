@@ -2,6 +2,7 @@ package com.ludi.tt_ludi;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -94,14 +95,14 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
                     @Override
                     public void onResponse(String response) {
                         //Toast.makeText(Registro.this, response, Toast.LENGTH_LONG).show();
-                        System.out.println("dddddddddd"+response);
-                        if(response.equals("{\"message\":OK}")){
-                            System.out.println("bien");
+                        System.out.println("Respuesta WS: "+response);
+                        if(response.equals("\"OK\"")){
+                            Intent siguiente = new Intent(Registro.this, Escuela.class);
+                            startActivity(siguiente);
                         }else{
-
                             AlertDialog alertDialog = new AlertDialog.Builder(Registro.this).create();
-                            alertDialog.setTitle("¡Oops!");
-                            alertDialog.setMessage(""+response);
+                            alertDialog.setTitle("Error en el serivdor");
+                            alertDialog.setMessage(response);
                             alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
                                     new DialogInterface.OnClickListener() {
                                         public void onClick(DialogInterface dialog, int which) {
@@ -116,8 +117,7 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        //Toast.makeText(Registro.this,error.toString(),Toast.LENGTH_LONG).show();
-                        System.out.println("aaaaaaaaaa:: "+error);
+                       System.out.println("Error al registrar usuario: "+error);
                     }
                 }){
             @Override
