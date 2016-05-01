@@ -151,7 +151,7 @@ public class Gato extends AppCompatActivity implements View.OnClickListener{
                         AlertDialog alertDialog = new AlertDialog.Builder(Gato.this).create();
                         alertDialog.setTitle("¡Felicidades!");
                         alertDialog.setMessage("Has ganado el juego, dirígete al cuestionario para reafirmar tus conocimientos");
-                        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "✓✓",
+                        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "ok",
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
                                         dialog.dismiss();
@@ -162,7 +162,7 @@ public class Gato extends AppCompatActivity implements View.OnClickListener{
                         AlertDialog alertDialog = new AlertDialog.Builder(Gato.this).create();
                         alertDialog.setTitle("¡Sigue intentando!");
                         alertDialog.setMessage("La actividad te ha ganado, inténtalo de nuevo o dirígete al cuestionario para reafirmar tus conocimientos");
-                        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "✓✓",
+                        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "ok",
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
                                         dialog.dismiss();
@@ -175,7 +175,7 @@ public class Gato extends AppCompatActivity implements View.OnClickListener{
                     AlertDialog alertDialog = new AlertDialog.Builder(Gato.this).create();
                     alertDialog.setTitle("¡Ya no hay más casillas!");
                     alertDialog.setMessage("El juego se ha terminado, inténtalo de nuevo o dirígete al cuestionario para reafirmar tus conocimientos ");
-                    alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "✓✓",
+                    alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "ok",
                             new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int which) {
                                     dialog.dismiss();

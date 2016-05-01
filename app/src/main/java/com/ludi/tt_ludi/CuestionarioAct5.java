@@ -260,7 +260,7 @@ public class CuestionarioAct5 extends AppCompatActivity implements View.OnClickL
             alertDialog.setTitle("¡EXCELENTE!");
             alertDialog.setMessage("Tus respuestas correctas fueron = " + correctas + "\n" +
                     "Concluiste la actividad");
-            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "ok",
                     new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
@@ -273,7 +273,7 @@ public class CuestionarioAct5 extends AppCompatActivity implements View.OnClickL
             alertDialog.setTitle("¡VAS POR BUEN CAMINO!");
             alertDialog.setMessage("Tus respuestas correctas fueron = " + correctas + "\n" +
                     "Concluiste la actividad");
-            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "ok",
                     new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
@@ -286,7 +286,7 @@ public class CuestionarioAct5 extends AppCompatActivity implements View.OnClickL
             alertDialog.setTitle("¡Continua jugando, vas a lograrlo!");
             alertDialog.setMessage("Tus respuestas correctas fueron = " + correctas + "\n" +
                     "Concluiste la actividad");
-            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "ok",
                     new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();

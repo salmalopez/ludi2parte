@@ -1,5 +1,7 @@
 package com.ludi.tt_ludi;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -89,6 +91,16 @@ public class Actividad3 extends AppCompatActivity implements View.OnTouchListene
                         sonidobien.start();
                         if(flag==11){
                             sonidoAplauso.start();
+                            AlertDialog alertDialog = new AlertDialog.Builder(Actividad3.this).create();
+                            alertDialog.setTitle("¡Felicidades!");
+                            alertDialog.setMessage("Concluiste la actividad, ahora dirigete al cuestionario para reafirmar tus conocimientos.");
+                            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "ok",
+                                    new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            dialog.dismiss();
+                                        }
+                                    });
+                            alertDialog.show();
                         }else{
                             flag++;
                         }
@@ -135,6 +147,16 @@ public class Actividad3 extends AppCompatActivity implements View.OnTouchListene
                         sonidobien.start();
                         if(flag==11){
                             sonidoAplauso.start();
+                            AlertDialog alertDialog = new AlertDialog.Builder(Actividad3.this).create();
+                            alertDialog.setTitle("¡Felicidades!");
+                            alertDialog.setMessage("Concluiste la actividad, ahora dirigete al cuestionario para reafirmar tus conocimientos.");
+                            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "ok",
+                                    new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            dialog.dismiss();
+                                        }
+                                    });
+                            alertDialog.show();
                         }else{
                             flag++;
                         }

@@ -148,7 +148,7 @@ public class Inicio extends AppCompatActivity implements View.OnClickListener{
                                     AlertDialog alertDialog = new AlertDialog.Builder(Inicio.this).create();
                                     alertDialog.setTitle("¡Oops!");
                                     alertDialog.setMessage("El usuario no se encuentra registrado.");
-                                    alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                                    alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "ok",
                                             new DialogInterface.OnClickListener() {
                                                 public void onClick(DialogInterface dialog, int which) {
                                                     dialog.dismiss();

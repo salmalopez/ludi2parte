@@ -43,12 +43,13 @@
         android:layout_width="match_parent"
         android:layout_height="302dp"
         android:orientation="horizontal"
-        android:weightSum="1">
+        android:weightSum="1"
+        android:layout_marginTop="10dp">
 
         <!--Imagen ahorcado-->
         <ImageView
             android:layout_width="400dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:text="8"
             android:id="@+id/imagen"
             android:background="@drawable/comenzar_ahorcado"
@@ -171,7 +172,7 @@
         android:layout_width="1201dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="40dp">
 
         <Button
             android:layout_width="80dp"

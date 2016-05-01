@@ -155,7 +155,7 @@ public class Escuela extends AppCompatActivity implements AdapterView.OnItemClic
         AlertDialog alertDialog = new AlertDialog.Builder(Escuela.this).create();
         alertDialog.setTitle("Aviso");
         alertDialog.setMessage(w);
-        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "ok",
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();

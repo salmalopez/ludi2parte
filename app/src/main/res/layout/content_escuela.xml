@@ -30,8 +30,6 @@
         android:orientation="vertical"
         android:layout_gravity="center">
 
-
-
         <LinearLayout
             android:layout_width="1182dp"
             android:layout_height="wrap_content"
@@ -50,11 +48,7 @@
                 android:layout_marginTop="65dp"
                 android:ems="10" />
 
-
         </LinearLayout>
-
-
-
 
         <LinearLayout
             android:layout_width="1182dp"
@@ -72,14 +66,13 @@
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="65dp"
-                android:ems="10" />
--->
+                android:ems="10" >
+
+            </AutoCompleteTextView>
         </LinearLayout>
 
 
     </LinearLayout>
-
-
 
 
     <RelativeLayout
